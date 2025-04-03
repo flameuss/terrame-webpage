@@ -253,13 +253,12 @@
 <li><strong>parent</strong>: The <a href="../environment/">Environment</a> it belongs.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>automaton = Automaton {
-    id = &quot;MyAutomaton&quot;,
+<pre class="highlight"><code>automaton = Automaton {
+    id = "MyAutomaton",
     State {...},
     -- ...
     State {...}
-}
-</code></pre></div>
+}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -315,9 +314,8 @@
 <li><strong>#1</strong>: A Trajectory or State.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>automaton:add(state)
-automaton:add(trajectory)
-</code></pre></div>
+<pre class="highlight"><code>automaton:add(state)
+automaton:add(trajectory)</code></pre>
 <hr />
 <h2 id="execute"><strong>execute</strong></h2>
 <p>Execute the <a href="../state/">State</a> machine. First, it executes the <a href="../jump/">Jump</a> of the current State while it jumps from State to State. When the machine stops jumping, it executes all the <a href="../flow/">Flows</a> of the current State. Usually, this function is called within an <a href="../event/">Event</a>, thus the time of the Event can be got from the <a href="../timer/">Timer</a>. It returns a boolean value indicating whether the Jumps were executed correctly.  </p>
@@ -326,14 +324,12 @@ automaton:add(trajectory)
 <li><strong>#1</strong>: An Event.</li>
 </ul>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>automaton:execute(event)
-</code></pre></div>
+<pre class="highlight"><code>automaton:execute(event)</code></pre>
 <hr />
 <h2 id="getid"><strong>getId</strong></h2>
 <p>Return the unique identifier name of the Automaton.  </p>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>automaton:getId()
-</code></pre></div>
+<pre class="highlight"><code>automaton:getId()</code></pre>
 <hr />
 <h2 id="getstate"><strong>getState</strong></h2>
 <p>Get a <a href="../state/">State</a> of the Automaton according to a given position.  </p>
@@ -342,8 +338,7 @@ automaton:add(trajectory)
 <li><strong>#1</strong>: A number indicating the position of the State to be retrieved.</li>
 </ul>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>state = automaton:getState(1)
-</code></pre></div>
+<pre class="highlight"><code>state = automaton:getState(1)</code></pre>
 <hr />
 <h2 id="getstatename"><strong>getStateName</strong></h2>
 <p>Return the name of the current <a href="../state/">State</a>. As an Automaton has independent States in each <a href="../cell/">Cell</a>, it requires a location to return its State name.  </p>
@@ -352,14 +347,12 @@ automaton:add(trajectory)
 <li><strong>#1</strong>: A Cell.</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>id = automaton:getStateName(cell)
-</code></pre></div>
+<pre class="highlight"><code>id = automaton:getStateName(cell)</code></pre>
 <hr />
 <h2 id="getstates"><strong>getStates</strong></h2>
 <p>Get all the <a href="../state/">States</a> inside the Automaton. It returns a vector.  </p>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>state = automaton:getStates()[1]
-</code></pre></div>
+<pre class="highlight"><code>state = automaton:getStates()[1]</code></pre>
 <hr />
 <h2 id="notify"><strong>notify</strong></h2>
 <p>Notify every Observer connected to the Automaton.  </p>
@@ -368,8 +361,7 @@ automaton:add(trajectory)
 <li><strong>#1</strong>: An integer number representing the notification time. The default value is zero. It is also possible to use an <a href="../event/">Event</a> as argument. In this case, it will use the result of <a href="../event/#gettime">Event:getTime()</a>.</li>
 </ul>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>automaton:notify()
-</code></pre></div>
+<pre class="highlight"><code>automaton:notify()</code></pre>
 <hr />
 <h2 id="setid"><strong>setId</strong></h2>
 <p>Set the unique identifier of the Automaton. Return a boolean value indicating whether the id was changed correctly.  </p>
@@ -378,8 +370,7 @@ automaton:add(trajectory)
 <li><strong>#1</strong>: A string that names the Automaton.</li>
 </ul>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>automaton:setId(&quot;newid&quot;)
-</code></pre></div>
+<pre class="highlight"><code>automaton:setId("newid")</code></pre>
 <hr />
 <h2 id="settrajectorystatus"><strong>setTrajectoryStatus</strong></h2>
 <p>Activate or not the <a href="../trajectory/">Trajectories</a> defined for the Automaton. Returns whether the change was successfully executed. When the Automaton is built its status is not activated.  </p>
@@ -388,8 +379,7 @@ automaton:add(trajectory)
 <li><strong>#1</strong>: A boolean that indicates if the Trajectories will be activated.</li>
 </ul>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>automaton:setTrajectoryStatus(true)
-</code></pre></div>
+<pre class="highlight"><code>automaton:setTrajectoryStatus(true)</code></pre>
               
             </div>
           </div><footer>

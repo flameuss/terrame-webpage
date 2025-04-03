@@ -236,7 +236,7 @@
 <li><strong>select</strong>: The last function used to filter the Group.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     age = Random{min = 10, max = 50, step = 1}
 }
 
@@ -257,8 +257,7 @@ groupBySize = Group{
     greater = function(a1, a2)
         return a1.age &gt; a2.age
     end
-}
-</code></pre></div>
+}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -307,16 +306,15 @@ groupBySize = Group{
 <li><strong>#1</strong>: An Agent.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{}
+<pre class="highlight"><code>agent = Agent{}
 group = Group{}
 
-group:add(agent)
-</code></pre></div>
+group:add(agent)</code></pre>
 <hr />
 <h2 id="clone"><strong>clone</strong></h2>
 <p>Return a copy of the Group. It has the same parent, select, greater and <a href="../agent/">Agents</a>. Any change in the cloned Group will not affect the original one.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     age = Random{min = 0, max = 50, step = 1}
 }
 
@@ -332,13 +330,12 @@ group = Group{
 
 group2 = group:clone()
 print(#group)
-print(#group2)
-</code></pre></div>
+print(#group2)</code></pre>
 <hr />
 <h2 id="filter"><strong>filter</strong></h2>
 <p>Apply the filter again over the <a href="../society/">Society</a> used as target for the Group. <a href="../agent/">Agents</a> that belong to the Society but do not belong to the Group are ignored. This way, this function creates a subset over the subset of the Society.  </p>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     age = Random{min = 0, max = 50, step = 1},
     execute = function(self)
         self.age = self.age + 1
@@ -355,13 +352,12 @@ group = Group{target = soc, select = function(agent)
 end}
 
 group:execute()
-group:filter()
-</code></pre></div>
+group:filter()</code></pre>
 <hr />
 <h2 id="randomize"><strong>randomize</strong></h2>
 <p>Randomize the <a href="../agent/">Agents</a> of the Group. It will change the traversing order used by <a href="../../functions/utils/#foreachagent">forEachAgent()</a>.  </p>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     age = Random{min = 0, max = 50, step = 1}
 }
 
@@ -374,13 +370,12 @@ group = Group{
     target = soc
 }
 
-group:randomize()
-</code></pre></div>
+group:randomize()</code></pre>
 <hr />
 <h2 id="rebuild"><strong>rebuild</strong></h2>
 <p>Rebuild the Group. It works as if the Group was declared again with the same arguments.  </p>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     age = Random{min = 0, max = 50, step = 1}
 }
 
@@ -399,13 +394,12 @@ forEachAgent(group, function(agent)
     agent.age = agent.age + 5
 end)
 
-group:rebuild()
-</code></pre></div>
+group:rebuild()</code></pre>
 <hr />
 <h2 id="sort"><strong>sort</strong></h2>
 <p>Sort the current <a href="../society/">Society</a> subset. It updates the traversing order of the Group.  </p>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     age = Random{min = 0, max = 50, step = 1},
     execute = function(self)
         self.age = self.age + Random{min = 0, max = 2}:sample()
@@ -422,13 +416,12 @@ group = Group{target = soc, greater = function(ag1, ag2)
 end}
 
 group:execute()
-group:sort()
-</code></pre></div>
+group:sort()</code></pre>
 <hr />
 <h2 id="_1"><strong>#</strong></h2>
 <p>Return the number of <a href="../agent/">Agents</a> in the Group.  </p>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     age = Random{min = 0, max = 50, step = 1}
 }
 
@@ -442,8 +435,7 @@ group = Group{
     select = function(agent) return agent.age &lt; 10 end
 }
 
-print(#group)
-</code></pre></div>
+print(#group)</code></pre>
               
             </div>
           </div><footer>

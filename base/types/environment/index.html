@@ -233,12 +233,11 @@
 <li><strong>cObj_</strong>: A pointer to a C++ representation of the Environment. Never use this object.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>environment = Environment{
+<pre class="highlight"><code>environment = Environment{
     cs1 = CellularSpace{xdim = 10},
     ag1 = Agent{},
     t1 = Timer{}
-}
-</code></pre></div>
+}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -282,7 +281,7 @@
 <li><strong>#1</strong>: An <a href="../agent/">Agent</a>, <a href="../automaton/">Automaton</a>, <a href="../cell/">Cell</a>, <a href="../cellularSpace/">CellularSpace</a>, <a href="../society/">Society</a>, <a href="../trajectory/">Trajectory</a>, <a href="../group/">Group</a>, <a href="../event/">Event</a>, <a href="../timer/">Timer</a>, Environment, or table. When adding a table, this function converts the table into an Event. When adding an Event, this function converts the Event into a Timer that contains the Event itself.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>environment = Environment{}
+<pre class="highlight"><code>environment = Environment{}
 
 cs1 = CellularSpace{xdim = 10}
 ag1 = Agent{}
@@ -290,8 +289,7 @@ t1 = Timer{}
 
 environment:add(cs1)
 environment:add(ag1)
-environment:add(t1)
-</code></pre></div>
+environment:add(t1)</code></pre>
 <hr />
 <h2 id="createplacement"><strong>createPlacement</strong></h2>
 <p>Create relations between behavioural entities (<a href="../agent/">Agents</a>) and spatial entities (<a href="../cell/">Cells</a>). It is possible to have more than one behavioural entity within the Environment, but it must have only one <a href="../cellularSpace/">CellularSpace</a>, <a href="../trajectory/">Trajectory</a>, or Cell. When distributing Agents over a Trajectory or a Cell, the Agents will be able to move over the whole CellularSpace. Note that this function uses rules that will be used only to build the placement. It is up to the modeler to implement such rules for the rest of the simulation if needed. For example, one can use argument max equals to one to indicate that the placement must have at most one Agent per Cell, but it works only to create the placement, having no effect along the simulation.  </p>
@@ -333,7 +331,7 @@ environment:add(t1)
 </tbody>
 </table>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 
 soc = Society{
     instance = ag,
@@ -342,19 +340,17 @@ soc = Society{
 
 cs = CellularSpace{xdim = 10}
 env = Environment{soc, cs}
-env:createPlacement()
-</code></pre></div>
+env:createPlacement()</code></pre>
 <hr />
 <h2 id="gettime"><strong>getTime</strong></h2>
 <p>Return the older simulation time of its <a href="../timer/">Timers</a>.  </p>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>env = Environment{
+<pre class="highlight"><code>env = Environment{
     Timer{Event{action = function() end}}
 }
 
 env:run(10)
-print(env:getTime())
-</code></pre></div>
+print(env:getTime())</code></pre>
 <hr />
 <h2 id="loadneighborhood"><strong>loadNeighborhood</strong></h2>
 <p>Load a <a href="../neighborhood/">Neighborhood</a> between two different <a href="../cellularSpace/">CellularSpaces</a>.  </p>
@@ -365,17 +361,16 @@ print(env:getTime())
 <li><strong>name</strong>: A string with the name of the relation to be created. The default value is "1".</li>
 </ul>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>river = CellularSpace{
-    file = filePath(&quot;river.shp&quot;)
+<pre class="highlight"><code>river = CellularSpace{
+    file = filePath("river.shp")
 }
 
 emas = CellularSpace{
-    file = filePath(&quot;emas.shp&quot;)
+    file = filePath("emas.shp")
 }
 
 env = Environment{emas, river}
-env:loadNeighborhood{file = filePath(&quot;gpmlinesDbEmas.gpm&quot;, &quot;base&quot;)}
-</code></pre></div>
+env:loadNeighborhood{file = filePath("gpmlinesDbEmas.gpm", "base")}</code></pre>
 <h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../../functions/package/#filepath">filePath (Package)</a></li>
@@ -388,9 +383,8 @@ env:loadNeighborhood{file = filePath(&quot;gpmlinesDbEmas.gpm&quot;, &quot;base&
 <li><strong>#1</strong>: A number representing the notification time. The default value is zero. It is also possible to use an <a href="../event/">Event</a> as argument. In this case, it will use the result of <a href="../event/#gettime">Event:getTime()</a>.</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>env = Environment{}
-env:notify()
-</code></pre></div>
+<pre class="highlight"><code>env = Environment{}
+env:notify()</code></pre>
 <hr />
 <h2 id="run"><strong>run</strong></h2>
 <p>Run the Environment until a given time. It activates the <a href="../timer/">Timers</a> it contains, the Timers of the Environments it contains, and so on.  </p>
@@ -399,16 +393,15 @@ env:notify()
 <li><strong>#1</strong>: A number representing the final time. This funcion will stop when there is no <a href="../event/">Event</a> scheduled to a time less or equal to the final time. When using instances of <a href="../model/">Models</a> within the Environment (to simulate them at the same time), this argument is optional. In this case, the default value is the greater final time amongst all instances.</li>
 </ul>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>env = Environment{
+<pre class="highlight"><code>env = Environment{
     Timer{Event{action = function()
-        print(&quot;execute 1&quot;)
+        print("execute 1")
     end}},
     Timer{Event{action = function()
-        print(&quot;execute 2&quot;)
+        print("execute 2")
     end}}
 }
-env:run(10)
-</code></pre></div>
+env:run(10)</code></pre>
               
             </div>
           </div><footer>

@@ -262,8 +262,7 @@
 <li><strong>#2</strong>: A string with the name of the package. As default, it uses base package.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{file = filePath(&quot;simple.pgm&quot;)}
-</code></pre></div>
+<pre class="highlight"><code>cs = CellularSpace{file = filePath("simple.pgm")}</code></pre>
 <hr />
 <h2 id="filesbyextension"><strong>filesByExtension</strong></h2>
 <p>Return a table with the files of a package that have a given extension.  </p>
@@ -273,8 +272,7 @@
 <li><strong>#2</strong>: A string with the extension.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>filesByExtension(&quot;base&quot;, &quot;csv&quot;)
-</code></pre></div>
+<pre class="highlight"><code>filesByExtension("base", "csv")</code></pre>
 <hr />
 <h2 id="getpackage"><strong>getPackage</strong></h2>
 <p>Return a table with the content of a given package. If the package is not installed, it verifies if the package is in the current directory.  </p>
@@ -283,9 +281,8 @@
 <li><strong>#1</strong>: A package name.</li>
 </ul>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>base = getPackage(&quot;base&quot;)
-cs = base.CellularSpace{xdim = 10}
-</code></pre></div>
+<pre class="highlight"><code>base = getPackage("base")
+cs = base.CellularSpace{xdim = 10}</code></pre>
 <hr />
 <h2 id="import"><strong>import</strong></h2>
 <p>Load a given package. If the package is not installed, it verifies if the package is available in the current directory. It shows a warning if trying to load a package that was already loaded. In this case, the package will not be loaded again. See #2 below for a different procedure.  </p>
@@ -295,8 +292,7 @@ cs = base.CellularSpace{xdim = 10}
 <li><strong>#2</strong>: A boolean value indicating whether TerraME should load the package even if it was already loaded (default is false). In this case, it also avoids a warning indicating that the package was already loaded.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>import(&quot;calibration&quot;)
-</code></pre></div>
+<pre class="highlight"><code>import("calibration")</code></pre>
 <hr />
 <h2 id="isloaded"><strong>isLoaded</strong></h2>
 <p>Return whether a given package is loaded.  </p>
@@ -305,10 +301,9 @@ cs = base.CellularSpace{xdim = 10}
 <li><strong>#1</strong>: A string with the name of the package.</li>
 </ul>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>if isLoaded(&quot;base&quot;) then
-    print(&quot;is loaded&quot;)
-end
-</code></pre></div>
+<pre class="highlight"><code>if isLoaded("base") then
+    print("is loaded")
+end</code></pre>
 <hr />
 <h2 id="packageinfo"><strong>packageInfo</strong></h2>
 <p>Return the description of a package. This function tries to find the package in the TerraME installation directory. If it does not exist then it checks wether the package is available in the current directory. If the package does not exist then it stops with an error. Otherwise, it reads file description.lua and returns the following string attributes.  </p>
@@ -379,9 +374,8 @@ end
 <li><strong>#1</strong>: A string with the name of the package. If nil, packageInfo will return the description of TerraME.</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = packageInfo().version
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = packageInfo().version
+print(str)</code></pre>
               
             </div>
           </div><footer>

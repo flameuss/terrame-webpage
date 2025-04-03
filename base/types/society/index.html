@@ -106,7 +106,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#instance-agent-execute-function-end-run-function-end-age-randommin-1-max-50-step-1-s-society-instance-instance-quantity-20-sexecute-call-execute-for-each-agent-srun-call-run-for-each-agent-printsage-sum-of-the-ages-of-each-agent-prints-instance-agent-execute-function-end-s-society-instance-instance-file-filepathagentscsv-base-prints">instance = Agent{ execute = function() end, run = function() end, age = Random{min = 1, max = 50, step = 1} } s = Society{ instance = instance, quantity = 20 } s:execute() -- call execute for each agent s:run() -- call run for each agent print(s:age()) -- sum of the ages of each agent print(#s) instance = Agent{ execute = function() end } s = Society{ instance = instance, file = filePath(&quot;agents.csv&quot;, &quot;base&quot;) } print(#s)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#instance-agent-execute-function-end-run-function-end-age-randommin-1-max-50-step-1-s-society-instance-instance-quantity-20-sexecute-call-execute-for-each-agent-srun-call-run-for-each-agent-printsage-sum-of-the-ages-of-each-agent-prints-instance-agent-execute-function-end-s-society-instance-instance-file-filepathagentscsv-base-prints">instance = Agent{ execute = function() end, run = function() end, age = Random{min = 1, max = 50, step = 1} } s = Society{ instance = instance, quantity = 20 } s:execute() -- call execute for each agent s:run() -- call run for each agent print(s:age()) -- sum of the ages of each agent print(#s) instance = Agent{ execute = function() end } s = Society{ instance = instance, file = filePath("agents.csv", "base") } print(#s)</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
     </li>
@@ -335,7 +335,7 @@
 <li><strong>placements</strong>: A vector with the names of the placements created using this object (see <a href="../environment/#createplacement">Environment:createPlacement()</a>).</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<h2 id="instance-agent-execute-function-end-run-function-end-age-randommin-1-max-50-step-1-s-society-instance-instance-quantity-20-sexecute-call-execute-for-each-agent-srun-call-run-for-each-agent-printsage-sum-of-the-ages-of-each-agent-prints-instance-agent-execute-function-end-s-society-instance-instance-file-filepathagentscsv-base-prints"><div class="highlight"><pre><span></span><code>instance = Agent{
+<h2 id="instance-agent-execute-function-end-run-function-end-age-randommin-1-max-50-step-1-s-society-instance-instance-quantity-20-sexecute-call-execute-for-each-agent-srun-call-run-for-each-agent-printsage-sum-of-the-ages-of-each-agent-prints-instance-agent-execute-function-end-s-society-instance-instance-file-filepathagentscsv-base-prints"><pre class="highlight"><code>instance = Agent{
     execute = function() end,
     run = function() end,
     age = Random{min = 1, max = 50, step = 1}
@@ -357,11 +357,10 @@ instance = Agent{
 
 s = Society{
     instance = instance,
-    file = filePath(&quot;agents.csv&quot;, &quot;base&quot;)
+    file = filePath("agents.csv", "base")
 }
 
-print(#s)
-</code></pre></div></h2>
+print(#s)</code></pre></h2>
 <h2 id="functions">Functions</h2>
 <table>
 <thead>
@@ -421,7 +420,7 @@ print(#s)
 <li><strong>#1</strong>: The new Agent that will be added to the Society. If nil, the Society will add a copy of its instance. In this case, the Society converts <a href="../random/">Random</a> values into samples and executes <a href="../agent/#init">Agent:init()</a>.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{
+<pre class="highlight"><code>ag = Agent{
     age = Random{min = 1, max = 50, step = 1}
 }
 
@@ -433,8 +432,7 @@ soc = Society{
 soc:add()
 print(#soc)
 agent = soc:add()
-print(agent.age)
-</code></pre></div>
+print(agent.age)</code></pre>
 <h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../agent/#init">init (Agent)</a></li>
@@ -443,7 +441,7 @@ print(agent.age)
 <h2 id="clear"><strong>clear</strong></h2>
 <p>Remove all the <a href="../agent/">Agents</a> from the Society.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 
 soc = Society{
     instance = ag,
@@ -452,8 +450,7 @@ soc = Society{
 
 print(#soc)
 soc:clear()
-print(#soc)
-</code></pre></div>
+print(#soc)</code></pre>
 <hr />
 <h2 id="createsocialnetwork"><strong>createSocialNetwork</strong></h2>
 <p>Create a directed <a href="../socialNetwork/">SocialNetwork</a> for each <a href="../agent/">Agent</a> of the Society.  </p>
@@ -540,7 +537,7 @@ print(#soc)
 <li><strong>symmetric</strong>: A boolean value indicating that, if Agent a is connected to Agent b, then Agent b will be connected to Agent a. In practice, if this option is used, the number of connections double. For example, if one use this with 20% of probability, on average, Agents will be connected with 40% of probability. The default value is false.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 
 soc = Society{
     instance = ag,
@@ -553,7 +550,7 @@ soc:createSocialNetwork{
 
 soc:createSocialNetwork{
     probability = 0.15,
-    name = &quot;random&quot;
+    name = "random"
 }
 
 cs = CellularSpace{xdim = 10}
@@ -562,10 +559,9 @@ env = Environment{soc, cs}
 env:createPlacement()
 
 soc:createSocialNetwork{
-   strategy = &quot;neighbor&quot;,
-   name = &quot;byneighbor&quot;
-}
-</code></pre></div>
+   strategy = "neighbor",
+   name = "byneighbor"
+}</code></pre>
 <hr />
 <h2 id="get"><strong>get</strong></h2>
 <p>Return a given <a href="../agent/">Agent</a> based on its position.  </p>
@@ -574,16 +570,15 @@ soc:createSocialNetwork{
 <li><strong>#1</strong>: The position of the Agent that will be returned. It can be a number (with the position of the Agent in the vector of Agents) or a string (with the id of the Agent).</li>
 </ul>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 
 soc = Society{
     instance = ag,
     quantity = 2
 }
 
-agent = soc:get(&quot;1&quot;)
-print(agent.id)
-</code></pre></div>
+agent = soc:get("1")
+print(agent.id)</code></pre>
 <hr />
 <h2 id="notify"><strong>notify</strong></h2>
 <p>Notify all the <a href="../agent/">Agents</a> of the Society.  </p>
@@ -592,7 +587,7 @@ print(agent.id)
 <li><strong>#1</strong>: A positive number representing the notification time. The default value is 0. It is also possible to use an <a href="../event/">Event</a> as argument. In this case, it will use the result of <a href="../event/#gettime">Event:getTime()</a>.</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 
 soc = Society{
     instance = ag,
@@ -602,8 +597,7 @@ soc = Society{
 soc:notify()
 soc:add()
 soc:add()
-soc:notify()
-</code></pre></div>
+soc:notify()</code></pre>
 <hr />
 <h2 id="remove"><strong>remove</strong></h2>
 <p>Remove a given <a href="../agent/">Agent</a> from the Society.  </p>
@@ -612,7 +606,7 @@ soc:notify()
 <li><strong>#1</strong>: The Agent that will be removed, or a function that takes an Agent as argument and returns true if the Agent must be removed.</li>
 </ul>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 
 soc = Society{
     instance = ag,
@@ -621,20 +615,18 @@ soc = Society{
 
 print(#soc)
 soc:remove(soc:sample())
-print(#soc)
-</code></pre></div>
+print(#soc)</code></pre>
 <hr />
 <h2 id="sample"><strong>sample</strong></h2>
 <p>Return a random <a href="../agent/">Agent</a> from the Society.  </p>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{}
+<pre class="highlight"><code>agent = Agent{}
 soc = Society{
     instance = agent,
     quantity = 10
 }
 
-sample = soc:sample()
-</code></pre></div>
+sample = soc:sample()</code></pre>
 <hr />
 <h2 id="split"><strong>split</strong></h2>
 <p>Split the Society into a set of <a href="../group/">Groups</a> according to a classification strategy. The Groups will have empty intersection and union equal to the whole Society (unless function below returns nil for some <a href="../agent/">Agent</a>). It works according to the type of its only and compulsory argument.  </p>
@@ -661,8 +653,8 @@ sample = soc:sample()
 </tbody>
 </table>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{
-    gender = Random{&quot;male&quot;, &quot;female&quot;},
+<pre class="highlight"><code>ag = Agent{
+    gender = Random{"male", "female"},
     age = Random{min = 1, max = 80, step = 1}
 }
 
@@ -671,22 +663,21 @@ soc = Society{
     quantity = 50
 }
 
-groups = soc:split(&quot;gender&quot;)
+groups = soc:split("gender")
 print(#groups.male) -- can be zero because it comes from an instance
 print(#groups.female) -- also
 
 groups2 = soc:split(function(ag)
     if ag.age &gt; 60 then
-        return &quot;old&quot;
+        return "old"
     else
-        return &quot;notold&quot;
+        return "notold"
     end
 end)
 
 if groups2.old then -- might not exist as it does not come from an instance
     print(#groups2.old)
-end
-</code></pre></div>
+end</code></pre>
 <hr />
 <h2 id="synchronize"><strong>synchronize</strong></h2>
 <p>Deliver asynchronous messages sent by <a href="../agent/">Agents</a> belonging to the Society.  </p>
@@ -695,7 +686,7 @@ end
 <li><strong>#1</strong>: A number indicating the current delay to be delivered. Messages with delay less or equal this value are sent, while the others have their delays reduced by this value. The default value is one.</li>
 </ul>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>nonFooAgent = Agent{
+<pre class="highlight"><code>nonFooAgent = Agent{
     received = 0,
     on_message = function(self)
         self.received = self.received + 1
@@ -720,21 +711,19 @@ print(otheragent.received)
 soc:synchronize(4)
 print(otheragent.received)
 soc:synchronize(2)
-print(otheragent.received)
-</code></pre></div>
+print(otheragent.received)</code></pre>
 <hr />
 <h2 id="_1"><strong>#</strong></h2>
 <p>Return the number of <a href="../agent/">Agents</a> in the Society.  </p>
 <h3 id="usage_10">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 
 soc = Society{
     instance = ag,
     quantity = 2
 }
 
-print(#soc)
-</code></pre></div>
+print(#soc)</code></pre>
               
             </div>
           </div><footer>

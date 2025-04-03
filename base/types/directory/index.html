@@ -247,15 +247,14 @@
 <li><strong>tmp</strong>: An optional boolean value indicating whether the directory should be temporary. The default value is false. When creating a temporary directory, the end of its name must contain X's, which are going to be replaced by random alphanumerical values in order to guarantee that the created directory will not replace a previous one.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>dir = Directory(&quot;/my/path/my_dir&quot;)
+<pre class="highlight"><code>dir = Directory("/my/path/my_dir")
 
 tmpDir = Directory{
-   name = &quot;mytmpdir_XXX&quot;,
+   name = "mytmpdir_XXX",
    tmp = true
 }
 
-print(tmpDir)
-</code></pre></div>
+print(tmpDir)</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -378,42 +377,38 @@ print(tmpDir)
 </tbody>
 </table>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>Directory(packageInfo(&quot;base&quot;).path..&quot;data&quot;):attributes(&quot;mode&quot;)
-</code></pre></div>
+<pre class="highlight"><code>Directory(packageInfo("base").path.."data"):attributes("mode")</code></pre>
 <hr />
 <h2 id="create"><strong>create</strong></h2>
 <p>Create the directory. Returns true if the operation was successful. In case of error, it returns nil plus an error string.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>dir = Directory(&quot;mydirectory&quot;)
+<pre class="highlight"><code>dir = Directory("mydirectory")
 dir:create()
 print(dir)
 
 tmpDir = Directory{
-   name = &quot;mytmpdir_XXX&quot;,
+   name = "mytmpdir_XXX",
    tmp = true
 }
 
 print(tmpDir)
 
 dir:delete()
-tmpDir:delete()
-</code></pre></div>
+tmpDir:delete()</code></pre>
 <hr />
 <h2 id="delete"><strong>delete</strong></h2>
 <p>Remove an existing directory. It removes all internal files and directories recursively. If the directory does not exist or it cannot be removed, this function stops with an error.  </p>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>dir = Directory(&quot;mydirectory&quot;)
+<pre class="highlight"><code>dir = Directory("mydirectory")
 dir:create()
-dir:delete()
-</code></pre></div>
+dir:delete()</code></pre>
 <hr />
 <h2 id="exists"><strong>exists</strong></h2>
 <p>Return whether the directory is stored in the computer.  </p>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>if Directory(&quot;C:\\TerraME\\bin&quot;):exists() then
-    print(&quot;is dir&quot;)
-end
-</code></pre></div>
+<pre class="highlight"><code>if Directory("C:\\TerraME\\bin"):exists() then
+    print("is dir")
+end</code></pre>
 <hr />
 <h2 id="list"><strong>list</strong></h2>
 <p>Return a vector of strings with the content of the directory.  </p>
@@ -422,28 +417,25 @@ end
 <li><strong>#1</strong>: A boolean value indicating whether hidden files should be returned. The default value is false.</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>files = packageInfo(&quot;base&quot;).data:list()
+<pre class="highlight"><code>files = packageInfo("base").data:list()
 
 forEachElement(files, function(_, file)
     print(file)
-end)
-</code></pre></div>
+end)</code></pre>
 <hr />
 <h2 id="name"><strong>name</strong></h2>
 <p>Return the name of a given directory. It is the last directory name given a full path.  </p>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>print(Directory(&quot;c:\\terrame\\bin\\&quot;):name()) -- &quot;bin&quot;
+<pre class="highlight"><code>print(Directory("c:\\terrame\\bin\\"):name()) -- "bin"
 
-print(Directory(&quot;/usr/local/bin&quot;):name()) -- &quot;bin&quot;
-</code></pre></div>
+print(Directory("/usr/local/bin"):name()) -- "bin"</code></pre>
 <hr />
 <h2 id="path"><strong>path</strong></h2>
 <p>Return the path of a given directory. In windows, it converts all backslashes into slashes.  </p>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>print(Directory(&quot;c:\\terrame\\bin\\&quot;):path()) -- &quot;c:/terrame&quot;
+<pre class="highlight"><code>print(Directory("c:\\terrame\\bin\\"):path()) -- "c:/terrame"
 
-print(Directory(&quot;/usr/local/bin&quot;):path()) -- &quot;/usr/local&quot;
-</code></pre></div>
+print(Directory("/usr/local/bin"):path()) -- "/usr/local"</code></pre>
 <hr />
 <h2 id="relativepath"><strong>relativePath</strong></h2>
 <p>Return a relative path given a small path.  </p>
@@ -452,15 +444,13 @@ print(Directory(&quot;/usr/local/bin&quot;):path()) -- &quot;/usr/local&quot;
 <li><strong>#1</strong>: A Directory or a string with a shorter path.</li>
 </ul>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>d = Directory(&quot;/my/full/path&quot;)
-print(d:relativePath(&quot;/my&quot;)) -- &quot;full/path&quot;
-</code></pre></div>
+<pre class="highlight"><code>d = Directory("/my/full/path")
+print(d:relativePath("/my")) -- "full/path"</code></pre>
 <hr />
 <h2 id="setcurrentdir"><strong>setCurrentDir</strong></h2>
 <p>Set the current working directory with the directory path. Returns true in case of success or nil plus an error string.  </p>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>Directory(&quot;c:\\tests&quot;):setCurrentDir()
-</code></pre></div>
+<pre class="highlight"><code>Directory("c:\\tests"):setCurrentDir()</code></pre>
 <hr />
 <h2 id="_1"><strong>..</strong></h2>
 <p>Concatenate the directory. It adds a path separator whenever needed.  </p>
@@ -469,8 +459,7 @@ print(d:relativePath(&quot;/my&quot;)) -- &quot;full/path&quot;
 <li><strong>#1</strong>: A string or an object that can be concatenated.</li>
 </ul>
 <h3 id="usage_10">Usage</h3>
-<div class="highlight"><pre><span></span><code>path = sessionInfo().path..&quot;data&quot;
-</code></pre></div>
+<pre class="highlight"><code>path = sessionInfo().path.."data"</code></pre>
               
             </div>
           </div><footer>

@@ -248,9 +248,8 @@
 <li><strong>weights</strong>: The weights of the Agents in the SocialNetwork.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>sn = SocialNetwork()
-sn = SocialNetwork{}
-</code></pre></div>
+<pre class="highlight"><code>sn = SocialNetwork()
+sn = SocialNetwork{}</code></pre>
 <h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../society/#createsocialnetwork">createSocialNetwork (Society)</a></li>
@@ -312,28 +311,26 @@ sn = SocialNetwork{}
 <li><strong>#2</strong>: A number representing the weight of the connection). The default value is 1.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>sn = SocialNetwork()
-agent1 = Agent{id = &quot;1&quot;}
-agent2 = Agent{id = &quot;2&quot;}
+<pre class="highlight"><code>sn = SocialNetwork()
+agent1 = Agent{id = "1"}
+agent2 = Agent{id = "2"}
 
 sn:add(agent1)
 sn:add(agent2, 0.5)
-print(#sn)
-</code></pre></div>
+print(#sn)</code></pre>
 <hr />
 <h2 id="clear"><strong>clear</strong></h2>
 <p>Remove all <a href="../agent/">Agents</a> from the SocialNetwork. In practice, it has the same behavior of calling SocialNetwork() again if the SocialNetwork was not added to any Agent.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>sn = SocialNetwork()
-agent1 = Agent{id = &quot;1&quot;}
-agent2 = Agent{id = &quot;2&quot;}
+<pre class="highlight"><code>sn = SocialNetwork()
+agent1 = Agent{id = "1"}
+agent2 = Agent{id = "2"}
 
 sn:add(agent1)
 sn:add(agent2)
 
 sn:clear()
-print(#sn)
-</code></pre></div>
+print(#sn)</code></pre>
 <hr />
 <h2 id="getweight"><strong>getWeight</strong></h2>
 <p>Return a number with the weight of a given connection.  </p>
@@ -342,16 +339,15 @@ print(#sn)
 <li><strong>#1</strong>: An <a href="../agent/">Agent</a>.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>sn = SocialNetwork()
-agent1 = Agent{id = &quot;1&quot;}
-agent2 = Agent{id = &quot;2&quot;}
+<pre class="highlight"><code>sn = SocialNetwork()
+agent1 = Agent{id = "1"}
+agent2 = Agent{id = "2"}
 
 sn:add(agent1)
 sn:add(agent2, 0.5)
 
 print(sn:getWeight(agent1))
-print(sn:getWeight(agent2))
-</code></pre></div>
+print(sn:getWeight(agent2))</code></pre>
 <hr />
 <h2 id="isconnection"><strong>isConnection</strong></h2>
 <p>Return whether a given <a href="../agent/">Agent</a> belongs to the SocialNetwork.  </p>
@@ -360,25 +356,23 @@ print(sn:getWeight(agent2))
 <li><strong>#1</strong>: An Agent.</li>
 </ul>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>sn = SocialNetwork()
-agent = Agent{id = &quot;1&quot;}
+<pre class="highlight"><code>sn = SocialNetwork()
+agent = Agent{id = "1"}
 
 sn:add(agent)
 
 if sn:isConnection(agent) then
-    print(&quot;connected&quot;)
-end
-</code></pre></div>
+    print("connected")
+end</code></pre>
 <hr />
 <h2 id="isempty"><strong>isEmpty</strong></h2>
 <p>Return whether the SocialNetwork does not contain any <a href="../agent/">Agent</a>.  </p>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>sn = SocialNetwork()
+<pre class="highlight"><code>sn = SocialNetwork()
 
 if sn:isEmpty() then
-    print(&quot;empty&quot;)
-end
-</code></pre></div>
+    print("empty")
+end</code></pre>
 <hr />
 <h2 id="remove"><strong>remove</strong></h2>
 <p>Remove an <a href="../agent/">Agent</a> from the SocialNetwork.  </p>
@@ -387,29 +381,27 @@ end
 <li><strong>#1</strong>: An Agent.</li>
 </ul>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>sn = SocialNetwork()
-agent1 = Agent{id = &quot;1&quot;}
-agent2 = Agent{id = &quot;2&quot;}
+<pre class="highlight"><code>sn = SocialNetwork()
+agent1 = Agent{id = "1"}
+agent2 = Agent{id = "2"}
 
 sn:add(agent1)
 sn:add(agent2)
 
 sn:remove(agent1)
-print(#sn)
-</code></pre></div>
+print(#sn)</code></pre>
 <hr />
 <h2 id="sample"><strong>sample</strong></h2>
 <p>Return a random <a href="../agent/">Agent</a> from the SocialNetwork.  </p>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>sn = SocialNetwork()
-agent1 = Agent{id = &quot;1&quot;}
-agent2 = Agent{id = &quot;2&quot;}
+<pre class="highlight"><code>sn = SocialNetwork()
+agent1 = Agent{id = "1"}
+agent2 = Agent{id = "2"}
 
 sn:add(agent1)
 sn:add(agent2)
 
-agent = sn:sample()
-</code></pre></div>
+agent = sn:sample()</code></pre>
 <hr />
 <h2 id="setweight"><strong>setWeight</strong></h2>
 <p>Update the weight of a connection.  </p>
@@ -419,23 +411,21 @@ agent = sn:sample()
 <li><strong>#2</strong>: A number with the new weight.</li>
 </ul>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>sn = SocialNetwork()
-agent1 = Agent{id = &quot;1&quot;}
-agent2 = Agent{id = &quot;2&quot;}
+<pre class="highlight"><code>sn = SocialNetwork()
+agent1 = Agent{id = "1"}
+agent2 = Agent{id = "2"}
 
 sn:add(agent1)
 sn:add(agent2, 0.5)
 sn:setWeight(agent1, 0.001)
 
-print(sn:getWeight(agent1))
-</code></pre></div>
+print(sn:getWeight(agent1))</code></pre>
 <hr />
 <h2 id="_1"><strong>#</strong></h2>
 <p>Retrieve the number of connections in the SocialNetwork.  </p>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>sn = SocialNetwork()
-print(#sn)
-</code></pre></div>
+<pre class="highlight"><code>sn = SocialNetwork()
+print(#sn)</code></pre>
               
             </div>
           </div><footer>

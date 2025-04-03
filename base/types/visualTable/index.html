@@ -193,16 +193,15 @@
 <li><strong>target</strong>: An <a href="../agent/">Agent</a>, <a href="../cell/">Cell</a>, <a href="../cellularSpace/">CellularSpace</a>, or Society.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
+<pre class="highlight"><code>cell = Cell{
     temperature = 20,
     humidity = 0.4
 }
 
 VisualTable{
     target = cell,
-    select = {&quot;temperature&quot;, &quot;humidity&quot;}
-}
-</code></pre></div>
+    select = {"temperature", "humidity"}
+}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -231,35 +230,33 @@ VisualTable{
 <li><strong>#1</strong>: A string with the file name.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
+<pre class="highlight"><code>cell = Cell{
     temperature = 20,
     humidity = 0.4
 }
 
 vt = VisualTable{
     target = cell,
-    select = {&quot;temperature&quot;, &quot;humidity&quot;}
+    select = {"temperature", "humidity"}
 }
 
-vt:save(&quot;file.bmp&quot;)
-File(&quot;file.bmp&quot;):delete()
-</code></pre></div>
+vt:save("file.bmp")
+File("file.bmp"):delete()</code></pre>
 <hr />
 <h2 id="update"><strong>update</strong></h2>
 <p>Update the VisualTable with the latest values of its target. It is usually recommended to use the VisualTable as action of an <a href="../event/">Event</a> instead of calling this function explicitly.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
+<pre class="highlight"><code>cell = Cell{
     temperature = 20,
     humidity = 0.4
 }
 
 vt = VisualTable{
     target = cell,
-    select = {&quot;temperature&quot;, &quot;humidity&quot;}
+    select = {"temperature", "humidity"}
 }
 
-vt:update()
-</code></pre></div>
+vt:update()</code></pre>
               
             </div>
           </div><footer>

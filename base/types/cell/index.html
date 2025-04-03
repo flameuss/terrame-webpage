@@ -310,11 +310,10 @@
 <li><strong>placement</strong>: A <a href="../socialNetwork/">SocialNetwork</a> representing the default placement of the Cell (only when a call to <a href="../environment/#createplacement">Environment:createPlacement()</a> use the Cell).</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell {
-    cover = &quot;forest&quot;,
+<pre class="highlight"><code>cell = Cell {
+    cover = "forest",
     soilWater = 0
-}
-</code></pre></div>
+}</code></pre>
 <h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../../functions/utils/#foreachneighborhood">forEachNeighborhood (Utils)</a></li>
@@ -399,13 +398,12 @@
 <li><strong>#2</strong>: Neighborhood's name. The default value is "1".</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>c1 = Cell{}
+<pre class="highlight"><code>c1 = Cell{}
 c2 = Cell{}
 n = Neighborhood()
 
 n:add(c2)
-c1:addNeighborhood(n)
-</code></pre></div>
+c1:addNeighborhood(n)</code></pre>
 <h3 id="see-also_1">See also</h3>
 <ul>
 <li><a href="../neighborhood/">Neighborhood</a></li>
@@ -414,8 +412,7 @@ c1:addNeighborhood(n)
 <h2 id="area"><strong>area</strong></h2>
 <p>Return the Cell area.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell:area()
-</code></pre></div>
+<pre class="highlight"><code>cell:area()</code></pre>
 <hr />
 <h2 id="distance"><strong>distance</strong></h2>
 <p>Returns the shortest distance between the cells. If the cell do not have geometry, it calculates the Euclidean distance to a given Cell using the attributes x and y of both Cells.  </p>
@@ -424,11 +421,10 @@ c1:addNeighborhood(n)
 <li><strong>#1</strong>: Other Cell.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>c1 = Cell{x = 5, y = 5}
+<pre class="highlight"><code>c1 = Cell{x = 5, y = 5}
 c2 = Cell{x = 10, y = 10}
 dist = c1:distance(c2)
-print(dist)
-</code></pre></div>
+print(dist)</code></pre>
 <hr />
 <h2 id="getagent"><strong>getAgent</strong></h2>
 <p>Return an <a href="../agent/">Agent</a> that belongs to the Cell. It assumes that there is at most one Agent per Cell. If there is no Agent within the cell then it returns nil.  </p>
@@ -437,20 +433,19 @@ print(dist)
 <li><strong>#1</strong>: A string with the name of the placement. The default value is "placement".</li>
 </ul>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 s = Society{instance = ag, quantity = 2}
 ag1 = s.agents[1]
 cs = CellularSpace{xdim = 3}
 c = cs.cells[1]
 myEnv = Environment{cs, ag1}
 
-myEnv:createPlacement{strategy = &quot;void&quot;}
+myEnv:createPlacement{strategy = "void"}
 
 ag1:enter(c)
 if c:getAgent() == ag1 then
-    print(&quot;equal&quot;)
-end
-</code></pre></div>
+    print("equal")
+end</code></pre>
 <hr />
 <h2 id="getagents"><strong>getAgents</strong></h2>
 <p>Return the <a href="../agent/">Agents</a> that belong to the Cell. The returning vector.  </p>
@@ -459,28 +454,26 @@ end
 <li><strong>#1</strong>: A string with the name of the placement. The default value is "placement".</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 s = Society{instance = ag, quantity = 2}
 ag1 = s.agents[1]
 cs = CellularSpace{xdim = 3}
 c = cs.cells[1]
 myEnv = Environment{cs, ag1}
 
-myEnv:createPlacement{strategy = &quot;void&quot;}
+myEnv:createPlacement{strategy = "void"}
 
 ag1:enter(c)
 if c:getAgents()[1] == ag1 then
-    print(&quot;equal&quot;)
-end
-</code></pre></div>
+    print("equal")
+end</code></pre>
 <hr />
 <h2 id="getid"><strong>getId</strong></h2>
 <p>Return a string with the unique identifier of the Cell. Note that any Cell that belongs to a <a href="../cellularSpace/">CellularSpace</a> has an id.  </p>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{id = &quot;2&quot;}
+<pre class="highlight"><code>cell = Cell{id = "2"}
 id = cell:getId()
-print(id)
-</code></pre></div>
+print(id)</code></pre>
 <hr />
 <h2 id="getneighborhood"><strong>getNeighborhood</strong></h2>
 <p>Return a <a href="../neighborhood/">Neighborhood</a> of the Cell. If the Neighborhood does not exist then it returns nil.  </p>
@@ -489,20 +482,19 @@ print(id)
 <li><strong>#1</strong>: A string with the neighborhood's name to be retrieved. The default value is "1".</li>
 </ul>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10
 }
 
 cs:createNeighborhood()
 
 n = cs:sample():getNeighborhood()
-print(#n)
-</code></pre></div>
+print(#n)</code></pre>
 <hr />
 <h2 id="init"><strong>init</strong></h2>
 <p>User-defined function that is used to initialize a Cell when a <a href="../cellularSpace/">CellularSpace</a> is created. This function gets the Cell itself as argument.  </p>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
+<pre class="highlight"><code>cell = Cell{
     init = function(self)
         self.population = Random():integer(1, 100) -- initial population chosen randomly
     end,
@@ -514,8 +506,7 @@ cs = CellularSpace{
     instance = cell
 }
 
-print(cs:sample().population)
-</code></pre></div>
+print(cs:sample().population)</code></pre>
 <h3 id="see-also_2">See also</h3>
 <ul>
 <li><a href="../random/">Random</a></li>
@@ -528,20 +519,19 @@ print(cs:sample().population)
 <li><strong>#1</strong>: A string with the name of the placement. The default value is "placement".</li>
 </ul>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 s = Society{instance = ag, quantity = 2}
 ag1 = s.agents[1]
 cs = CellularSpace{xdim = 3}
 c = cs.cells[1]
 myEnv = Environment{cs, ag1}
 
-myEnv:createPlacement{strategy = &quot;void&quot;}
+myEnv:createPlacement{strategy = "void"}
 
 ag1:enter(c)
 if not c:isEmpty() then
-    print(&quot;not empty&quot;)
-end
-</code></pre></div>
+    print("not empty")
+end</code></pre>
 <hr />
 <h2 id="notify"><strong>notify</strong></h2>
 <p>Notify every Observer connected to the Cell.  </p>
@@ -550,17 +540,16 @@ end
 <li><strong>#1</strong>: A positive number representing the notification time. The default value is zero. It is also possible to use an <a href="../event/">Event</a> as argument. In this case, it will use the result of <a href="../event/#gettime">Event:getTime()</a>.</li>
 </ul>
 <h3 id="usage_10">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{value = 5}
+<pre class="highlight"><code>cell = Cell{value = 5}
 Chart{target = cell}
 
 cell:notify(1)
-cell:notify(2)
-</code></pre></div>
+cell:notify(2)</code></pre>
 <hr />
 <h2 id="on_synchronize"><strong>on_synchronize</strong></h2>
 <p>An optional user-defined function that is activated just after one calls <a href="./#synchronize">Cell:synchronize()</a>.  </p>
 <h3 id="usage_11">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
+<pre class="highlight"><code>cell = Cell{
     value = 3,
     on_synchronize = function(self)
         self.value = 0
@@ -568,8 +557,7 @@ cell:notify(2)
 }
 
 cell:synchronize()
-print(cell.value) -- 0
-</code></pre></div>
+print(cell.value) -- 0</code></pre>
 <hr />
 <h2 id="sample"><strong>sample</strong></h2>
 <p>Return a random Cell from a <a href="../neighborhood/">Neighborhood</a> of the Cell.  </p>
@@ -578,7 +566,7 @@ print(cell.value) -- 0
 <li><strong>#1</strong>: A string with the name of the Neighborhood. The default value is "1".</li>
 </ul>
 <h3 id="usage_12">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10
 }
 
@@ -586,8 +574,7 @@ cs:createNeighborhood()
 
 cell = cs:sample()
 neigh = cell:sample()
-print(type(neigh))
-</code></pre></div>
+print(type(neigh))</code></pre>
 <h3 id="see-also_3">See also</h3>
 <ul>
 <li><a href="./#getneighborhood">getNeighborhood</a></li>
@@ -600,20 +587,18 @@ print(type(neigh))
 <li><strong>#1</strong>: A string with the new unique identifier.</li>
 </ul>
 <h3 id="usage_13">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{id = &quot;2&quot;}
-cell:setId(&quot;newid&quot;)
+<pre class="highlight"><code>cell = Cell{id = "2"}
+cell:setId("newid")
 id = cell:getId()
-print(id)
-</code></pre></div>
+print(id)</code></pre>
 <hr />
 <h2 id="synchronize"><strong>synchronize</strong></h2>
 <p>Synchronizes the Cell. TerraME can keep two copies of the attributes of a Cell in memory: one stores the past values and the other stores the current (present) values. Synchronize copies the current values to a table named past, within the Cell. The previous past is therefore overwritten. In the end synchronize, it calls <a href="./#on_synchronize">Cell:on_synchronize()</a> if it exists.  </p>
 <h3 id="usage_14">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{value = 5}
+<pre class="highlight"><code>cell = Cell{value = 5}
 
 cell:synchronize()
-print(cell.past.value)
-</code></pre></div>
+print(cell.past.value)</code></pre>
 <h3 id="see-also_4">See also</h3>
 <ul>
 <li><a href="../cellularSpace/#synchronize">synchronize (CellularSpace)</a></li>
@@ -622,13 +607,12 @@ print(cell.past.value)
 <h2 id="_1"><strong>#</strong></h2>
 <p>Return the number of <a href="../neighborhood/">Neighborhoods</a> in the Cell.  </p>
 <h3 id="usage_15">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{}
+<pre class="highlight"><code>cell = Cell{}
 cell:addNeighborhood(Neighborhood())
 cell:addNeighborhood(Neighborhood())
 
 size = #cell
-print(size)
-</code></pre></div>
+print(size)</code></pre>
               
             </div>
           </div><footer>

@@ -188,16 +188,15 @@
 <li><strong>target</strong>: An <a href="../agent/">Agent</a>, <a href="../cell/">Cell</a>, <a href="../cellularSpace/">CellularSpace</a>, Society.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     age = 3
 }
 
 Log{
     target = agent,
-    file = &quot;agent.csv&quot;,
-    separator = &quot;;&quot;
-}
-</code></pre></div>
+    file = "agent.csv",
+    separator = ";"
+}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -218,20 +217,19 @@ Log{
 <h2 id="update"><strong>update</strong></h2>
 <p>Update the Log with the latest values of its target. It is usually recommended to use the Log as action of an <a href="../event/">Event</a> instead of calling this function explicitly.  </p>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     age = 3
 }
 
 log = Log{
     target = agent,
-    file = &quot;agent.csv&quot;,
-    separator = &quot;;&quot;
+    file = "agent.csv",
+    separator = ";"
 }
 
 log:update()
 
-File(&quot;agent.csv&quot;):delete()
-</code></pre></div>
+File("agent.csv"):delete()</code></pre>
               
             </div>
           </div><footer>

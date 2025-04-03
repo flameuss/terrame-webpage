@@ -233,7 +233,7 @@
 <li><strong>...</strong>: Values for the DataFrame. It can be a vector of named tables or a named table with whose values are vectors.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>-- named table with vectors
+<pre class="highlight"><code>-- named table with vectors
 df = DataFrame{
     x = {1, 1, 2, 2},
     y = {1, 2, 1, 2}
@@ -253,8 +253,7 @@ df = DataFrame{
 }
 
 print(df.y[2030]) -- 2
-print(df[2010].y) -- 2
-</code></pre></div>
+print(df[2010].y) -- 2</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -304,7 +303,7 @@ print(df[2010].y) -- 2
 <li><strong>#2</strong>: An optional number describing the position of the row. As default, this function adds the new row after the last one.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>df = DataFrame{
+<pre class="highlight"><code>df = DataFrame{
     {x = 1, y = 1}
 }
 
@@ -312,15 +311,13 @@ df:add{x = 5, y = 2}
 df:add{x = 4, y = 2}
 
 print(df[3].x) -- 4
-print(df.y[2]) -- 2
-</code></pre></div>
+print(df.y[2]) -- 2</code></pre>
 <hr />
 <h2 id="columns"><strong>columns</strong></h2>
 <p>Return the columns of the DataFrame. It is a named table whose indexes are the column names and the values are true.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>df = DataFrame{x = {1}, y = {2}}
-print(vardump(df:columns())) -- {x = true, y = true}
-</code></pre></div>
+<pre class="highlight"><code>df = DataFrame{x = {1}, y = {2}}
+print(vardump(df:columns())) -- {x = true, y = true}</code></pre>
 <hr />
 <h2 id="remove"><strong>remove</strong></h2>
 <p>Remove a given row. This function only works properly when the rows are numbered from one to the quantity of elements in the DataFrame.  </p>
@@ -329,7 +326,7 @@ print(vardump(df:columns())) -- {x = true, y = true}
 <li><strong>#1</strong>: A number with the position to be removed.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>df = DataFrame{
+<pre class="highlight"><code>df = DataFrame{
     {x = 1, y = 1},
     {x = 2, y = 1},
     {x = 3, y = 2},
@@ -340,15 +337,13 @@ print(vardump(df:columns())) -- {x = true, y = true}
 df:remove(3)
 
 print(#df) -- 4
-print(df[3].x) -- 4
-</code></pre></div>
+print(df[3].x) -- 4</code></pre>
 <hr />
 <h2 id="rows"><strong>rows</strong></h2>
 <p>Return the rows of the DataFrame. It is a named table whose indexes are the rows positions and the values are true.  </p>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>df = DataFrame{x = {1}, y = {2}}
-print(vardump(df:rows())) -- {true}
-</code></pre></div>
+<pre class="highlight"><code>df = DataFrame{x = {1}, y = {2}}
+print(vardump(df:rows())) -- {true}</code></pre>
 <hr />
 <h2 id="save"><strong>save</strong></h2>
 <p>Save the DataFrame to a given file.  </p>
@@ -357,23 +352,21 @@ print(vardump(df:rows())) -- {true}
 <li><strong>#1</strong>: A mandatory string with the file name or a <a href="../file/">File</a>. It can be a Lua file (.lua) or a CSV (.csv).</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>filename = &quot;dump.lua&quot;
+<pre class="highlight"><code>filename = "dump.lua"
 df = DataFrame{x = {1}, y = {2}}
 df:save(filename)
 
-File(filename):deleteIfExists()
-</code></pre></div>
+File(filename):deleteIfExists()</code></pre>
 <hr />
 <h2 id="_1"><strong>#</strong></h2>
 <p>Return the number of rows in the DataFrame.  </p>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>df = DataFrame{
+<pre class="highlight"><code>df = DataFrame{
     x = {1, 1, 2, 2},
     y = {1, 2, 1, 2}
 }
 
-print(#df) -- 4
-</code></pre></div>
+print(#df) -- 4</code></pre>
 <hr />
 <h2 id="_2"><strong>[]</strong></h2>
 <p>Return a row or a column of the DataFrame.  </p>
@@ -382,7 +375,7 @@ print(#df) -- 4
 <li><strong>#1</strong>: An index. If it is a number this function returns the given row as a named table. If it is a string this function returns the entire column as a vector.</li>
 </ul>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>df = DataFrame{
+<pre class="highlight"><code>df = DataFrame{
     x = {1, 1, 2, 2},
     y = {1, 2, 1, 2}
 }
@@ -392,8 +385,7 @@ print(df.x[1]) -- 1
 df.x[1] = 5
 df[1].x = df[1].x + 1
 
-print(df.x[1]) -- 6
-</code></pre></div>
+print(df.x[1]) -- 6</code></pre>
               
             </div>
           </div><footer>

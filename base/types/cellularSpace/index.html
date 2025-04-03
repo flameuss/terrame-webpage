@@ -398,19 +398,18 @@
 <li><strong>yMin</strong>: The minimum value of the attribute y of its Cells.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 20,
     ydim = 25
 }
 
 states = CellularSpace{
-    file = filePath(&quot;brazilstates.shp&quot;, &quot;base&quot;)
+    file = filePath("brazilstates.shp", "base")
 }
 
 cabecadeboi = CellularSpace{
-    file = filePath(&quot;cabecadeboi.shp&quot;)
-}
-</code></pre></div>
+    file = filePath("cabecadeboi.shp")
+}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -478,13 +477,12 @@ cabecadeboi = CellularSpace{
 <li><strong>#1</strong>: A Cell.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10
 }
 
 cell = Cell{x = 10, y = 11}
-cs:add(cell)
-</code></pre></div>
+cs:add(cell)</code></pre>
 <hr />
 <h2 id="createneighborhood"><strong>createNeighborhood</strong></h2>
 <p>Create a <a href="../neighborhood/">Neighborhood</a> for each <a href="../cell/">Cell</a> of the CellularSpace. Most of the available strategies require that each Cell has attributes with (x, y) locations. It is possible to set the attributes that represent (x, y) locations while creating the CellularSpace.  </p>
@@ -558,7 +556,7 @@ cs:add(cell)
 <li><strong>wrap</strong>: Will the Cells in the borders be connected to the Cells in the opposite border? The default value is false.</li>
 </ul>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
+<pre class="highlight"><code>cell = Cell{
     height = Random{min = 0, max = 100}
 }
 
@@ -570,19 +568,19 @@ cs = CellularSpace{
 cs:createNeighborhood() -- moore
 
 cs:createNeighborhood{
-    name = &quot;moore&quot;
+    name = "moore"
 }
 
 cs:createNeighborhood{
-    strategy = &quot;vonneumann&quot;,
-    name = &quot;vonneumann&quot;,
+    strategy = "vonneumann",
+    name = "vonneumann",
     self = true
 }
 
 cs:createNeighborhood{
-    strategy = &quot;mxn&quot;,
+    strategy = "mxn",
     m = 5,
-    name = &quot;5&quot;,
+    name = "5",
     filter = function(cell, candidate)
         return cell.height &gt; candidate.height
     end,
@@ -597,12 +595,11 @@ cs2 = CellularSpace{
 }
 
 cs:createNeighborhood{
-    strategy = &quot;mxn&quot;,
+    strategy = "mxn",
     target = cs2,
     m = 5,
-    name = &quot;spatialCoupling&quot;
-}
-</code></pre></div>
+    name = "spatialCoupling"
+}</code></pre>
 <hr />
 <h2 id="cut"><strong>cut</strong></h2>
 <p>Cut the CellularSpace according to maximum and minimum coordinates. It returns a <a href="../trajectory/">Trajectory</a> with the selected <a href="../cell/">Cells</a>.  </p>
@@ -614,11 +611,10 @@ cs:createNeighborhood{
 <li><strong>ymin</strong>: A number with the minimum value of y.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{xdim = 10}
+<pre class="highlight"><code>cs = CellularSpace{xdim = 10}
 
 cs2 = cs:cut{xmin = 3, ymax = 8}
-print(#cs2)
-</code></pre></div>
+print(#cs2)</code></pre>
 <hr />
 <h2 id="get"><strong>get</strong></h2>
 <p>Return a <a href="../cell/">Cell</a> from the CellularSpace, given its unique identifier or its location. If the Cell does not belong to the CellularSpace then it will return nil.  </p>
@@ -628,22 +624,20 @@ print(#cs2)
 <li><strong>#2</strong>: A number indicating a y coordinate. This argument is unnecessary when the first argument is a string.</li>
 </ul>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{xdim = 10}
+<pre class="highlight"><code>cs = CellularSpace{xdim = 10}
 
 cell = cs:get(2, 2)
 print(cell.x)
 print(cell.y)
 
-cell = cs:get(&quot;5&quot;)
-print(cell:getId())
-</code></pre></div>
+cell = cs:get("5")
+print(cell:getId())</code></pre>
 <hr />
 <h2 id="load"><strong>load</strong></h2>
 <p>Load the CellularSpace from the database. TerraME automatically executes this function when the CellularSpace is created, but one can execute this to load the attributes again, erasing all attributes and relations created by the modeler.  </p>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{xdim = 10}
-cs:load()
-</code></pre></div>
+<pre class="highlight"><code>cs = CellularSpace{xdim = 10}
+cs:load()</code></pre>
 <hr />
 <h2 id="loadneighborhood"><strong>loadNeighborhood</strong></h2>
 <p>Load a <a href="../neighborhood/">Neighborhood</a> stored in an external source. Each <a href="../cell/">Cell</a> receives its own set of neighbors.  </p>
@@ -676,12 +670,11 @@ cs:load()
 </tbody>
 </table>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
-    file = filePath(&quot;cabecadeboi800.shp&quot;, &quot;base&quot;)
+<pre class="highlight"><code>cs = CellularSpace{
+    file = filePath("cabecadeboi800.shp", "base")
 }
 
-cs:loadNeighborhood{file = filePath(&quot;cabecadeboi-neigh.gpm&quot;, &quot;base&quot;)}
-</code></pre></div>
+cs:loadNeighborhood{file = filePath("cabecadeboi-neigh.gpm", "base")}</code></pre>
 <hr />
 <h2 id="notify"><strong>notify</strong></h2>
 <p>Notify every Observer connected to the CellularSpace.  </p>
@@ -690,7 +683,7 @@ cs:loadNeighborhood{file = filePath(&quot;cabecadeboi-neigh.gpm&quot;, &quot;bas
 <li><strong>#1</strong>: A number representing the notification time. The default value is zero. It is also possible to use an <a href="../event/">Event</a> as argument. In this case, it will use the result of <a href="../event/#gettime">Event:getTime()</a>.</li>
 </ul>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10,
     value = 5
 }
@@ -698,19 +691,17 @@ cs:loadNeighborhood{file = filePath(&quot;cabecadeboi-neigh.gpm&quot;, &quot;bas
 Chart{target = cs}
 
 cs:notify(1)
-cs:notify(2)
-</code></pre></div>
+cs:notify(2)</code></pre>
 <hr />
 <h2 id="sample"><strong>sample</strong></h2>
 <p>Return a random <a href="../cell/">Cell</a> from the CellularSpace.  </p>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10
 }
 
 cell = cs:sample()
-print(type(cell))
-</code></pre></div>
+print(type(cell))</code></pre>
 <hr />
 <h2 id="save"><strong>save</strong></h2>
 <p>Save the attributes of a CellularSpace into <a href="http://localhost:5500/gis/doc/files/Project.html">Project (gis package)</a> or a tif file.  </p>
@@ -720,25 +711,24 @@ print(type(cell))
 <li><strong>#2</strong>: A vector with the names of the attributes to be saved. If the data come from a layer, these attributes should be only the attributes that were created or modified. The other attributes of the layer will also be saved in the new output. If the data come from a tif directory, it is only possible save one attribute at a time. The attribute value saved will have the same type of the loaded tif files, it means, if the tif is 8 bits the new tif will be 8 bits as well. When saving a single attribute, you can use a string "attribute" instead of a table {"attribute"}.</li>
 </ul>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>import(&quot;gis&quot;)
+<pre class="highlight"><code>import("gis")
 
 proj = Project{
-    file = &quot;amazonia.tview&quot;,
+    file = "amazonia.tview",
     clean = true,
-    amazonia = filePath(&quot;amazonia.shp&quot;)
+    amazonia = filePath("amazonia.shp")
 }
 
 cs = CellularSpace{
     project = proj,
-    layer = &quot;amazonia&quot;
+    layer = "amazonia"
 }
 
 forEachCell(cs, function(cell)
     cell.distweight = 1 / cell.distroad
 end)
 
-cs:save(&quot;myamazonia&quot;, &quot;distweight&quot;)
-</code></pre></div>
+cs:save("myamazonia", "distweight")</code></pre>
 <hr />
 <h2 id="split"><strong>split</strong></h2>
 <p>Split the CellularSpace into a table of <a href="../trajectory/">Trajectories</a> according to a classification strategy. The Trajectories will have empty intersection and union equal to the whole CellularSpace (unless function below returns nil for some <a href="../cell/">Cell</a>). It works according to the type of its only and compulsory argument.  </p>
@@ -765,8 +755,8 @@ cs:save(&quot;myamazonia&quot;, &quot;distweight&quot;)
 </tbody>
 </table>
 <h3 id="usage_10">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
-    cover = Random{&quot;pasture&quot;, &quot;forest&quot;},
+<pre class="highlight"><code>cell = Cell{
+    cover = Random{"pasture", "forest"},
     forest = Random{min = 0, max = 1}
 }
 
@@ -775,22 +765,21 @@ cs = CellularSpace{
     instance = cell
 }
 
-ts = cs:split(&quot;cover&quot;)
+ts = cs:split("cover")
 print(#ts.forest) -- can be zero because it comes from an instance
 print(#ts.pasture) -- also
 
 ts2 = cs:split(function(cell)
     if cell.forest &gt; 0.5 then
-        return &quot;gt&quot;
+        return "gt"
     else
-        return &quot;lt&quot;
+        return "lt"
     end
 end)
 
 if ts2.gt then -- might not exist as it does not come from an instance
     print(#ts2.gt)
-end
-</code></pre></div>
+end</code></pre>
 <hr />
 <h2 id="synchronize"><strong>synchronize</strong></h2>
 <p>Synchronize the CellularSpace, calling the function synchronize() for each of its <a href="../cell/">Cells</a>.  </p>
@@ -799,7 +788,7 @@ end
 <li><strong>#1</strong>: A string or a vector of strings with the attributes to be synchronized. If empty, TerraME synchronizes every attribute of the Cells but the (x, y) coordinates. If the CellularSpace has an instance and it implements <a href="../cell/#on_synchronize">Cell:on_synchronize()</a> then it will be called for each Cell.</li>
 </ul>
 <h3 id="usage_11">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
+<pre class="highlight"><code>cell = Cell{
     forest = Random{min = 0, max = 1}
 }
 
@@ -811,16 +800,14 @@ cs = CellularSpace{
 cs:synchronize()
 c = cs:sample()
 print(c.forest)
-print(c.past.forest)
-</code></pre></div>
+print(c.past.forest)</code></pre>
 <hr />
 <h2 id="_1"><strong>#</strong></h2>
 <p>Return the number of <a href="../cell/">Cells</a> in the CellularSpace.  </p>
 <h3 id="usage_12">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{xdim = 5}
+<pre class="highlight"><code>cs = CellularSpace{xdim = 5}
 
-print(#cs)
-</code></pre></div>
+print(#cs)</code></pre>
               
             </div>
           </div><footer>

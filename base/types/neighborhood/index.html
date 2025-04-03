@@ -237,9 +237,8 @@
 <p>A Neighborhood is a set of pairs (cell, weight), where cell is a neighbor <a href="../cell/">Cell</a> and weight is a number storing the relation's strength. Each Cell can have one or more Neighborhoods to represent its proximity relations.  </p>
 <p>This type is used to create Neighborhoods from scratch to be used by <a href="../cell/#addneighborhood">Cell:addNeighborhood()</a>. To create well-established Neighborhoods see <a href="../cellularSpace/#createneighborhood">CellularSpace:createNeighborhood()</a>. Neighborhoods can also be loaded from external soures using <a href="../cellularSpace/#loadneighborhood">CellularSpace:loadNeighborhood()</a>. It is recommended that a Neighborhood should contain only Cells that belong to the same <a href="../cellularSpace/">CellularSpace</a>, as it guarantees that all its Cells have unique identifiers. Calling <a href="../../functions/utils/#foreachneighbor">forEachNeighbor()</a> from a Cell traverses one of its Neighborhoods.  </p>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>n = Neighborhood()
-n = Neighborhood{}
-</code></pre></div>
+<pre class="highlight"><code>n = Neighborhood()
+n = Neighborhood{}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -297,17 +296,15 @@ n = Neighborhood{}
 <li><strong>#2</strong>: A number representing the weight of the connection. The default value is 1.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>n = Neighborhood()
+<pre class="highlight"><code>n = Neighborhood()
 c = Cell{}
-n:add(c, 0.02)
-</code></pre></div>
+n:add(c, 0.02)</code></pre>
 <hr />
 <h2 id="clear"><strong>clear</strong></h2>
 <p>Remove all <a href="../cell/">Cells</a> from the Neighborhood. In practice, it has the same behavior as calling Neighborhood() again if the Neighborhood was not added to any Cell.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>n = Neighborhood()
-n:clear()
-</code></pre></div>
+<pre class="highlight"><code>n = Neighborhood()
+n:clear()</code></pre>
 <hr />
 <h2 id="getweight"><strong>getWeight</strong></h2>
 <p>Return the weight of the connection to a given neighbor <a href="../cell/">Cell</a>. It returns nil when the Cell is not a neighbor.  </p>
@@ -316,22 +313,20 @@ n:clear()
 <li><strong>#1</strong>: A Cell.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>c = Cell{}
+<pre class="highlight"><code>c = Cell{}
 n = Neighborhood()
 n:add(c, 0.5)
 
-print(n:getWeight(c))
-</code></pre></div>
+print(n:getWeight(c))</code></pre>
 <hr />
 <h2 id="isempty"><strong>isEmpty</strong></h2>
 <p>Return whether the Neighborhood does not contain any <a href="../cell/">Cell</a>.  </p>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>n = Neighborhood()
+<pre class="highlight"><code>n = Neighborhood()
 
 if n:isEmpty() then
-    print(&quot;is empty&quot;)
-end
-</code></pre></div>
+    print("is empty")
+end</code></pre>
 <hr />
 <h2 id="isneighbor"><strong>isNeighbor</strong></h2>
 <p>Return whether a given <a href="../cell/">Cell</a> belongs to the Neighborhood.  </p>
@@ -340,14 +335,13 @@ end
 <li><strong>#1</strong>: A Cell.</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>n = Neighborhood()
+<pre class="highlight"><code>n = Neighborhood()
 c = Cell{}
 
 n:add(c)
 if n:isNeighbor(c) then
-    print(&quot;is neighbor&quot;)
-end
-</code></pre></div>
+    print("is neighbor")
+end</code></pre>
 <hr />
 <h2 id="remove"><strong>remove</strong></h2>
 <p>Remove a <a href="../cell/">Cell</a> from the Neighborhood.  </p>
@@ -356,8 +350,8 @@ end
 <li><strong>#1</strong>: The Cell that is going to be removed.</li>
 </ul>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>c1 = Cell{id = &quot;1&quot;}
-c2 = Cell{id = &quot;2&quot;}
+<pre class="highlight"><code>c1 = Cell{id = "1"}
+c2 = Cell{id = "2"}
 
 n = Neighborhood()
 n:add(c1)
@@ -365,22 +359,20 @@ n:add(c2)
 
 print(#n)
 n:remove(c1)
-print(#n)
-</code></pre></div>
+print(#n)</code></pre>
 <hr />
 <h2 id="sample"><strong>sample</strong></h2>
 <p>Return a random <a href="../cell/">Cell</a> from the Neighborhood.  </p>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>c1 = Cell{id = &quot;1&quot;}
-c2 = Cell{id = &quot;2&quot;}
+<pre class="highlight"><code>c1 = Cell{id = "1"}
+c2 = Cell{id = "2"}
 
 n = Neighborhood()
 n:add(c1)
 n:add(c2)
 
 cell = n:sample()
-print(type(cell))
-</code></pre></div>
+print(type(cell))</code></pre>
 <hr />
 <h2 id="setweight"><strong>setWeight</strong></h2>
 <p>Update a weight of the connection to a given neighbor <a href="../cell/">Cell</a>.  </p>
@@ -390,22 +382,20 @@ print(type(cell))
 <li><strong>#2</strong>: A number with the new weight.</li>
 </ul>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>c = Cell{}
+<pre class="highlight"><code>c = Cell{}
 n = Neighborhood()
 n:add(c, 0.5)
 
 print(n:getWeight(c))
 n:setWeight(c, 0.01)
-print(n:getWeight(c))
-</code></pre></div>
+print(n:getWeight(c))</code></pre>
 <hr />
 <h2 id="_1"><strong>#</strong></h2>
 <p>Return the number of <a href="../cell/">Cells</a> in the Neighborhood.  </p>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>n = Neighborhood()
+<pre class="highlight"><code>n = Neighborhood()
 
-print(#n)
-</code></pre></div>
+print(#n)</code></pre>
               
             </div>
           </div><footer>

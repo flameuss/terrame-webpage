@@ -246,10 +246,9 @@
                 <h1 id="profiler">Profiler</h1>
 <p>The type Profiler is used to measure the simulation/execution time of a model or the time to execute small blocks of a model. The user can inform Profiler how many times a block will execute. Thus it can estimate the time left to finish the execution of a block. This type also summaries all its measures and show a report containing how many times a block was executed, the time to execute all repetitions of this block and the average time of these repetitions.  </p>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>Profiler():start(&quot;test&quot;)
-Profiler():stop(&quot;test&quot;)
-print(Profiler():uptime(&quot;test&quot;))
-</code></pre></div>
+<pre class="highlight"><code>Profiler():start("test")
+Profiler():stop("test")
+print(Profiler():uptime("test"))</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -306,8 +305,7 @@ print(Profiler():uptime(&quot;test&quot;))
 <h2 id="clean"><strong>clean</strong></h2>
 <p>Clean the Profiler, removing all blocks and restarting its execution time.  </p>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>Profiler():clean()
-</code></pre></div>
+<pre class="highlight"><code>Profiler():clean()</code></pre>
 <hr />
 <h2 id="clock"><strong>clock</strong></h2>
 <p>Return how much time of CPU was spent on the block up to last stop. It returns two representations: a string with a human-like representation of the time and a number with the time in seconds.  </p>
@@ -316,10 +314,9 @@ print(Profiler():uptime(&quot;test&quot;))
 <li><strong>#1</strong>: A string with the block name. If the name is not informed, then it returns the uptime of the current block.</li>
 </ul>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>Profiler():start(&quot;block&quot;)
-Profiler():stop(&quot;block&quot;)
-stringTime, numberTime = Profiler():clock(&quot;block&quot;)
-</code></pre></div>
+<pre class="highlight"><code>Profiler():start("block")
+Profiler():stop("block")
+stringTime, numberTime = Profiler():clock("block")</code></pre>
 <hr />
 <h2 id="count"><strong>count</strong></h2>
 <p>Return how many times a given block has started.  </p>
@@ -328,18 +325,16 @@ stringTime, numberTime = Profiler():clock(&quot;block&quot;)
 <li><strong>#1</strong>: A string with the block name. If the name is not informed, then it returns the count of the current block.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>Profiler():start(&quot;block&quot;)
-print(Profiler():count(&quot;block&quot;)) -- 1
-Profiler():stop(&quot;block&quot;)
-</code></pre></div>
+<pre class="highlight"><code>Profiler():start("block")
+print(Profiler():count("block")) -- 1
+Profiler():stop("block")</code></pre>
 <hr />
 <h2 id="current"><strong>current</strong></h2>
 <p>Return the current block.  </p>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>Profiler():start(&quot;block&quot;)
+<pre class="highlight"><code>Profiler():start("block")
 print(Profiler():current().name) -- block
-Profiler():stop(&quot;block&quot;)
-</code></pre></div>
+Profiler():stop("block")</code></pre>
 <hr />
 <h2 id="eta"><strong>eta</strong></h2>
 <p>Estimate and return the time to execute all repetitions of a given block. It returns in two representations: a string with a human-like representation of the time and a number with the time in seconds.  </p>
@@ -348,19 +343,17 @@ Profiler():stop(&quot;block&quot;)
 <li><strong>#1</strong>: A string with the block name. If the name is not informed, then it returns the "eta" of the current block.</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>Profiler():steps(&quot;block&quot;, 5)
-Profiler():start(&quot;block&quot;)
-Profiler():stop(&quot;block&quot;)
-eta_string, eta_number = Profiler():eta(&quot;block&quot;)
-print(eta_string..&quot; left...&quot;)
-print(eta_number..&quot; seconds to finish...&quot;)
-</code></pre></div>
+<pre class="highlight"><code>Profiler():steps("block", 5)
+Profiler():start("block")
+Profiler():stop("block")
+eta_string, eta_number = Profiler():eta("block")
+print(eta_string.." left...")
+print(eta_number.." seconds to finish...")</code></pre>
 <hr />
 <h2 id="report"><strong>report</strong></h2>
 <p>Show a report with the time and amount of times each block was executed.  </p>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>Profiler():report()
-</code></pre></div>
+<pre class="highlight"><code>Profiler():report()</code></pre>
 <hr />
 <h2 id="start"><strong>start</strong></h2>
 <p>Create and start a new block.  </p>
@@ -369,9 +362,8 @@ print(eta_number..&quot; seconds to finish...&quot;)
 <li><strong>#1</strong>: A string with the block name.</li>
 </ul>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>Profiler():start(&quot;block&quot;)
-Profiler():stop(&quot;block&quot;)
-</code></pre></div>
+<pre class="highlight"><code>Profiler():start("block")
+Profiler():stop("block")</code></pre>
 <hr />
 <h2 id="steps"><strong>steps</strong></h2>
 <p>Define how many times a given block will be executed.  </p>
@@ -381,10 +373,9 @@ Profiler():stop(&quot;block&quot;)
 <li><strong>#2</strong>: Number of steps a given block will execute.</li>
 </ul>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>Profiler():start(&quot;block&quot;)
-Profiler():steps(&quot;block&quot;, 5)
-Profiler():stop(&quot;block&quot;)
-</code></pre></div>
+<pre class="highlight"><code>Profiler():start("block")
+Profiler():steps("block", 5)
+Profiler():stop("block")</code></pre>
 <hr />
 <h2 id="stop"><strong>stop</strong></h2>
 <p>Stop to measure the time of a given block and return how much time was spent with the block since it was started. It returns a table with the spent time in seconds (time), a string with a human-like representation of the time (strTime), spent time of CPU in high precision (clock), a string with a human-like representation of the time of CPU (strClock).  </p>
@@ -393,13 +384,12 @@ Profiler():stop(&quot;block&quot;)
 <li><strong>#1</strong>: A string with the block name. If the name is not informed, then it stops and return the uptime of the current block.</li>
 </ul>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>Profiler():start(&quot;block&quot;)
-timeTable = Profiler():stop(&quot;block&quot;)
+<pre class="highlight"><code>Profiler():start("block")
+timeTable = Profiler():stop("block")
 time = timeTable.time
 clock = timeTable.clock
 strTime = timeTable.strTime
-strClock = timeTable.strClock
-</code></pre></div>
+strClock = timeTable.strClock</code></pre>
 <hr />
 <h2 id="uptime"><strong>uptime</strong></h2>
 <p>Return how much time was spent on the block up to last stop. It returns two representations: a string with a human-like representation of the time and a number with the time in seconds.  </p>
@@ -408,10 +398,9 @@ strClock = timeTable.strClock
 <li><strong>#1</strong>: A string with the block name. If the name is not informed, then it returns the uptime of the current block.</li>
 </ul>
 <h3 id="usage_10">Usage</h3>
-<div class="highlight"><pre><span></span><code>Profiler():start(&quot;block&quot;)
-Profiler():stop(&quot;block&quot;)
-stringTime, numberTime = Profiler():uptime(&quot;block&quot;)
-</code></pre></div>
+<pre class="highlight"><code>Profiler():start("block")
+Profiler():stop("block")
+stringTime, numberTime = Profiler():uptime("block")</code></pre>
               
             </div>
           </div><footer>

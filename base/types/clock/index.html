@@ -194,7 +194,7 @@
 <li><strong>target</strong>: A Timer.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<h2 id="timer-timer-eventaction-function-end-eventperiod-2-action-function-end-clocktarget-timer-timerrun3-timernotify"><div class="highlight"><pre><span></span><code>timer = Timer{
+<h2 id="timer-timer-eventaction-function-end-eventperiod-2-action-function-end-clocktarget-timer-timerrun3-timernotify"><pre class="highlight"><code>timer = Timer{
     Event{action = function() end},
     Event{period = 2, action = function() end}
 }
@@ -202,8 +202,7 @@
 Clock{target = timer}
 
 timer:run(3)
-timer:notify()
-</code></pre></div></h2>
+timer:notify()</code></pre></h2>
 <h2 id="functions">Functions</h2>
 <table>
 <thead>
@@ -231,27 +230,25 @@ timer:notify()
 <li><strong>#1</strong>: A string with the file name.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>timer = Timer{
+<pre class="highlight"><code>timer = Timer{
     Event{action = function() end}
 }
 
 clock = Clock{target = timer}
 
-clock:save(&quot;file.bmp&quot;)
-File(&quot;file.bmp&quot;):delete()
-</code></pre></div>
+clock:save("file.bmp")
+File("file.bmp"):delete()</code></pre>
 <hr />
 <h2 id="update"><strong>update</strong></h2>
 <p>Update the Clock with the latest values of its target. It is usually recommended to use the Clock as action of an <a href="../event/">Event</a> instead of calling this function explicitly.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>timer = Timer{
+<pre class="highlight"><code>timer = Timer{
     Event{action = function() end}
 }
 
 clock = Clock{target = timer}
 
-clock:update()
-</code></pre></div>
+clock:update()</code></pre>
               
             </div>
           </div><footer>

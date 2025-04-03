@@ -293,13 +293,13 @@
 <li><strong>start</strong>: A number representing the time instant when the Event will occur for the first time. The default value is one, except when using graphics (Chart, Map, Clock, etc.) as action. In this case the default value is zero, plotting the initial state of the simulation.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
+<pre class="highlight"><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
     print(event:getTime())
 end}
 
 agent = Agent{
     execute = function()
-        print(&quot;executing&quot;)
+        print("executing")
     end
 }
 
@@ -309,8 +309,7 @@ event2 = Event{
 }
 
 timer = Timer{event, event2}
-timer:run(10)
-</code></pre></div>
+timer:run(10)</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -353,16 +352,15 @@ timer:run(10)
 <li><strong>time</strong>: The time instant the Event will occur.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>event = Event{start = 2, action = function() end}
+<pre class="highlight"><code>event = Event{start = 2, action = function() end}
 
 event:config{priority = -1}
-event:config{time = 10, period = 2}
-</code></pre></div>
+event:config{time = 10, period = 2}</code></pre>
 <hr />
 <h2 id="getparent"><strong>getParent</strong></h2>
 <p>Return the <a href="../timer/">Timer</a> that contains the Event.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>event = Event {action = function(event)
+<pre class="highlight"><code>event = Event {action = function(event)
     print(event:getTime())
 end}
 
@@ -370,42 +368,38 @@ timer = Timer{event}
 
 parent = event:getParent()
 if parent == timer then
-    print(&quot;equal&quot;)
-end
-</code></pre></div>
+    print("equal")
+end</code></pre>
 <hr />
 <h2 id="getperiod"><strong>getPeriod</strong></h2>
 <p>Return the period of the Event.  </p>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
+<pre class="highlight"><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
     print(event:getTime())
 end}
 
 period = event:getPeriod()
-print(period)
-</code></pre></div>
+print(period)</code></pre>
 <hr />
 <h2 id="getpriority"><strong>getPriority</strong></h2>
 <p>Return the priority of the Event.  </p>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
+<pre class="highlight"><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
     print(event:getTime())
 end}
 
 priority = event:getPriority()
-print(priority)
-</code></pre></div>
+print(priority)</code></pre>
 <hr />
 <h2 id="gettime"><strong>getTime</strong></h2>
 <p>Return the current simulation time, according to the <a href="../timer/">Timer</a> it belongs.  </p>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
+<pre class="highlight"><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
     print(event:getTime())
 end}
 
 time = event:getTime()
-print(time)
-</code></pre></div>
+print(time)</code></pre>
               
             </div>
           </div><footer>

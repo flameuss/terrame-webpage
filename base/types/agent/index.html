@@ -403,21 +403,20 @@
 <li>state_: An internal state for the Agent. Never use this object.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code><span class="n">singleFooAgent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">{</span>
-    <span class="n">size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
-    <span class="n">execute</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">size</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="n">self</span><span class="p">:</span><span class="n">walk</span><span class="p">()</span>
-    <span class="kr">end</span><span class="p">,</span>
-    <span class="n">on_hello</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
-        <span class="n">self</span><span class="p">:</span><span class="n">message</span><span class="p">{</span>
-            <span class="n">receiver</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="n">sender</span><span class="p">,</span>
-            <span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;hi&quot;</span>
-        <span class="p">}</span>
-    <span class="kr">end</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre class="highlight"><code class="language-lua">singleFooAgent = Agent{
+    size = 10,
+    name = "foo",
+    execute = function(self)
+        self.size = self.size + 1
+        self:walk()
+    end,
+    on_hello = function(self, m)
+        self:message{
+            receiver = m.sender,
+            content = "hi"
+        }
+    end
+}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -534,12 +533,11 @@
 <li><strong>#1</strong>: A State or a Trajectory.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 cs = CellularSpace{xdim = 5}
 traj = Trajectory{target = cs}
 
-ag:add(traj)
-</code></pre></div>
+ag:add(traj)</code></pre>
 <hr />
 <h2 id="addsocialnetwork">addSocialNetwork</h2>
 <p>Add a <a href="../socialNetwork/">SocialNetwork</a> to the Agent. This function replaces previous SocialNetwork with the same id (if it exists) without showing any warning message.  </p>
@@ -549,7 +547,7 @@ ag:add(traj)
 <li><strong>#2</strong>: Name of the relation. The default value is "1".</li>
 </ul>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{}
+<pre class="highlight"><code>agent = Agent{}
 
 soc = Society{
     instance = agent,
@@ -567,8 +565,7 @@ if friend2 ~= friend1 then
     sn:add(friend2)
 end
 
-agent:addSocialNetwork(sn)
-</code></pre></div>
+agent:addSocialNetwork(sn)</code></pre>
 <h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../../functions/utils/#foreachconnection">forEachConnection (Utils)</a></li>
@@ -577,14 +574,13 @@ agent:addSocialNetwork(sn)
 <h2 id="die">die</h2>
 <p>Kill the agent and remove it from the <a href="../society/">Society</a> it belongs. It also removes any basic placements from the agents (those used by <a href="./#enter">Agent:enter()</a>, <a href="./#leave">Agent:leave()</a>, and <a href="./#move">Agent:move()</a>). After executing this function, it will not be possible to call any function from the Agent anymore. Therefore, if there is any complex placement in the model, it should be removed manually before calling this function.  </p>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     execute = function(self)
         if self.energy &lt;= 0 then
             agent:die()
         end
     end
-}
-</code></pre></div>
+}</code></pre>
 <hr />
 <h2 id="emptyneighbor">emptyNeighbor</h2>
 <p>Return an empty Neighbor <a href="../cell/">Cell</a>. If there is no empty neighbor, it returns nil. The Agent needs to have a placement to be able to use this function, and the <a href="../cellularSpace/">CellularSpace</a> must have a <a href="../neighborhood/">Neighborhood</a>. This function is recommended to be used only when it is possible to have only one Agent per Cell.  </p>
@@ -594,7 +590,7 @@ agent:addSocialNetwork(sn)
 <li><strong>#2</strong>: A string representing the Neighborhood to be used. The default value is "1.</li>
 </ul>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>singleFooAgent = Agent{}
+<pre class="highlight"><code>singleFooAgent = Agent{}
 
 cs = CellularSpace{xdim = 10}
 cs:createNeighborhood()
@@ -602,8 +598,7 @@ cs:createNeighborhood()
 e = Environment{cs, singleFooAgent}
 e:createPlacement()
 
-singleFooAgent:move(singleFooAgent:emptyNeighbor()) -- same as singleFooAgent:moveToEmpty()
-</code></pre></div>
+singleFooAgent:move(singleFooAgent:emptyNeighbor()) -- same as singleFooAgent:moveToEmpty()</code></pre>
 <h3 id="see-also_1">See also</h3>
 <ul>
 <li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
@@ -617,7 +612,7 @@ singleFooAgent:move(singleFooAgent:emptyNeighbor()) -- same as singleFooAgent:mo
 <li><strong>#2</strong>: A string representing the name of the placement to be used. The default value is "placement".</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>soc = Society{
+<pre class="highlight"><code>soc = Society{
     instance = Agent{},
     quantity = 30
 }
@@ -627,11 +622,10 @@ cs = CellularSpace{
 }
 
 env = Environment{soc, cs}
-env:createPlacement{strategy = &quot;void&quot;}
+env:createPlacement{strategy = "void"}
 
 agent = soc:sample()
-agent:enter(cs:sample())
-</code></pre></div>
+agent:enter(cs:sample())</code></pre>
 <h3 id="see-also_2">See also</h3>
 <ul>
 <li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
@@ -644,15 +638,14 @@ agent:enter(cs:sample())
 <li><strong>#1</strong>: An Event.</li>
 </ul>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     size = 5,
     execute = function(self)
         self.size = self.size + 1
     end
 }
 
-agent:execute()
-</code></pre></div>
+agent:execute()</code></pre>
 <hr />
 <h2 id="getcell">getCell</h2>
 <p>Return the <a href="../cell/">Cell</a> where the Agent is located according to its placement. It assumes that each Agent belongs to at most one Cell.  </p>
@@ -661,7 +654,7 @@ agent:execute()
 <li><strong>#1</strong>: A string representing the name of the placement to be used. The default value is "placement".</li>
 </ul>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>soc = Society{
+<pre class="highlight"><code>soc = Society{
     instance = Agent{},
     quantity = 30
 }
@@ -674,8 +667,7 @@ env = Environment{soc, cs}
 env:createPlacement{}
 
 agent = soc:sample()
-cell = agent:getCell()
-</code></pre></div>
+cell = agent:getCell()</code></pre>
 <hr />
 <h2 id="getcells">getCells</h2>
 <p>Return a vector with the <a href="../cell/">Cells</a> pointed by the Agent.  </p>
@@ -684,7 +676,7 @@ cell = agent:getCell()
 <li><strong>#1</strong>: A string representing the name of the placement to be used. The default value is "placement".</li>
 </ul>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>soc = Society{
+<pre class="highlight"><code>soc = Society{
     instance = Agent{},
     quantity = 30
 }
@@ -698,14 +690,12 @@ env:createPlacement{}
 
 agent = soc:sample()
 
-cell = agent:getCells()[1]
-</code></pre></div>
+cell = agent:getCells()[1]</code></pre>
 <hr />
 <h2 id="getlatency">getLatency</h2>
 <p>Return the time when the <a href="../state/">State</a> machine executed the transition to the current state. Before executing for the first time, the latency is zero. This function is useful only when the Agent is described as a State machine.  </p>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>-- latency = agent:getLatency()
-</code></pre></div>
+<pre class="highlight"><code>-- latency = agent:getLatency()</code></pre>
 <hr />
 <h2 id="getsocialnetwork">getSocialNetwork</h2>
 <p>Return a <a href="../socialNetwork/">SocialNetwork</a> of the Agent given its name.  </p>
@@ -714,17 +704,16 @@ cell = agent:getCells()[1]
 <li><strong>#1</strong>: Name of the SocialNetwork.</li>
 </ul>
 <h3 id="usage_10">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{}
+<pre class="highlight"><code>agent = Agent{}
 
 soc = Society{
     instance = agent,
     quantity = 100
 }
 
-soc:createSocialNetwork{probability = 0.5, name = &quot;friends&quot;}
+soc:createSocialNetwork{probability = 0.5, name = "friends"}
 ag = soc:sample()
-ag:getSocialNetwork(&quot;friends&quot;)
-</code></pre></div>
+ag:getSocialNetwork("friends")</code></pre>
 <h3 id="see-also_3">See also</h3>
 <ul>
 <li><a href="../society/#createsocialnetwork">createSocialNetwork (Society)</a></li>
@@ -734,14 +723,12 @@ ag:getSocialNetwork(&quot;friends&quot;)
 <h2 id="getstatename">getStateName</h2>
 <p>Return a string with the current <a href="../state/">State</a> name. This function is useful only when the Agent is described as a state machine.  </p>
 <h3 id="usage_11">Usage</h3>
-<div class="highlight"><pre><span></span><code>name = agent:getStateName()
-</code></pre></div>
+<pre class="highlight"><code>name = agent:getStateName()</code></pre>
 <hr />
 <h2 id="gettrajectorystatus">getTrajectoryStatus</h2>
 <p>Return the status of the <a href="../trajectory/">Trajectories</a> of the Agent. This function is useful only when the Agent is described as a <a href="../state/">State</a> machine.  </p>
 <h3 id="usage_12">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent:getTrajectoryStatus()
-</code></pre></div>
+<pre class="highlight"><code>agent:getTrajectoryStatus()</code></pre>
 <h3 id="see-also_4">See also</h3>
 <ul>
 <li><a href="./#settrajectorystatus">setTrajectoryStatus</a></li>
@@ -750,7 +737,7 @@ ag:getSocialNetwork(&quot;friends&quot;)
 <h2 id="init">init</h2>
 <p>User-defined function that is used to initialize an Agent when it enters in a given <a href="../society/">Society</a> (e.g. when the Society is created, or when one calls <a href="../society/#add">Society:add()</a>).  </p>
 <h3 id="usage_13">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     age = Random{min = 1, max  = 50, step = 1},
     init = function(self)
         if self.age &gt; 40 then
@@ -766,8 +753,7 @@ soc = Society{
     quantity = 10
 }
 
-print(soc:sample().age)
-</code></pre></div>
+print(soc:sample().age)</code></pre>
 <h3 id="see-also_5">See also</h3>
 <ul>
 <li><a href="../random/">Random</a></li>
@@ -780,12 +766,11 @@ print(soc:sample().age)
 <li><strong>#1</strong>: A string representing the name of the placement to be used. The default value is "placement".</li>
 </ul>
 <h3 id="usage_14">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag1 = Agent{}
+<pre class="highlight"><code>ag1 = Agent{}
 cs = CellularSpace{xdim = 3}
 myEnv = Environment{cs, ag1}
 myEnv:createPlacement()
-ag1:leave()
-</code></pre></div>
+ag1:leave()</code></pre>
 <h3 id="see-also_6">See also</h3>
 <ul>
 <li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
@@ -801,9 +786,9 @@ ag1:leave()
 <li>...: Other arguments are allowed to this function, as the message is a table. The receiver will get all the attributes sent plus an attribute called sender.</li>
 </ul>
 <h3 id="usage_15">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent1 = Agent{
+<pre class="highlight"><code>agent1 = Agent{
     on_message = function(self, message)
-        print(&quot;Got money:&quot;..message.quantity)
+        print("Got money:"..message.quantity)
     end
 }
 
@@ -811,10 +796,9 @@ agent2 = Agent{}
 
 agent2:message{
     receiver = agent1,
-    content = &quot;money&quot;,
+    content = "money",
     quantity = 20
-}
-</code></pre></div>
+}</code></pre>
 <hr />
 <h2 id="move">move</h2>
 <p>Move the Agent to a new <a href="../cell/">Cell</a>. This function supposes that each Agent can be in one and only one Cell along the simulation. The agent needs to have a placement to be able to use <a href="./#enter">Agent:enter()</a>, <a href="./#leave">Agent:leave()</a>, <a href="./#move">Agent:move()</a>, or <a href="./#walk">Agent:walk()</a>.  </p>
@@ -824,7 +808,7 @@ agent2:message{
 <li><strong>#2</strong>: A string representing the placement to be used. The default value is "placement".</li>
 </ul>
 <h3 id="usage_16">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag1 = Agent{}
+<pre class="highlight"><code>ag1 = Agent{}
 cs = CellularSpace{xdim = 3}
 soc = Society{
     instance = ag1,
@@ -836,8 +820,7 @@ myEnv:createPlacement()
 
 ag = soc:sample()
 cell = cs:sample()
-ag:move(cell)
-</code></pre></div>
+ag:move(cell)</code></pre>
 <h3 id="see-also_7">See also</h3>
 <ul>
 <li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
@@ -850,14 +833,13 @@ ag:move(cell)
 <li><strong>#1</strong>: A number representing the notification time. The default value is zero. It is also possible to use an <a href="../event/">Event</a> as argument. In this case, it will use the result of <a href="../event/#gettime">Event:getTime()</a>.</li>
 </ul>
 <h3 id="usage_17">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     value = 1
 }
 
 Chart{target = agent}
 agent:notify(1)
-agent:notify(2)
-</code></pre></div>
+agent:notify(2)</code></pre>
 <hr />
 <h2 id="on_message">on_message</h2>
 <p>User-defined function that can be implemented to allow Agents to exchange messages. It is executed every time a receiver gets a message. The received message has the same content of the sent message, plus an attribute called sender with the Agent that sent the message. In the case of non-delayed messages, the returning value of this function (executed by the receiver) is also returned as the result of message (executed by the sender). Note that, although in the description below on_message has only one argument, the signature has two arguments, the first one being the agent itself. This function is usually called internally by TerraME, as result of calls of <a href="./#message">Agent:message()</a> by the modeler. Other functions on_ can be defined by the modeler, and will be called by TerraME according to the subject of the message.  </p>
@@ -866,18 +848,18 @@ agent:notify(2)
 <li><strong>#1</strong>: A table with the received message. It has an attribute called sender with the Agent that sent the message.</li>
 </ul>
 <h3 id="usage_18">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     money = 0,
     on_message = function(self, message)
         self.money = self.money + message.quantity
-        self:message{receiver = message.sender, subject = &quot;thanks&quot;}
+        self:message{receiver = message.sender, subject = "thanks"}
     end,
     on_thanks = function(self, message)
-        print(&quot;thanks&quot;)
-        self:message{receiver = message.sender, subject = &quot;yourewelcome&quot;}
+        print("thanks")
+        self:message{receiver = message.sender, subject = "yourewelcome"}
     end,
     on_yourewelcome = function()
-        print(&quot;yourewelcome&quot;)
+        print("yourewelcome")
     end
 }
 
@@ -889,8 +871,7 @@ soc = Society{
 soc:sample():message{
     receiver = soc:sample(),
     quantity = 20
-}
-</code></pre></div>
+}</code></pre>
 <h3 id="see-also_8">See also</h3>
 <ul>
 <li><a href="./#message">message</a></li>
@@ -904,7 +885,7 @@ soc:sample():message{
 <li><strong>#1</strong>: An optional table with attributes of the new Agent. If this table do not contay some of the placements registered in its Society, then they are instantiated and the newborn will be placed in the same Cell of its parent. This functionality supposes that an Agent can be in one and only one Cell for each placement along the simulation.</li>
 </ul>
 <h3 id="usage_19">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{}
+<pre class="highlight"><code>agent = Agent{}
 
 soc = Society{
     instance = agent,
@@ -912,8 +893,7 @@ soc = Society{
 }
 
 soc.agents[1]:reproduce()
-print(#soc)
-</code></pre></div>
+print(#soc)</code></pre>
 <hr />
 <h2 id="sample">sample</h2>
 <p>Return a random Agent from a <a href="../socialNetwork/">SocialNetwork</a> of the Agent.  </p>
@@ -922,7 +902,7 @@ print(#soc)
 <li><strong>#1</strong>: A string with the name of the SocialNetwork. The default value is "1".</li>
 </ul>
 <h3 id="usage_20">Usage</h3>
-<div class="highlight"><pre><span></span><code>ag = Agent{}
+<pre class="highlight"><code>ag = Agent{}
 soc = Society{instance = ag, quantity = 5}
 
 sn = SocialNetwork()
@@ -931,8 +911,7 @@ forEachAgent(soc, function(agent)
 end)
 
 ag:addSocialNetwork(sn)
-friend = ag:sample()
-</code></pre></div>
+friend = ag:sample()</code></pre>
 <h3 id="see-also_9">See also</h3>
 <ul>
 <li><a href="./#getSocialNetwork">getSocialNetwork</a></li>
@@ -945,8 +924,7 @@ friend = ag:sample()
 <li><strong>#1</strong>: Use or not the Trajectories. As default, Trajectories are turned off. If status is true, when executed, the Agent that contains <a href="../state/">States</a> will automatically traverse all trajectories defined within it, which means that <a href="./#execute">Agent:execute()</a> will be executed once for each of its <a href="../cell/">Cells</a>. This function is useful only when the Agent is described as a State machine.</li>
 </ul>
 <h3 id="usage_21">Usage</h3>
-<div class="highlight"><pre><span></span><code>-- agent:setTrajectoryStatus(true)
-</code></pre></div>
+<pre class="highlight"><code>-- agent:setTrajectoryStatus(true)</code></pre>
 <hr />
 <h2 id="walk">walk</h2>
 <p>Execute a random walk to a neighbor <a href="../cell/">Cell</a>. This function supposes that each Agent can be in one and only one Cell along the simulation. The Agent needs to have a placement to be able to use <a href="./#enter">Agent:enter()</a>, <a href="./#leave">Agent:leave()</a>, <a href="./#move">Agent:move()</a>, and <a href="./#walk">Agent:walk()</a>.  </p>
@@ -956,7 +934,7 @@ friend = ag:sample()
 <li><strong>#2</strong>: A string representing the <a href="../neighborhood/">Neighborhood</a> to be used. The default value is "1.</li>
 </ul>
 <h3 id="usage_22">Usage</h3>
-<div class="highlight"><pre><span></span><code>singleFooAgent = Agent{}
+<pre class="highlight"><code>singleFooAgent = Agent{}
 
 cs = CellularSpace{xdim = 10}
 cs:createNeighborhood()
@@ -965,8 +943,7 @@ e = Environment{cs, singleFooAgent}
 e:createPlacement()
 
 singleFooAgent:walk()
-singleFooAgent:walk()
-</code></pre></div>
+singleFooAgent:walk()</code></pre>
 <h3 id="see-also_10">See also</h3>
 <ul>
 <li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
@@ -980,7 +957,7 @@ singleFooAgent:walk()
 <li><strong>#2</strong>: A string representing the Neighborhood to be used. The default value is "1.</li>
 </ul>
 <h3 id="usage_23">Usage</h3>
-<div class="highlight"><pre><span></span><code>singleFooAgent = Agent{}
+<pre class="highlight"><code>singleFooAgent = Agent{}
 
 cs = CellularSpace{xdim = 10}
 cs:createNeighborhood()
@@ -988,8 +965,7 @@ cs:createNeighborhood()
 e = Environment{cs, singleFooAgent}
 e:createPlacement()
 
-singleFooAgent:walkIfEmpty()
-</code></pre></div>
+singleFooAgent:walkIfEmpty()</code></pre>
 <h3 id="see-also_11">See also</h3>
 <ul>
 <li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
@@ -1003,7 +979,7 @@ singleFooAgent:walkIfEmpty()
 <li><strong>#2</strong>: A string representing the Neighborhood to be used. The default value is "1.</li>
 </ul>
 <h3 id="usage_24">Usage</h3>
-<div class="highlight"><pre><span></span><code>singleFooAgent = Agent{}
+<pre class="highlight"><code>singleFooAgent = Agent{}
 
 cs = CellularSpace{xdim = 10}
 cs:createNeighborhood()
@@ -1011,8 +987,7 @@ cs:createNeighborhood()
 e = Environment{cs, singleFooAgent}
 e:createPlacement()
 
-singleFooAgent:walkToEmpty()
-</code></pre></div>
+singleFooAgent:walkToEmpty()</code></pre>
 <h3 id="see-also_12">See also</h3>
 <ul>
 <li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>

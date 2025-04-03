@@ -298,7 +298,7 @@
 <li><strong>value</strong>: A table with the possible values for the selected attributes.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
+<pre class="highlight"><code>cell = Cell{
     temperature = Random{min = 0, max = 50},
     seggregation = Random{0, 1, 2},
     forest = Random{min = 0, max = 1}
@@ -311,25 +311,25 @@ cs = CellularSpace{
 
 Map{
     target = cs,
-    select = &quot;temperature&quot;,
+    select = "temperature",
     min = 0,
     max = 50,
     slices = 10,
-    color = {&quot;blue&quot;, &quot;red&quot;}
+    color = {"blue", "red"}
 }
 
 Map{
     target = cs,
-    select = &quot;seggregation&quot;,
+    select = "seggregation",
     value = {0, 1, 2},
-    color = {&quot;blue&quot;, &quot;green&quot;, &quot;red&quot;},
-    label = {&quot;low&quot;, &quot;medium&quot;, &quot;high&quot;}
+    color = {"blue", "green", "red"},
+    label = {"low", "medium", "high"}
 }
 
 Map{
     target = cs,
-    select = &quot;forest&quot;,
-    color  = &quot;RdYlGn&quot;,
+    select = "forest",
+    color  = "RdYlGn",
     min = 0,
     max = 1,
     slices = 10
@@ -339,9 +339,9 @@ Map{
 cell = Cell{
     cover = function(cell)
         if Random():number() &gt; 0.2 then
-            return &quot;pasture&quot;
+            return "pasture"
         else
-            return &quot;soil&quot;
+            return "soil"
         end
     end
 }
@@ -353,9 +353,9 @@ cs = CellularSpace{
 
 Map{
     target = cs,
-    select = &quot;cover&quot;,
-    value = {&quot;soil&quot;, &quot;pasture&quot;},
-    color = {&quot;brown&quot;, &quot;green&quot;}
+    select = "cover",
+    value = {"soil", "pasture"},
+    color = {"brown", "green"}
 }
 
 -- Visualizing the agents of a Society
@@ -377,13 +377,12 @@ e:createPlacement{}
 
 m = Map{
     target = soc,
-    symbol = &quot;smile&quot;,
-    color = &quot;yellow&quot;,
-    background = &quot;darkGreen&quot;,
+    symbol = "smile",
+    color = "yellow",
+    background = "darkGreen",
     grid = true,
     size = 25
-}
-</code></pre></div>
+}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -412,22 +411,21 @@ m = Map{
 <li><strong>#1</strong>: A string with the file name.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10
 }
 
 map = Map{
     target = cs,
-    select = &quot;x&quot;,
+    select = "x",
     min = 0,
     max = 10,
     slices = 4,
-    color = &quot;Blues&quot;
+    color = "Blues"
 }
 
-map:save(&quot;file.bmp&quot;)
-File(&quot;file.bmp&quot;):delete()
-</code></pre></div>
+map:save("file.bmp")
+File("file.bmp"):delete()</code></pre>
 <hr />
 <h2 id="update"><strong>update</strong></h2>
 <p>Update the Map with the latest values of its target. It is usually recommended to use the Map as action of an <a href="../event/">Event</a> instead of calling this function explicitly.  </p>
@@ -436,21 +434,20 @@ File(&quot;file.bmp&quot;):delete()
 <li><strong>#1</strong>: An optional argument that can be a number with the current time or an Event.</li>
 </ul>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10
 }
 
 map = Map{
     target = cs,
-    select = &quot;x&quot;,
+    select = "x",
     min = 0,
     max = 10,
     slices = 4,
-    color = &quot;Blues&quot;
+    color = "Blues"
 }
 
-map:update()
-</code></pre></div>
+map:update()</code></pre>
               
             </div>
           </div><footer>

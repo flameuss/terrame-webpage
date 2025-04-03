@@ -160,7 +160,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#timer-timer-eventaction-function-printstep-end-timerrun10">timer = Timer{ Event{action = function() print(&quot;step&quot;) end} } timer:run(10)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#timer-timer-eventaction-function-printstep-end-timerrun10">timer = Timer{ Event{action = function() print("step") end} } timer:run(10)</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#_1">#</a>
         <ul>
@@ -241,20 +241,19 @@
 <li><strong>time</strong>: The current simulation time.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>timer = Timer{
+<pre class="highlight"><code>timer = Timer{
     Event{action = function()
-        print(&quot;each time step&quot;)
+        print("each time step")
     end},
     Event{period = 2, action = function()
-        print(&quot;each two time steps&quot;)
+        print("each two time steps")
     end},
-    Event{priority = &quot;high&quot;, period = 4, action = function()
-        print(&quot;each four time steps&quot;)
+    Event{priority = "high", period = 4, action = function()
+        print("each four time steps")
     end}
 }
 
-timer:run(10)
-</code></pre></div>
+timer:run(10)</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -307,61 +306,56 @@ timer:run(10)
 <li><strong>#1</strong>: An Event or table. When adding a table, this function converts the table into an Event.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>timer = Timer{}
+<pre class="highlight"><code>timer = Timer{}
 
-timer:add(Event{action = function() end})
-</code></pre></div>
+timer:add(Event{action = function() end})</code></pre>
 <hr />
 <h2 id="clear"><strong>clear</strong></h2>
 <p>Remove all the <a href="../event/">Events</a> from the Timer. Note that, when this function is called within an action of an Event, if such function does not return false, it will be added to the Timer again after the end of its execution. This means that the simulation will continue with a single Event until its final time.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>timer = Timer{
-    Event{action = function() print(&quot;step&quot;) end}
+<pre class="highlight"><code>timer = Timer{
+    Event{action = function() print("step") end}
 }
 
-timer:clear()
-</code></pre></div>
+timer:clear()</code></pre>
 <hr />
 <h2 id="getevents"><strong>getEvents</strong></h2>
 <p>Return a vector with the <a href="../event/">Events</a> of the Timer.  </p>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>timer = Timer{
-    Event{action = function() print(&quot;step&quot;) end}
+<pre class="highlight"><code>timer = Timer{
+    Event{action = function() print("step") end}
 }
 
-print(timer:getEvents()[1]:getTime())
-</code></pre></div>
+print(timer:getEvents()[1]:getTime())</code></pre>
 <hr />
 <h2 id="gettime"><strong>getTime</strong></h2>
 <p>Return the current simulation time.  </p>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>timer = Timer{
-    Event{action = function() print(&quot;step&quot;) end}
+<pre class="highlight"><code>timer = Timer{
+    Event{action = function() print("step") end}
 }
 
 timer:run(10)
-print(timer:getTime())
-</code></pre></div>
+print(timer:getTime())</code></pre>
 <hr />
 <h2 id="notify"><strong>notify</strong></h2>
 <p>Notify every Observer connected to the Timer.  </p>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>timer = Timer{
-    Event{action = function() print(&quot;step&quot;) end}
+<pre class="highlight"><code>timer = Timer{
+    Event{action = function() print("step") end}
 }
 
 Clock{target = timer}
 
 timer:run(10)
 
-timer:notify()
-</code></pre></div>
+timer:notify()</code></pre>
 <hr />
 <h2 id="reset"><strong>reset</strong></h2>
 <p>Reset the Timer to time minus infinite, keeping the same <a href="../event/">Event</a> queue.  </p>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>timer = Timer{
-    Event{action = function() print(&quot;step&quot;) end}
+<pre class="highlight"><code>timer = Timer{
+    Event{action = function() print("step") end}
 }
 
 Clock{target = timer}
@@ -369,8 +363,7 @@ Clock{target = timer}
 timer:run(10)
 
 timer:reset()
-print(timer:getTime())
-</code></pre></div>
+print(timer:getTime())</code></pre>
 <hr />
 <h2 id="run"><strong>run</strong></h2>
 <p>Run the Timer until a given final time. It manages the <a href="../event/">Event</a> queue according to their execution times and priorities. The Event with lower time will be executed in each step. If there are two Events to be executed at the same time, it executes the one with lower priority. If both have the same priority, it executes the one that was scheuled first for that time. In order to activate an Event, the Timer executes its action, passing the Event itself as argument. If the action of the Event does not return false, the Event is scheduled to execute again according to its period. The Timer then repeats its execution again and again. It stops only when all its Events are scheduled to execute after the final time, or when there are no remaining Events.  </p>
@@ -379,26 +372,24 @@ print(timer:getTime())
 <li><strong>#1</strong>: A number representing the final time of the simulation. This argument is mandatory.</li>
 </ul>
 <h3 id="usage_7">Usage</h3>
-<h2 id="timer-timer-eventaction-function-printstep-end-timerrun10"><div class="highlight"><pre><span></span><code>timer = Timer{
-    Event{action = function() print(&quot;step&quot;) end}
+<h2 id="timer-timer-eventaction-function-printstep-end-timerrun10"><pre class="highlight"><code>timer = Timer{
+    Event{action = function() print("step") end}
 }
 
-timer:run(10)
-</code></pre></div></h2>
+timer:run(10)</code></pre></h2>
 <h2 id="_1"><strong>#</strong></h2>
 <p>Return the number of <a href="../event/">Events</a> in the Timer.  </p>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>timer = Timer{
+<pre class="highlight"><code>timer = Timer{
     Event{action = function()
-        print(&quot;each time step&quot;)
+        print("each time step")
     end},
     Event{period = 2, action = function()
-        print(&quot;each two time steps&quot;)
+        print("each two time steps")
     end}
 }
 
-print(#timer)
-</code></pre></div>
+print(#timer)</code></pre>
               
             </div>
           </div><footer>

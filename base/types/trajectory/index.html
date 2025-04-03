@@ -259,8 +259,8 @@
 <li><strong>select</strong>: The last function used to filter the Trajectory.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
-    cover = Random{&quot;forest&quot;, &quot;deforested&quot;},
+<pre class="highlight"><code>cell = Cell{
+    cover = Random{"forest", "deforested"},
     dist = Random{min = 0, max = 50}
 }
 
@@ -272,7 +272,7 @@ cs = CellularSpace{
 traj = Trajectory{
     target = cs,
     select = function(c)
-        return c.cover == &quot;forest&quot;
+        return c.cover == "forest"
     end,
     greater = function(c, d)
         return c.dist &lt; d.dist
@@ -289,8 +289,7 @@ traj = Trajectory{
 traj = Trajectory{
     target = cs,
     build = false
-}
-</code></pre></div>
+}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -351,7 +350,7 @@ traj = Trajectory{
 <li><strong>#1</strong>: A Cell.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10
 }
 
@@ -362,13 +361,12 @@ traj = Trajectory{
     end
 }
 
-traj:add(cs:get(1, 1))
-</code></pre></div>
+traj:add(cs:get(1, 1))</code></pre>
 <hr />
 <h2 id="clear"><strong>clear</strong></h2>
 <p>Remove all <a href="../cell/">Cells</a> from the Trajectory.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10
 }
 
@@ -378,14 +376,13 @@ traj = Trajectory{
 
 traj:clear()
 
-print(#traj)
-</code></pre></div>
+print(#traj)</code></pre>
 <hr />
 <h2 id="clone"><strong>clone</strong></h2>
 <p>Return a copy of the Trajectory. It has the same parent, select, greater and <a href="../cell/">Cells</a>. Any change in the cloned Trajectory will not affect the original one.  </p>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
-    cover = Random{&quot;forest&quot;, &quot;deforested&quot;}
+<pre class="highlight"><code>cell = Cell{
+    cover = Random{"forest", "deforested"}
 }
 
 cs = CellularSpace{
@@ -396,19 +393,18 @@ cs = CellularSpace{
 traj = Trajectory{
     target = cs,
     select = function(c)
-        return c.cover == &quot;forest&quot;
+        return c.cover == "forest"
     end
 }
 
 copy = traj:clone()
 print(#copy)
-print(#traj)
-</code></pre></div>
+print(#traj)</code></pre>
 <hr />
 <h2 id="filter"><strong>filter</strong></h2>
 <p>Apply the filter over the <a href="../cell/">Cells</a> of the Trajectory. Cells that belong to the <a href="../cellularSpace/">CellularSpace</a> but do not belong to the Trajectory are ignored. This way, this function creates a subset over the subset of the CellularSpace.  </p>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
+<pre class="highlight"><code>cell = Cell{
     dist = Random{min = 0, max = 50},
     increase = function(self)
         self.dist = self.dist + 2
@@ -425,8 +421,7 @@ traj = Trajectory{target = cs, select = function(c)
 end}
 
 traj:increase()
-traj:filter()
-</code></pre></div>
+traj:filter()</code></pre>
 <hr />
 <h2 id="get"><strong>get</strong></h2>
 <p>Return a <a href="../cell/">Cell</a> from the Trajectory given its x and y locations. If the Cell does not belong to the Trajectory then it will return nil.  </p>
@@ -436,27 +431,25 @@ traj:filter()
 <li><strong>#2</strong>: The y location.</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{xdim = 10}
+<pre class="highlight"><code>cs = CellularSpace{xdim = 10}
 
 traj = Trajectory{target = cs}
 
-traj:get(1, 1)
-</code></pre></div>
+traj:get(1, 1)</code></pre>
 <hr />
 <h2 id="randomize"><strong>randomize</strong></h2>
 <p>Randomize the <a href="../cell/">Cells</a> of the Trajectory. It will change the traversing order used by <a href="../../functions/utils/#foreachcell">forEachCell()</a>.  </p>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{xdim = 10}
+<pre class="highlight"><code>cs = CellularSpace{xdim = 10}
 
 traj = Trajectory{target = cs}
 
-traj:randomize()
-</code></pre></div>
+traj:randomize()</code></pre>
 <hr />
 <h2 id="rebuild"><strong>rebuild</strong></h2>
 <p>Rebuild the Trajectory. It works as if the Trajectory was declared again with the same arguments.  </p>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
+<pre class="highlight"><code>cell = Cell{
     dist = Random{min = 0, max = 50}
 }
 
@@ -477,8 +470,7 @@ forEachCell(cs, function(cell)
 end)
 
 traj:rebuild()
-print(#traj)
-</code></pre></div>
+print(#traj)</code></pre>
 <hr />
 <h2 id="save"><strong>save</strong></h2>
 <p>Save a subset from the target <a href="../cellularSpace/">CellularSpace</a> into a file.  </p>
@@ -488,8 +480,8 @@ print(#traj)
 <li><strong>#2</strong>: A vector with the names of the attributes to be saved. If attrs is nil, all attributes will be saved.</li>
 </ul>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
-    file = filePath(&quot;test/sampa.shp&quot;, &quot;gis&quot;)
+<pre class="highlight"><code>cs = CellularSpace{
+    file = filePath("test/sampa.shp", "gis")
 }
 
 t = Trajectory{
@@ -499,13 +491,12 @@ t = Trajectory{
     end
 }
 
-t:save(&quot;odd.shp&quot;)
-</code></pre></div>
+t:save("odd.shp")</code></pre>
 <hr />
 <h2 id="sort"><strong>sort</strong></h2>
 <p>Sort the current <a href="../cellularSpace/">CellularSpace</a> subset. It updates the traversing order of the Trajectory.  </p>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{
+<pre class="highlight"><code>cell = Cell{
     dist = Random{min = 0, max = 50},
     increase = function(self)
         self.dist = self.dist + Random{min = 0, max = 3}:sample()
@@ -522,13 +513,12 @@ traj = Trajectory{target = cs, greater = function(c, d)
 end}
 
 traj:increase()
-traj:sort()
-</code></pre></div>
+traj:sort()</code></pre>
 <hr />
 <h2 id="_1"><strong>#</strong></h2>
 <p>Retrieve the number of <a href="../cell/">Cells</a> in the Trajectory.  </p>
 <h3 id="usage_10">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10
 }
 
@@ -536,8 +526,7 @@ traj = Trajectory{
     target = cs
 }
 
-print(#traj)
-</code></pre></div>
+print(#traj)</code></pre>
               
             </div>
           </div><footer>

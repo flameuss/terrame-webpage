@@ -306,8 +306,7 @@
 <li><strong>name</strong>: A string with the file name. This argument is mandatory.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>file = File(&quot;agents.csv&quot;)
-</code></pre></div>
+<pre class="highlight"><code>file = File("agents.csv")</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -462,15 +461,13 @@
 </tbody>
 </table>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>filePath(&quot;river.shp&quot;):attributes(&quot;mode&quot;)
-</code></pre></div>
+<pre class="highlight"><code>filePath("river.shp"):attributes("mode")</code></pre>
 <hr />
 <h2 id="close"><strong>close</strong></h2>
 <p>Close an opened file.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>file = File(&quot;abc.txt&quot;)
-file:close()
-</code></pre></div>
+<pre class="highlight"><code>file = File("abc.txt")
+file:close()</code></pre>
 <hr />
 <h2 id="copy"><strong>copy</strong></h2>
 <p>Copy the file to a given destination.  </p>
@@ -479,60 +476,53 @@ file:close()
 <li><strong>#1</strong>: A <a href="../directory/">Directory</a> or a string with the destination path. It can also be a File with the destination. If the file to be copied is a shapefile, it also copies the respective dbf, shx, prj, and qix files if they exist.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>path = Directory(&quot;c:/mypath&quot;)
-file = File(path..&quot;file.lua&quot;)
-file:copy(File(path..&quot;file2.lua&quot;)) -- from c:/mypath/file.lua to c:/mypath/file2.lua
-</code></pre></div>
+<pre class="highlight"><code>path = Directory("c:/mypath")
+file = File(path.."file.lua")
+file:copy(File(path.."file2.lua")) -- from c:/mypath/file.lua to c:/mypath/file2.lua</code></pre>
 <hr />
 <h2 id="delete"><strong>delete</strong></h2>
 <p>Remove an existing file. If the file does not exist or it cannot be removed, this function stops with an error. If the file to be removed is a shapefile, it also removes the respective dbf, shx, prj, and qix files if they exist.  </p>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>filename = &quot;myfile.txt&quot;
+<pre class="highlight"><code>filename = "myfile.txt"
 file = File(filename)
-file:writeLine(&quot;Some text..&quot;)
+file:writeLine("Some text..")
 file:close()
-file:delete()
-</code></pre></div>
+file:delete()</code></pre>
 <hr />
 <h2 id="deleteifexists"><strong>deleteIfExists</strong></h2>
 <p>Remove a file if it exists. It does not stop with an error when the file does not exist. This function returns the File itself.  </p>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>filename = &quot;myfile.txt&quot;
+<pre class="highlight"><code>filename = "myfile.txt"
 file = File(filename)
-file:writeLine(&quot;Some text..&quot;)
+file:writeLine("Some text..")
 file:close()
 file:deleteIfExists()
 
-file = File(filename):deleteIfExists() -- ensure that &quot;myfile.txt&quot; does not exist when &#39;file&#39; is created
-</code></pre></div>
+file = File(filename):deleteIfExists() -- ensure that "myfile.txt" does not exist when 'file' is created</code></pre>
 <hr />
 <h2 id="exists"><strong>exists</strong></h2>
 <p>Return whether the file stored in the computer.  </p>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>file = filePath(&quot;agents.csv&quot;, &quot;base&quot;)
-print(file:exists())
-</code></pre></div>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+print(file:exists())</code></pre>
 <hr />
 <h2 id="extension"><strong>extension</strong></h2>
 <p>Return the extension of the file. It returns the substring after the last dot. If it does not have a dot, an empty string is returned.  </p>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>file = filePath(&quot;agents.csv&quot;, &quot;base&quot;)
-print(file:extension()) -- &quot;csv&quot;
-</code></pre></div>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+print(file:extension()) -- "csv"</code></pre>
 <hr />
 <h2 id="hasextension"><strong>hasExtension</strong></h2>
 <p>Return a boolean value if the file has an extension.  </p>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>file = filePath(&quot;agents.csv&quot;, &quot;base&quot;)
-print(file:hasExtension()) -- true
-</code></pre></div>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+print(file:hasExtension()) -- true</code></pre>
 <hr />
 <h2 id="name"><strong>name</strong></h2>
 <p>Return the file name removing its path.  </p>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>file = filePath(&quot;agents.csv&quot;, &quot;base&quot;)
-print(file:name()) -- &quot;agents.csv&quot;
-</code></pre></div>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+print(file:name()) -- "agents.csv"</code></pre>
 <hr />
 <h2 id="open"><strong>open</strong></h2>
 <p>Open the file for reading or writing. An opened file must be closed after being used.  </p>
@@ -541,9 +531,8 @@ print(file:name()) -- &quot;agents.csv&quot;
 <li><strong>#1</strong>: A string with the mode. It can be "w" for writing or "r" for reading.</li>
 </ul>
 <h3 id="usage_10">Usage</h3>
-<div class="highlight"><pre><span></span><code>file = File(&quot;myfile.txt&quot;)
-file:open()
-</code></pre></div>
+<pre class="highlight"><code>file = File("myfile.txt")
+file:open()</code></pre>
 <h3 id="see-also">See also</h3>
 <ul>
 <li><a href="./#close">close</a></li>
@@ -552,9 +541,8 @@ file:open()
 <h2 id="path"><strong>path</strong></h2>
 <p>Return the path to the file.  </p>
 <h3 id="usage_11">Usage</h3>
-<div class="highlight"><pre><span></span><code>file = filePath(&quot;agents.csv&quot;, &quot;base&quot;)
-print(file:path())
-</code></pre></div>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+print(file:path())</code></pre>
 <hr />
 <h2 id="read"><strong>read</strong></h2>
 <p>Read a file. It returns a vector (whose indexes are line numbers) containing named tables (whose indexes are attribute names). The first line of the file list the attribute names. This function automatically closes the file.  </p>
@@ -563,10 +551,9 @@ print(file:path())
 <li><strong>#1</strong>: A string with the separator. The default value is ','.</li>
 </ul>
 <h3 id="usage_12">Usage</h3>
-<div class="highlight"><pre><span></span><code>file = filePath(&quot;agents.csv&quot;, &quot;base&quot;)
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
 csv = file:read()
-print(csv[1].age) -- 20
-</code></pre></div>
+print(csv[1].age) -- 20</code></pre>
 <hr />
 <h2 id="readline"><strong>readLine</strong></h2>
 <p>Read a line from the file. It stores the position of the line internally in case of some error occur. Therefore no line number will be used as argument for this function.  </p>
@@ -575,25 +562,23 @@ print(csv[1].age) -- 20
 <li><strong>#1</strong>: A string with the separator. Parse a single CSV line. It returns a vector of strings with the i-th value in the position i. This function was taken from <a href="http://lua-users.org/wiki/LuaCsv.">http://lua-users.org/wiki/LuaCsv.</a></li>
 </ul>
 <h3 id="usage_13">Usage</h3>
-<div class="highlight"><pre><span></span><code>file = filePath(&quot;agents.csv&quot;, &quot;base&quot;)
-line = file:readLine(&quot;,&quot;)
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+line = file:readLine(",")
 print(line[1]) -- john
 print(line[2]) -- 20
 print(line[3]) -- 200
 
 line = file:readLine()
-print(line) -- &quot;mary&quot;,18,100,3,1,false
-</code></pre></div>
+print(line) -- "mary",18,100,3,1,false</code></pre>
 <hr />
 <h2 id="split"><strong>split</strong></h2>
 <p>Split the path, name, and extension of the file into three returning values.  </p>
 <h3 id="usage_14">Usage</h3>
-<div class="highlight"><pre><span></span><code>file = filePath(&quot;agents.csv&quot;, &quot;base&quot;)
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
 directory, name, extension = file:split()
-print(directory) -- &quot;/base/data/&quot;
-print(name) -- &quot;agents&quot;,
-print(extension) -- &quot;csv&quot;
-</code></pre></div>
+print(directory) -- "/base/data/"
+print(name) -- "agents",
+print(extension) -- "csv"</code></pre>
 <hr />
 <h2 id="touch"><strong>touch</strong></h2>
 <p>Set access and modification times for the file. Times are provided in seconds (which should be generated with Lua standard function os.time). If the modification time is omitted, the access time provided is used; if both times are omitted, the current time is used. Returns true if the operation was successful; in case of error, it returns nil plus an error string.  </p>
@@ -603,8 +588,7 @@ print(extension) -- &quot;csv&quot;
 <li><strong>#2</strong>: The new modification time (in seconds).</li>
 </ul>
 <h3 id="usage_15">Usage</h3>
-<div class="highlight"><pre><span></span><code>filePath(&quot;river.shp&quot;):touch(0, 0)
-</code></pre></div>
+<pre class="highlight"><code>filePath("river.shp"):touch(0, 0)</code></pre>
 <hr />
 <h2 id="write"><strong>write</strong></h2>
 <p>Write a given <a href="../dataFrame/">DataFrame</a> into the file. It automatically closes the file after writing it.  </p>
@@ -614,16 +598,15 @@ print(extension) -- &quot;csv&quot;
 <li><strong>#2</strong>: A string with the separator. The default value is ','.</li>
 </ul>
 <h3 id="usage_16">Usage</h3>
-<div class="highlight"><pre><span></span><code>mytable = DataFrame{
+<pre class="highlight"><code>mytable = DataFrame{
     {age = 1, wealth = 10, vision = 2},
     {age = 3, wealth =  8, vision = 1},
     {age = 3, wealth = 15, vision = 2}
 }
 
-file = File(&quot;file.csv&quot;)
-file:write(mytable, &quot;;&quot;)
-file:deleteIfExists()
-</code></pre></div>
+file = File("file.csv")
+file:write(mytable, ";")
+file:deleteIfExists()</code></pre>
 <hr />
 <h2 id="writeline"><strong>writeLine</strong></h2>
 <p>Write a given string or table into the file. The file must be closed afterwards. It automatically adds an end of line to the file after the string.  </p>
@@ -633,14 +616,13 @@ file:deleteIfExists()
 <li><strong>#2</strong>: A string with the separator. The default value is ','.</li>
 </ul>
 <h3 id="usage_17">Usage</h3>
-<div class="highlight"><pre><span></span><code>mytable = {&quot;x&quot;, &quot;y&quot;, &quot;z&quot;}
+<pre class="highlight"><code>mytable = {"x", "y", "z"}
 
-file = File(&quot;file.csv&quot;)
-file:writeLine(mytable, &quot;;&quot;)
-file:writeLine(&quot;Some text..&quot;)
+file = File("file.csv")
+file:writeLine(mytable, ";")
+file:writeLine("Some text..")
 file:close()
-file:deleteIfExists()
-</code></pre></div>
+file:deleteIfExists()</code></pre>
 <hr />
 <h2 id="_1"><strong>..</strong></h2>
 <p>Concatenate the file.  </p>
@@ -649,8 +631,7 @@ file:deleteIfExists()
 <li><strong>#1</strong>: A string or an object that can be concatenated.</li>
 </ul>
 <h3 id="usage_18">Usage</h3>
-<div class="highlight"><pre><span></span><code>print(File(&quot;abcd1234&quot;)..&quot; does not exist.&quot;)
-</code></pre></div>
+<pre class="highlight"><code>print(File("abcd1234").." does not exist.")</code></pre>
               
             </div>
           </div><footer>

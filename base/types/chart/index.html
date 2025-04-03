@@ -273,7 +273,7 @@
 <li><strong>yLabel</strong>: Name of the y-axis. It does not show any label as default.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10,
     value1 = 5,
     value2 = 7
@@ -292,9 +292,9 @@ world = Cell{
 Chart{
     target = world,
     width = 2,
-    select = {&quot;susceptible&quot;, &quot;infected&quot;, &quot;recovered&quot;},
-    style = {&quot;dots&quot;, &quot;steps&quot;, &quot;sticks&quot;},
-    color = {&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;}
+    select = {"susceptible", "infected", "recovered"},
+    style = {"dots", "steps", "sticks"},
+    color = {"red", "green", "blue"}
 }
 
 data = DataFrame{
@@ -306,10 +306,9 @@ data = DataFrame{
 
 Chart{
     target = data,
-    select = &quot;limit&quot;,
-    color = &quot;blue&quot;
-}
-</code></pre></div>
+    select = "limit",
+    color = "blue"
+}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -345,17 +344,16 @@ Chart{
 <h2 id="clear"><strong>clear</strong></h2>
 <p>Clear the Chart.  </p>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{value = 1}
+<pre class="highlight"><code>cell = Cell{value = 1}
 chart = Chart{target = cell}
 chart:update(1)
 chart:update(2)
-chart:clear()
-</code></pre></div>
+chart:clear()</code></pre>
 <hr />
 <h2 id="getdata"><strong>getData</strong></h2>
 <p>Return a <a href="../dataFrame/">DataFrame</a> with the values got from all its updates.  </p>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10,
     value1 = 5,
     value2 = 7
@@ -368,20 +366,18 @@ chart:update(2)
 chart:update(3)
 
 data = chart:getData()
-print(tostring(data))
-</code></pre></div>
+print(tostring(data))</code></pre>
 <hr />
 <h2 id="restart"><strong>restart</strong></h2>
 <p>Restart the Chart keeping the old plots.  </p>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{value = 1}
+<pre class="highlight"><code>cell = Cell{value = 1}
 chart = Chart{target = cell}
 chart:update(1)
 chart:update(2)
 chart:restart()
 chart:update(2)
-chart:update(3)
-</code></pre></div>
+chart:update(3)</code></pre>
 <hr />
 <h2 id="save"><strong>save</strong></h2>
 <p>Save a Chart into a file. Supported extensions are bmp, jpg, png, and tiff.  </p>
@@ -390,7 +386,7 @@ chart:update(3)
 <li><strong>#1</strong>: A string with the file name.</li>
 </ul>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>cs = CellularSpace{
+<pre class="highlight"><code>cs = CellularSpace{
     xdim = 10,
     value1 = 5,
     value2 = 7
@@ -401,9 +397,8 @@ chart = Chart{target = cs}
 chart:update(1)
 chart:update(2)
 chart:update(3)
-chart:save(&quot;file.bmp&quot;)
-File(&quot;file.bmp&quot;):delete()
-</code></pre></div>
+chart:save("file.bmp")
+File("file.bmp"):delete()</code></pre>
 <hr />
 <h2 id="update"><strong>update</strong></h2>
 <p>Update the Chart with the latest values of its target. It is usually recommended to use the Chart as action of an <a href="../event/">Event</a> instead of calling this function explicitly.  </p>
@@ -412,13 +407,12 @@ File(&quot;file.bmp&quot;):delete()
 <li><strong>#1</strong>: A number with the current time or an Event.</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>cell = Cell{value = 1}
+<pre class="highlight"><code>cell = Cell{value = 1}
 chart = Chart{target = cell}
 
 chart:update(0)
 chart:update(1)
-chart:update(2)
-</code></pre></div>
+chart:update(2)</code></pre>
               
             </div>
           </div><footer>

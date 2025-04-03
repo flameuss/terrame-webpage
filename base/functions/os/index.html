@@ -252,9 +252,8 @@
 <h2 id="currentdir"><strong>currentDir</strong></h2>
 <p>Return a <a href="../../types/directory/">Directory</a> with the current working directory.  </p>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>cdir = currentDir()
-print(cdir)
-</code></pre></div>
+<pre class="highlight"><code>cdir = currentDir()
+print(cdir)</code></pre>
 <hr />
 <h2 id="isdirectory"><strong>isDirectory</strong></h2>
 <p>Return if a given path represents a directory that exists.  </p>
@@ -263,8 +262,7 @@ print(cdir)
 <li><strong>#1</strong>: A string with a path.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>print(isDirectory(&quot;/home/user/mydirectory&quot;))
-</code></pre></div>
+<pre class="highlight"><code>print(isDirectory("/home/user/mydirectory"))</code></pre>
 <hr />
 <h2 id="isfile"><strong>isFile</strong></h2>
 <p>Return if a given file path exists.  </p>
@@ -273,8 +271,7 @@ print(cdir)
 <li><strong>#1</strong>: A string with a file path.</li>
 </ul>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>print(isFile(&quot;abc.lua&quot;))
-</code></pre></div>
+<pre class="highlight"><code>print(isFile("abc.lua"))</code></pre>
 <hr />
 <h2 id="openwebpage"><strong>openWebpage</strong></h2>
 <p>Opens a webpage in a Web Browser.  </p>
@@ -283,8 +280,7 @@ print(cdir)
 <li><strong>#1</strong>: A string with the webpage to be opened.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>openWebpage(&quot;www.terrame.org&quot;)
-</code></pre></div>
+<pre class="highlight"><code>openWebpage("www.terrame.org")</code></pre>
 <hr />
 <h2 id="runcommand"><strong>runCommand</strong></h2>
 <p>Execute a system command and return its output. It returns two tables. The first one contains each standard output line as a position. The second one contains each error output line as a position.  </p>
@@ -293,8 +289,7 @@ print(cdir)
 <li><strong>#1</strong>: A command.</li>
 </ul>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>result, error = runCommand(&quot;dir&quot;)
-</code></pre></div>
+<pre class="highlight"><code>result, error = runCommand("dir")</code></pre>
 <hr />
 <h2 id="sessioninfo"><strong>sessionInfo</strong></h2>
 <p>Return information about the current execution. The result is a table with the values below. Some of them are read only, while others might be changed accordingly.  </p>
@@ -390,8 +385,7 @@ print(cdir)
 </tbody>
 </table>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>print(sessionInfo().mode)
-</code></pre></div>
+<pre class="highlight"><code>print(sessionInfo().mode)</code></pre>
               
             </div>
           </div><footer>

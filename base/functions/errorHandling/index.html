@@ -676,9 +676,8 @@
 <li><strong>#1</strong>: A string describing the error message.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>_, err = pcall(function() customError(&quot;error message&quot;) end)
-print(err)
-</code></pre></div>
+<pre class="highlight"><code>_, err = pcall(function() customError("error message") end)
+print(err)</code></pre>
 <hr />
 <h2 id="customwarning"><strong>customWarning</strong></h2>
 <p>Print a warning. If TerraME is executing in the debug mode, it stops the simulation with an error.  </p>
@@ -687,8 +686,7 @@ print(err)
 <li><strong>#1</strong>: A string describing the warning.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>customWarning(&quot;warning message&quot;)
-</code></pre></div>
+<pre class="highlight"><code>customWarning("warning message")</code></pre>
 <hr />
 <h2 id="defaulttablevalue"><strong>defaultTableValue</strong></h2>
 <p>Verify the default value of a given attribute of a named table. It adds the attribute with the default value in the table if it does not exist, stops with an error (<a href="./#incompatibletypemsg">incompatibleTypeMsg()</a>) if the value has a different type, or shows a warning (<a href="./#defaultvaluewarning">defaultValueWarning()</a>) if it is equal to the default value.  </p>
@@ -699,14 +697,13 @@ print(err)
 <li><strong>#3</strong>: The default value (any type).</li>
 </ul>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>function integrate(attrs)
-    defaultTableValue(attrs, &quot;method&quot;, &quot;euler&quot;)
+<pre class="highlight"><code>function integrate(attrs)
+    defaultTableValue(attrs, "method", "euler")
     return attrs
 end
 
 t = integrate{}
-print(t.method)
-</code></pre></div>
+print(t.method)</code></pre>
 <hr />
 <h2 id="defaultvaluemsg"><strong>defaultValueMsg</strong></h2>
 <p>Return a message indicating that the modeler is using the default value for a given argument and therefore it could be removed. The string is "Argument '#1' could be removed as it is the default value ('#2').".  </p>
@@ -716,9 +713,8 @@ print(t.method)
 <li><strong>#2</strong>: A number or string or boolean value with the default value for the argument.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = defaultValueMsg(&quot;dbtype&quot;, &quot;mysql&quot;)
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = defaultValueMsg("dbtype", "mysql")
+print(str)</code></pre>
 <hr />
 <h2 id="defaultvaluewarning"><strong>defaultValueWarning</strong></h2>
 <p>Show a strict warning if the attribute of a table has the default value. If TerraME is running in the debug mode, the simulation stops with an error. The warning message comes from <a href="./#defaultvaluemsg">defaultValueMsg()</a>.  </p>
@@ -728,9 +724,8 @@ print(str)
 <li><strong>#2</strong>: The default value.</li>
 </ul>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = defaultValueWarning(&quot;size&quot;, 2)
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = defaultValueWarning("size", 2)
+print(str)</code></pre>
 <hr />
 <h2 id="deprecatedfunction"><strong>deprecatedFunction</strong></h2>
 <p>Show an error indicating a deprecated function. The error comes from <a href="./#deprecatedfunctionmsg">deprecatedFunctionMsg()</a>.  </p>
@@ -740,13 +735,12 @@ print(str)
 <li><strong>#2</strong>: A string indicating how to proceed to replace the deprecated function call.</li>
 </ul>
 <h3 id="usage_5">Usage</h3>
-<div class="highlight"><pre><span></span><code>deprecatedFunc = function()
-    deprecatedFunction(&quot;abc&quot;, &quot;def&quot;)
+<pre class="highlight"><code>deprecatedFunc = function()
+    deprecatedFunction("abc", "def")
 end
 
 _, err = pcall(function() deprecatedFunc() end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
 <hr />
 <h2 id="deprecatedfunctionmsg"><strong>deprecatedFunctionMsg</strong></h2>
 <p>Return a message indicating that a function is deprecated and must be replaced. The string is "Function '#1' is deprecated. Use '#2' instead.".  </p>
@@ -756,9 +750,8 @@ print(err)
 <li><strong>#2</strong>: A string indicating how to proceed to replace the deprecated function call.</li>
 </ul>
 <h3 id="usage_6">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = deprecatedFunctionMsg(&quot;abc&quot;, &quot;def&quot;)
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = deprecatedFunctionMsg("abc", "def")
+print(str)</code></pre>
 <hr />
 <h2 id="incompatibletypeerror"><strong>incompatibleTypeError</strong></h2>
 <p>Stop the simulation with an error of a wrong type for an argument of a function. The error message is the return value of <a href="./#incompatibletypemsg">incompatibleTypeMsg()</a>.  </p>
@@ -769,9 +762,8 @@ print(str)
 <li><strong>#3</strong>: The value wrongly passed as argument.</li>
 </ul>
 <h3 id="usage_7">Usage</h3>
-<div class="highlight"><pre><span></span><code>_, err = pcall(function() incompatibleTypeError(&quot;cell&quot;, &quot;Cell&quot;, Agent{}) end)
-print(err)
-</code></pre></div>
+<pre class="highlight"><code>_, err = pcall(function() incompatibleTypeError("cell", "Cell", Agent{}) end)
+print(err)</code></pre>
 <hr />
 <h2 id="incompatibletypemsg"><strong>incompatibleTypeMsg</strong></h2>
 <p>Return an error message for incompatible types. The string is "Incompatible types. Argument '#1' expected #2, got type(#3).".  </p>
@@ -782,9 +774,8 @@ print(err)
 <li><strong>#3</strong>: The value wrongly passed as argument.</li>
 </ul>
 <h3 id="usage_8">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = incompatibleTypeMsg(&quot;source&quot;, &quot;string&quot;, 2)
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = incompatibleTypeMsg("source", "string", 2)
+print(str)</code></pre>
 <hr />
 <h2 id="incompatiblevalueerror"><strong>incompatibleValueError</strong></h2>
 <p>Stop the simulation with an error of a wrong value for an argument of a function. The error message comes from <a href="./#incompatiblevaluemsg">incompatibleValueMsg()</a>.  </p>
@@ -795,9 +786,8 @@ print(str)
 <li><strong>#3</strong>: The value wrongly passed as argument.</li>
 </ul>
 <h3 id="usage_9">Usage</h3>
-<div class="highlight"><pre><span></span><code>_, err = pcall(function() incompatibleValueError(&quot;position&quot;, &quot;one of {1, 2, 3}&quot;, 4) end)
-print(err)
-</code></pre></div>
+<pre class="highlight"><code>_, err = pcall(function() incompatibleValueError("position", "one of {1, 2, 3}", 4) end)
+print(err)</code></pre>
 <hr />
 <h2 id="incompatiblevaluemsg"><strong>incompatibleValueMsg</strong></h2>
 <p>Return an error message for incompatible values. The string is "Incompatible values. Argument '#1' expected #2, got #3.".  </p>
@@ -808,9 +798,8 @@ print(err)
 <li><strong>#3</strong>: The value wrongly passed as argument.</li>
 </ul>
 <h3 id="usage_10">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = incompatibleValueMsg(&quot;source&quot;, &quot;one of {1, 3, 4}&quot;, 2)
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = incompatibleValueMsg("source", "one of {1, 3, 4}", 2)
+print(str)</code></pre>
 <hr />
 <h2 id="integerargument"><strong>integerArgument</strong></h2>
 <p>Verify whether a given argument is integer. It is useful only for functions with non-named arguments. The error message comes from <a href="./#integerargumentmsg">integerArgumentMsg()</a>.  </p>
@@ -820,15 +809,14 @@ print(str)
 <li><strong>#2</strong>: The value used as argument to the function call.</li>
 </ul>
 <h3 id="usage_11">Usage</h3>
-<div class="highlight"><pre><span></span><code>sum = function(a, b)
+<pre class="highlight"><code>sum = function(a, b)
     integerArgument(1, a)
     integerArgument(2, b)
     return a + b
 end
 
 _, err = pcall(function() sum(5) end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
 <hr />
 <h2 id="integerargumentmsg"><strong>integerArgumentMsg</strong></h2>
 <p>Return a message indicating that a given argument of a function should be integer. It returns <a href="./#incompatiblevaluemsg">incompatibleValueMsg()</a> with "integer number" as #2.  </p>
@@ -838,12 +826,11 @@ print(err)
 <li><strong>#2</strong>: The value used as argument to the function call.</li>
 </ul>
 <h3 id="usage_12">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = integerArgumentMsg(&quot;target&quot;, 7.4)
+<pre class="highlight"><code>str = integerArgumentMsg("target", 7.4)
 print(str)
 
 str = integerArgumentMsg(2, 5.1)
-print(str)
-</code></pre></div>
+print(str)</code></pre>
 <hr />
 <h2 id="integertableargument"><strong>integerTableArgument</strong></h2>
 <p>Verify whether a given argument of a named function is integer. The error message comes from <a href="./#integerargumentmsg">integerArgumentMsg()</a>.  </p>
@@ -853,13 +840,12 @@ print(str)
 <li><strong>#2</strong>: A string with the name of the argument.</li>
 </ul>
 <h3 id="usage_13">Usage</h3>
-<div class="highlight"><pre><span></span><code>myFunction = function(mtable)
-    integerTableArgument(mtable, &quot;value&quot;)
+<pre class="highlight"><code>myFunction = function(mtable)
+    integerTableArgument(mtable, "value")
 end
 
 _, err = pcall(function() myFunction{value = false} end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
 <hr />
 <h2 id="invalidfileextensionerror"><strong>invalidFileExtensionError</strong></h2>
 <p>Stop the simulation with an error indicating that the function does not support a given file extension. The error message comes from <a href="./#invalidfileextensionmsg">invalidFileExtensionMsg()</a>.  </p>
@@ -869,9 +855,8 @@ print(err)
 <li><strong>#2</strong>: A string with the incompatible file extension.</li>
 </ul>
 <h3 id="usage_14">Usage</h3>
-<div class="highlight"><pre><span></span><code>_, err = pcall(function() invalidFileExtensionError(&quot;file&quot;, &quot;.txt&quot;) end)
-print(err)
-</code></pre></div>
+<pre class="highlight"><code>_, err = pcall(function() invalidFileExtensionError("file", ".txt") end)
+print(err)</code></pre>
 <hr />
 <h2 id="invalidfileextensionmsg"><strong>invalidFileExtensionMsg</strong></h2>
 <p>Return a message indicating that a given file extension is incompatible. The string is "Argument '#1' does not support extension '#2'.".  </p>
@@ -881,9 +866,8 @@ print(err)
 <li><strong>#2</strong>: A string with the incompatible file extension.</li>
 </ul>
 <h3 id="usage_15">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = invalidFileExtensionMsg(&quot;file&quot;, &quot;csv&quot;)
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = invalidFileExtensionMsg("file", "csv")
+print(str)</code></pre>
 <hr />
 <h2 id="mandatoryargument"><strong>mandatoryArgument</strong></h2>
 <p>Verify whether a given argument of a function with non-named arguments belongs to the correct type. The error message comes from <a href="./#mandatoryargumentmsg">mandatoryArgumentMsg()</a> and <a href="./#incompatibletypemsg">incompatibleTypeMsg()</a>.  </p>
@@ -894,13 +878,12 @@ print(str)
 <li><strong>#3</strong>: The value used as argument to the function call.</li>
 </ul>
 <h3 id="usage_16">Usage</h3>
-<div class="highlight"><pre><span></span><code>myFunction = function(value)
-    mandatoryArgument(1, &quot;string&quot;, value)
+<pre class="highlight"><code>myFunction = function(value)
+    mandatoryArgument(1, "string", value)
 end
 
 _, err = pcall(function() myFunction(2) end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
 <hr />
 <h2 id="mandatoryargumenterror"><strong>mandatoryArgumentError</strong></h2>
 <p>Stop the simulation with an error indicating that a given argument is mandatory. The error message comes from <a href="./#mandatoryargumentmsg">mandatoryArgumentMsg()</a>.  </p>
@@ -909,9 +892,8 @@ print(err)
 <li><strong>#1</strong>: A string with name of the argument or a number with its position in the function.</li>
 </ul>
 <h3 id="usage_17">Usage</h3>
-<div class="highlight"><pre><span></span><code>_, err = pcall(function() mandatoryArgumentError(2) end)
-print(err)
-</code></pre></div>
+<pre class="highlight"><code>_, err = pcall(function() mandatoryArgumentError(2) end)
+print(err)</code></pre>
 <hr />
 <h2 id="mandatoryargumentmsg"><strong>mandatoryArgumentMsg</strong></h2>
 <p>Return a message indicating that a given argument of a function is mandatory. The string is "Argument '#1' is mandatory.".  </p>
@@ -920,12 +902,11 @@ print(err)
 <li><strong>#1</strong>: The name of the argument. It can be a string or a number.</li>
 </ul>
 <h3 id="usage_18">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = mandatoryArgumentMsg(&quot;target&quot;)
+<pre class="highlight"><code>str = mandatoryArgumentMsg("target")
 print(str)
 
 str = mandatoryArgumentMsg(2)
-print(str)
-</code></pre></div>
+print(str)</code></pre>
 <hr />
 <h2 id="mandatorytableargument"><strong>mandatoryTableArgument</strong></h2>
 <p>Verify whether a named table contains a mandatory argument. It stops with an error if the value is nil or if it does not belong to the required type. The error message comes from <a href="./#mandatoryargumentmsg">mandatoryArgumentMsg()</a> or <a href="./#incompatibletypemsg">incompatibleTypeMsg()</a>.  </p>
@@ -936,20 +917,18 @@ print(str)
 <li><strong>#3</strong>: A string with the required type for the argument, or a vector of strings with the allowed types. This argument is optional. If not used, then this function will check only if the argument is not nil.</li>
 </ul>
 <h3 id="usage_19">Usage</h3>
-<div class="highlight"><pre><span></span><code>myFunction = function(mtable)
-    mandatoryTableArgument(mtable, &quot;value&quot;, &quot;string&quot;)
+<pre class="highlight"><code>myFunction = function(mtable)
+    mandatoryTableArgument(mtable, "value", "string")
 end
 
 _, err = pcall(function() myFunction{value = 2} end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
 <hr />
 <h2 id="namedargumentsmsg"><strong>namedArgumentsMsg</strong></h2>
 <p>Return a message indicating that the arguments of a function must be named. The string is "Arguments must be named.".  </p>
 <h3 id="usage_20">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = namedArgumentsMsg()
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = namedArgumentsMsg()
+print(str)</code></pre>
 <hr />
 <h2 id="optionalargument"><strong>optionalArgument</strong></h2>
 <p>Verify whether an optional argument of a function with non-named arguments belongs to the correct type. If the argument is nil then no error is created. The error message comes from <a href="./#incompatibletypemsg">incompatibleTypeMsg()</a>.  </p>
@@ -960,13 +939,12 @@ print(str)
 <li><strong>#3</strong>: The value used as argument to the function call.</li>
 </ul>
 <h3 id="usage_21">Usage</h3>
-<div class="highlight"><pre><span></span><code>myFunction = function(value)
-    optionalArgument(1, &quot;string&quot;, value)
+<pre class="highlight"><code>myFunction = function(value)
+    optionalArgument(1, "string", value)
 end
 
 _, err = pcall(function() myFunction(2) end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
 <hr />
 <h2 id="optionaltableargument"><strong>optionalTableArgument</strong></h2>
 <p>Verify whether a named table contains an optional argument. It stops with an error if the value is not nil and it has a type different from the required type. The error comes from <a href="./#incompatibletypeerror">incompatibleTypeError()</a>.  </p>
@@ -977,13 +955,12 @@ print(err)
 <li><strong>#3</strong>: A string with the required type for the argument or a table with strings describing the allowed types.</li>
 </ul>
 <h3 id="usage_22">Usage</h3>
-<div class="highlight"><pre><span></span><code>myFunction = function(mtable)
-    optionalTableArgument(mtable, &quot;value&quot;, &quot;string&quot;)
+<pre class="highlight"><code>myFunction = function(mtable)
+    optionalTableArgument(mtable, "value", "string")
 end
 
 _, err = pcall(function() myFunction{value = 2} end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
 <hr />
 <h2 id="positiveargument"><strong>positiveArgument</strong></h2>
 <p>Verify whether a given argument is positive. It is useful only for functions with non-named arguments. The error message comes from <a href="./#positiveargumentmsg">positiveArgumentMsg()</a>.  </p>
@@ -994,15 +971,14 @@ print(err)
 <li><strong>#3</strong>: A boolean value indicating whether zero should be included (the default value is false).</li>
 </ul>
 <h3 id="usage_23">Usage</h3>
-<div class="highlight"><pre><span></span><code>positiveSum = function(a, b)
+<pre class="highlight"><code>positiveSum = function(a, b)
     positiveArgument(1, a)
     positiveArgument(2, b)
     return a + b
 end
 
 _, err = pcall(function() positiveSum(5, -2) end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
 <hr />
 <h2 id="positiveargumentmsg"><strong>positiveArgumentMsg</strong></h2>
 <p>Return a message indicating that a given argument of a function should be positive. It returns <a href="./#incompatiblevaluemsg">incompatibleValueMsg()</a> with "positive number (including/excluding zero)" as #2.  </p>
@@ -1013,12 +989,11 @@ print(err)
 <li><strong>#3</strong>: A boolean value indicating whether zero should be included (the default value is false).</li>
 </ul>
 <h3 id="usage_24">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = positiveArgumentMsg(&quot;target&quot;, -5)
+<pre class="highlight"><code>str = positiveArgumentMsg("target", -5)
 print(str)
 
 str = positiveArgumentMsg(2, -2, true)
-print(str)
-</code></pre></div>
+print(str)</code></pre>
 <hr />
 <h2 id="positivetableargument"><strong>positiveTableArgument</strong></h2>
 <p>Verify whether a given argument of a function with named arguments is positive. The error message comes from <a href="./#positiveargumentmsg">positiveArgumentMsg()</a>.  </p>
@@ -1029,13 +1004,12 @@ print(str)
 <li><strong>#3</strong>: A boolean value indicating whether zero should be included (the default value is false).</li>
 </ul>
 <h3 id="usage_25">Usage</h3>
-<div class="highlight"><pre><span></span><code>myFunction = function(mtable)
-    positiveTableArgument(mtable, &quot;value&quot;)
+<pre class="highlight"><code>myFunction = function(mtable)
+    positiveTableArgument(mtable, "value")
 end
 
 _, err = pcall(function() myFunction{value = -2} end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
 <hr />
 <h2 id="resourcenotfounderror"><strong>resourceNotFoundError</strong></h2>
 <p>Stop the simulation with an error indicating that a given resource was not found. The error message comes from <a href="./#resourcenotfoundmsg">resourceNotFoundMsg()</a>.  </p>
@@ -1045,9 +1019,8 @@ print(err)
 <li><strong>#2</strong>: A string with the location of the resource.</li>
 </ul>
 <h3 id="usage_26">Usage</h3>
-<div class="highlight"><pre><span></span><code>_, err = pcall(function() resourceNotFoundError(&quot;file&quot;, &quot;file.txt&quot;) end)
-print(err)
-</code></pre></div>
+<pre class="highlight"><code>_, err = pcall(function() resourceNotFoundError("file", "file.txt") end)
+print(err)</code></pre>
 <hr />
 <h2 id="resourcenotfoundmsg"><strong>resourceNotFoundMsg</strong></h2>
 <p>Return a message indicating that a given resource could not be found. The string is "<a href="../../types/file/">File</a>/Resource '#1' was not found for argument '#2'.".  </p>
@@ -1057,9 +1030,8 @@ print(err)
 <li><strong>#2</strong>: A File or a string with the location of the resource.</li>
 </ul>
 <h3 id="usage_27">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = resourceNotFoundMsg(&quot;file&quot;, &quot;c:\\myfiles\\file.csv&quot;)
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = resourceNotFoundMsg("file", "c:\\myfiles\\file.csv")
+print(str)</code></pre>
 <hr />
 <h2 id="strictwarning"><strong>strictWarning</strong></h2>
 <p>Print a strict warning. This warning is shown only in the strict mode. If TerraME is executing in the debug mode, it stops the simulation with an error.  </p>
@@ -1068,8 +1040,7 @@ print(str)
 <li><strong>#1</strong>: A string describing the warning.</li>
 </ul>
 <h3 id="usage_28">Usage</h3>
-<div class="highlight"><pre><span></span><code>strictWarning(&quot;warning message&quot;)
-</code></pre></div>
+<pre class="highlight"><code>strictWarning("warning message")</code></pre>
 <hr />
 <h2 id="suggestion"><strong>suggestion</strong></h2>
 <p>Return a suggestion for a wrong string value. The suggestion must have a Levenshtein's distance of less than 60% the size of the string, otherwise it returns nil.  </p>
@@ -1079,15 +1050,14 @@ print(str)
 <li><strong>#2</strong>: A named table with the possible suggestions. It can also be a vector of strings.</li>
 </ul>
 <h3 id="usage_29">Usage</h3>
-<div class="highlight"><pre><span></span><code>t = {
+<pre class="highlight"><code>t = {
     blue = true,
     red = true,
     green = true
 }
 
-str = suggestion(&quot;gren&quot;, t)
-print(str)
-</code></pre></div>
+str = suggestion("gren", t)
+print(str)</code></pre>
 <hr />
 <h2 id="suggestionmsg"><strong>suggestionMsg</strong></h2>
 <p>Return the arguments of suggestion within a question " Do you mean '#1'?".  </p>
@@ -1096,15 +1066,14 @@ print(str)
 <li><strong>#1</strong>: A string.</li>
 </ul>
 <h3 id="usage_30">Usage</h3>
-<div class="highlight"><pre><span></span><code>t = {
+<pre class="highlight"><code>t = {
     blue = true,
     red = true,
     green = true
 }
 
-str = suggestionMsg(suggestion(&quot;gren&quot;, t))
-print(str)
-</code></pre></div>
+str = suggestionMsg(suggestion("gren", t))
+print(str)</code></pre>
 <hr />
 <h2 id="switchinvalidargument"><strong>switchInvalidArgument</strong></h2>
 <p>Stop the simulation with an error because the user did not choose a correct option. This function supposes that there is a set of available options described as string idexes of a table so it tries to find an approximate string to be shown as a suggestion. Otherwise, it shows all the available options. The error messages come from <a href="./#switchinvalidargumentsuggestionmsg">switchInvalidArgumentSuggestionMsg()</a> and <a href="./#switchinvalidargumentmsg">switchInvalidArgumentMsg()</a>.  </p>
@@ -1115,15 +1084,14 @@ print(str)
 <li><strong>#3</strong>: A named table describing the available options.</li>
 </ul>
 <h3 id="usage_31">Usage</h3>
-<div class="highlight"><pre><span></span><code>t = {
+<pre class="highlight"><code>t = {
     blue = true,
     red = true,
     green = true
 }
 
-_, err = pcall(function() switchInvalidArgument(&quot;attribute&quot;, &quot;gren&quot;, t) end)
-print(err)
-</code></pre></div>
+_, err = pcall(function() switchInvalidArgument("attribute", "gren", t) end)
+print(err)</code></pre>
 <hr />
 <h2 id="switchinvalidargumentmsg"><strong>switchInvalidArgumentMsg</strong></h2>
 <p>Return a message for a wrong argument value showing the options. The string is "'#1' is an invalid value for argument '#2'. It must be a string from the set [#3].".  </p>
@@ -1134,15 +1102,14 @@ print(err)
 <li><strong>#3</strong>: A named table indicating the available options.</li>
 </ul>
 <h3 id="usage_32">Usage</h3>
-<div class="highlight"><pre><span></span><code>local options = {
+<pre class="highlight"><code>local options = {
     aaa = true,
     bbb = true,
     ccc = true
 }
 
-str = switchInvalidArgumentMsg(&quot;ddd&quot;, &quot;attr&quot;, options)
-print(str)
-</code></pre></div>
+str = switchInvalidArgumentMsg("ddd", "attr", options)
+print(str)</code></pre>
 <hr />
 <h2 id="switchinvalidargumentsuggestionmsg"><strong>switchInvalidArgumentSuggestionMsg</strong></h2>
 <p>Return a message for a wrong argument value showing the most similar option. The string is "'#1' is an invalid value for argument '#2'. suggestionMsg(#3)".  </p>
@@ -1153,16 +1120,14 @@ print(str)
 <li><strong>#3</strong>: A string with a suggestion to replace the wrong value.</li>
 </ul>
 <h3 id="usage_33">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = switchInvalidArgumentSuggestionMsg(&quot;aab&quot;, &quot;attr&quot;, &quot;aaa&quot;)
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = switchInvalidArgumentSuggestionMsg("aab", "attr", "aaa")
+print(str)</code></pre>
 <hr />
 <h2 id="tableargumentmsg"><strong>tableArgumentMsg</strong></h2>
 <p>Return a message indicating that the argument of a function must be a table. The string is "Argument must be a table.".  </p>
 <h3 id="usage_34">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = tableArgumentMsg()
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = tableArgumentMsg()
+print(str)</code></pre>
 <hr />
 <h2 id="unnecessaryargumentmsg"><strong>unnecessaryArgumentMsg</strong></h2>
 <p>Return a message indicating that a given argument is unnecessary. The string is "Argument '#1' is unnecessary. suggestionMsg(#2)".  </p>
@@ -1172,12 +1137,11 @@ print(str)
 <li><strong>#2</strong>: A possible suggestion for the argument. This argument is optional.</li>
 </ul>
 <h3 id="usage_35">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = unnecessaryArgumentMsg(&quot;file&quot;)
+<pre class="highlight"><code>str = unnecessaryArgumentMsg("file")
 print(str)
 
-str = unnecessaryArgumentMsg(&quot;filf&quot;, &quot;file&quot;)
-print(str)
-</code></pre></div>
+str = unnecessaryArgumentMsg("filf", "file")
+print(str)</code></pre>
 <hr />
 <h2 id="valuenotfounderror"><strong>valueNotFoundError</strong></h2>
 <p>Stop the simulation with an error due to a wrong value for an argument. The error message comes from <a href="./#valuenotfoundmsg">valueNotFoundMsg()</a>.  </p>
@@ -1187,9 +1151,8 @@ print(str)
 <li><strong>#2</strong>: The value used as argument to the function call.</li>
 </ul>
 <h3 id="usage_36">Usage</h3>
-<div class="highlight"><pre><span></span><code>_, err = pcall(function() valueNotFoundError(1, &quot;neighborhood&quot;) end)
-print(err)
-</code></pre></div>
+<pre class="highlight"><code>_, err = pcall(function() valueNotFoundError(1, "neighborhood") end)
+print(err)</code></pre>
 <hr />
 <h2 id="valuenotfoundmsg"><strong>valueNotFoundMsg</strong></h2>
 <p>Return a message indicating that a given argument of a function is mandatory. The string is "Value '#2' not found for argument '#1'.".  </p>
@@ -1199,9 +1162,8 @@ print(err)
 <li><strong>#2</strong>: The valued used as argument to the function call.</li>
 </ul>
 <h3 id="usage_37">Usage</h3>
-<div class="highlight"><pre><span></span><code>str = valueNotFoundMsg(1, &quot;neighborhood&quot;)
-print(str)
-</code></pre></div>
+<pre class="highlight"><code>str = valueNotFoundMsg(1, "neighborhood")
+print(str)</code></pre>
 <hr />
 <h2 id="verify"><strong>verify</strong></h2>
 <p>Verify a given condition, otherwise it stops the simulation with an error.  </p>
@@ -1211,13 +1173,12 @@ print(str)
 <li><strong>#2</strong>: A string with the error to be displayed.</li>
 </ul>
 <h3 id="usage_38">Usage</h3>
-<div class="highlight"><pre><span></span><code>greater = function(a, b)
-    verify(a &gt; b, &quot;#1 is not greater than #2.&quot;)
+<pre class="highlight"><code>greater = function(a, b)
+    verify(a &gt; b, "#1 is not greater than #2.")
 end
 
 _, err = pcall(function() greater(5, 7) end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
 <hr />
 <h2 id="verifynamedtable"><strong>verifyNamedTable</strong></h2>
 <p>Verify if a given object is a named table. It generates errors if it is nil, if it is not a table, or if it has numeric names. The error messages come from <a href="./#tableargumentmsg">tableArgumentMsg()</a> and <a href="./#namedargumentsmsg">namedArgumentsMsg()</a>.  </p>
@@ -1226,13 +1187,12 @@ print(err)
 <li><strong>#1</strong>: A value of any type.</li>
 </ul>
 <h3 id="usage_39">Usage</h3>
-<div class="highlight"><pre><span></span><code>myFunction = function(mtable)
+<pre class="highlight"><code>myFunction = function(mtable)
     verifyNamedTable(mtable)
 end
 
 _, err = pcall(function() myFunction{1, 2, 3} end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
 <hr />
 <h2 id="verifyunnecessaryarguments"><strong>verifyUnnecessaryArguments</strong></h2>
 <p>Verify whether the user has passed only the allowed arguments for a function, removing the unnecessary arguments and showing a strict warning otherwise. The warning comes from <a href="./#unnecessaryargumentmsg">unnecessaryArgumentMsg()</a>. It is recommended that this function should be called as early as possible, in order to show the warning before any error that might be related to it. This function removes each unnecessary argument from #1.  </p>
@@ -1242,13 +1202,12 @@ print(err)
 <li><strong>#2</strong>: A vector with the allowed arguments.</li>
 </ul>
 <h3 id="usage_40">Usage</h3>
-<div class="highlight"><pre><span></span><code>myFunction = function(mtable)
-    verifyUnnecessaryArguments(mtable, {&quot;aaa&quot;, &quot;bbb&quot;, &quot;ccc&quot;})
+<pre class="highlight"><code>myFunction = function(mtable)
+    verifyUnnecessaryArguments(mtable, {"aaa", "bbb", "ccc"})
 end
 
 _, err = pcall(function() myFunction{aaa = 3, value = 2} end)
-print(err)
-</code></pre></div>
+print(err)</code></pre>
               
             </div>
           </div><footer>

@@ -351,7 +351,7 @@
 <li><strong>distrib</strong>: The distribution of the Random object. All the other parameters of the distribution are also attributes.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>random = Random()
+<pre class="highlight"><code>random = Random()
 
 bernoulli = Random{p = 0.4}
 print(bernoulli:sample())
@@ -368,7 +368,7 @@ print(gender:sample())
 age = Random{1, 2, 4, 8, 16, 32}
 print(age:sample())
 
-cover = Random{&quot;pasture&quot;, &quot;forest&quot;, &quot;clearcut&quot;}
+cover = Random{"pasture", "forest", "clearcut"}
 print(cover:sample())
 
 person = Agent{
@@ -382,8 +382,7 @@ soc = Society{
     quantity = 10
 }
 
-print(soc:gender().male)
-</code></pre></div>
+print(soc:gender().male)</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -421,12 +420,11 @@ print(soc:gender().male)
 <li><strong>#2</strong>: An integer number. When used, integer() will return a number between the first argument and the second, inclusive.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>random = Random()
+<pre class="highlight"><code>random = Random()
 
 value = random:integer() -- 0 or 1
 value = random:integer(10) -- from 0 to 10
-value = random:integer(5, 10) -- from 5 to 10
-</code></pre></div>
+value = random:integer(5, 10) -- from 5 to 10</code></pre>
 <hr />
 <h2 id="number"><strong>number</strong></h2>
 <p>Return a random real number. By default number() will return a value between zero and one.  </p>
@@ -436,12 +434,11 @@ value = random:integer(5, 10) -- from 5 to 10
 <li><strong>#2</strong>: A number. When used, number() will return a number between the first argument and the second.</li>
 </ul>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>random = Random()
+<pre class="highlight"><code>random = Random()
 
 value = random:number() -- between 0 and 1
 value = random:number(10) -- between 0 and 10
-value = random:number(5, 10) -- between 5 and 10
-</code></pre></div>
+value = random:number(5, 10) -- between 5 and 10</code></pre>
 <hr />
 <h2 id="reseed"><strong>reSeed</strong></h2>
 <p>Set the seed to generate random numbers. This seed will be used in new instances of Random. All Random objecs previously created will still use the previous seed.  </p>
@@ -450,18 +447,16 @@ value = random:number(5, 10) -- between 5 and 10
 <li><strong>#1</strong>: An integer number with the new seed.</li>
 </ul>
 <h3 id="usage_3">Usage</h3>
-<div class="highlight"><pre><span></span><code>random = Random()
+<pre class="highlight"><code>random = Random()
 
-random:reSeed(12345)
-</code></pre></div>
+random:reSeed(12345)</code></pre>
 <hr />
 <h2 id="sample"><strong>sample</strong></h2>
 <p>Return a random element from the chosen distribution.  </p>
 <h3 id="usage_4">Usage</h3>
-<div class="highlight"><pre><span></span><code>random = Random{2, 3, 4, 6}
+<pre class="highlight"><code>random = Random{2, 3, 4, 6}
 
-random:sample()
-</code></pre></div>
+random:sample()</code></pre>
               
             </div>
           </div><footer>

@@ -195,16 +195,15 @@
 <li><strong>target</strong>: An <a href="../agent/">Agent</a>, <a href="../cell/">Cell</a>, <a href="../cellularSpace/">CellularSpace</a>, Society.</li>
 </ul>
 <h3 id="usage">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     size = 5,
     age = 1
 }
 
 TextScreen{
     target = agent,
-    select = {&quot;size&quot; , &quot;age&quot;}
-}
-</code></pre></div>
+    select = {"size" , "age"}
+}</code></pre>
 <hr />
 <h2 id="functions">Functions</h2>
 <table>
@@ -233,19 +232,18 @@ TextScreen{
 <li><strong>#1</strong>: A string with the file name.</li>
 </ul>
 <h3 id="usage_1">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     size = 5,
     age = 1
 }
 
 ts = TextScreen{
     target = agent,
-    select = {&quot;size&quot; , &quot;age&quot;}
+    select = {"size" , "age"}
 }
 
-ts:save(&quot;file.bmp&quot;)
-File(&quot;file.bmp&quot;):delete()
-</code></pre></div>
+ts:save("file.bmp")
+File("file.bmp"):delete()</code></pre>
 <hr />
 <h2 id="update"><strong>update</strong></h2>
 <p>Update the TextScreen with the latest values of its target. It is usually recommended to use the TextScreen as action of an <a href="../event/">Event</a> instead of calling this function explicitly.  </p>
@@ -254,18 +252,17 @@ File(&quot;file.bmp&quot;):delete()
 <li><strong>#1</strong>: An optional argument that can be a number with the current time or an Event.</li>
 </ul>
 <h3 id="usage_2">Usage</h3>
-<div class="highlight"><pre><span></span><code>agent = Agent{
+<pre class="highlight"><code>agent = Agent{
     size = 5,
     age = 1
 }
 
 ts = TextScreen{
     target = agent,
-    select = {&quot;size&quot; , &quot;age&quot;}
+    select = {"size" , "age"}
 }
 
-ts:update()
-</code></pre></div>
+ts:update()</code></pre>
               
             </div>
           </div><footer>
