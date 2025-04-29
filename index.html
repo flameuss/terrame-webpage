@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>TerraME</title>
+    <title>TerraME: Multiparadigm Modeling Toolkit - TerraME</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -40,8 +40,9 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">TerraME</span></p>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">TerraME: Multiparadigm Modeling Toolkit</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">TerraME: Multiparadigm Modeling Toolkit</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#download">Download</a>
     </li>
@@ -76,7 +77,7 @@
     <li class="toctree-l2"><a class="reference internal" href="#statistics">Statistics</a>
     </li>
     </ul>
-                </li>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Base</span></p>
               <ul>
@@ -167,9 +168,29 @@
                   <li class="toctree-l1"><a class="reference internal" href="base/font/">Font</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Package</span></p>
+              <p class="caption"><span class="caption-text">Packages</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="package/package-list/">Package-list</a>
+                  <li class="toctree-l1"><a class="reference internal" href="package/gis/">gis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="package/gis/types/layer/">Layer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="package/gis/types/project/">Project</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="package/gis/types/terralib/">TerraLib</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="package/gis/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="package/gis/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="package/gis/functions/data/">Data</a>
+                </li>
+    </ul>
                   </li>
               </ul>
       </div>
@@ -186,6 +207,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">TerraME</li>
       <li class="breadcrumb-item active">TerraME: Multiparadigm Modeling Toolkit</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -227,7 +249,7 @@
 <p>You can execute a Google search in TerraME packages <a href="https://cse.google.com/cse/publicurl?cx=011124210546699273653:pomdzxscb3o">here</a>. The two basic packages of TerraME that comes with its installation are:</p>
 <ul>
 <li><a href="base/"><strong>base</strong></a>: A package with the basic modelling concepts, such as Cell, CellularSpace, Agent, Timer, and Model.</li>
-<li><a href="http://www.terrame.org/packages/doc/gis/doc/index.html"><strong>gis</strong></a>: A package to handle geospatial data. It has types to manage TerraView projects as well as functions to create and fill cellular layers.</li>
+<li><a href="package/gis/"><strong>gis</strong></a>: A package to handle geospatial data. It has types to manage TerraView projects as well as functions to create and fill cellular layers.</li>
 </ul>
 <p>Using the graphical interface, it is possible to download and install packages from TerraME's repository. They are are:</p>
 <ul>
@@ -247,7 +269,7 @@
 <h2 id="papers-and-reports">Papers and reports</h2>
 <hr />
 <ul>
-<li>LEMOS, CASSIA M.G.; ANDRADE, PEDRO R. ; RODRIGUES, RICARDO R. ; HISSA, LETICIA ; AGUIAR, ANA P. D. . <a href="https://link.springer.com/article/10.1007/s10113-021-01792-0">Combining regional to local restoration goals in the Brazilian Atlantic forest</a>. Regional Environmental Change, v. 21, p. 68, 2021.</li>
+<li>Lemos, Cassia M.G.; Andrade, Pedro R. ; Rodrigues, Ricardo R. ; Hissa, Leticia ; Aguiar, Ana P. D. . <a href="https://link.springer.com/article/10.1007/s10113-021-01792-0">Combining regional to local restoration goals in the Brazilian Atlantic forest</a>. Regional Environmental Change, v. 21, p. 68, 2021.</li>
 <li>Cássia Maria Gama Lemos; Líliam César de Castro Medeiros ; Kelly Ribeiro ; Rodrigo Avancini . <a href="https://periodicos.ufmg.br/index.php/geografias/article/view/13459">Agent-based model implemented using the TerraME framework to simulate the dynamic transmission of dengue fever</a>. Revista GEOgrafias, p. 85-98, 2017.</li>
 <li>Bezerra et al. <a href="https://doi.org/10.1371/journal.pone.0256052">New land-use change scenarios for Brazil: Refining global SSPs with a regional spatially-explicit allocation model</a>. Plos one 17.4, 2022: e0256052.</li>
 <li>Aguiar et al. <a href="https://doi.org/10.1111/gcb.13134">Land use change emission scenarios: anticipating a forest transition process in the Brazilian Amazon</a>. Global change biology, v. 22, n. 5, p. 1821-1840, 2016.</li>
@@ -353,8 +375,3 @@
 
 </body>
 </html>
-
-<!--
-MkDocs version : 1.6.1
-Build Date UTC : 2025-04-03 14:31:00.946813+00:00
--->

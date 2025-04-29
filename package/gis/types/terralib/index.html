@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>TerraLib - TerraME</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "TerraLib";
+        var mkdocs_page_input_path = "package/gis/types/terralib.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../..">
+          <img src="../../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">TerraME</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Packages</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">gis</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../layer/">Layer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../project/">Project</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">TerraLib</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addgdallayer">addGdalLayer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addgeojsoncellspacelayer">addGeoJSONCellSpaceLayer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addgeojsonlayer">addGeoJSONLayer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addpgcellspacelayer">addPgCellSpaceLayer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addpglayer">addPgLayer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_4">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addshpcellspacelayer">addShpCellSpaceLayer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_5">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_6">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addshplayer">addShpLayer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_6">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_7">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addwfslayer">addWfsLayer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_7">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_8">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addwmslayer">addWmsLayer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_8">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_9">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attributefill">attributeFill</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_9">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_10">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#castgeomtosubtype">castGeomToSubtype</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_10">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_11">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checklayergeometries">checkLayerGeometries</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_11">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_12">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checkname">checkName</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_12">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_13">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#createproject">createProject</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_13">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_14">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#douglaspeucker">douglasPeucker</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_14">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_15">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#droppgdatabase">dropPgDatabase</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_15">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_16">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#droppgtable">dropPgTable</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_16">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_17">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#geometry">geometry</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_18">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getarea">getArea</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_17">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_19">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getboundingbox">getBoundingBox</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_18">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_20">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getdataset">getDataSet</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_19">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_21">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getdatasetsize">getDataSetSize</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_20">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_22">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getdistance">getDistance</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_21">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_23">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getdummyvalue">getDummyValue</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_22">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_24">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getgeometryinfo">getGeometryInfo</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_23">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_25">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getlayerinfo">getLayerInfo</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_24">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_26">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getlayersize">getLayerSize</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_25">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_27">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getnumofbands">getNumOfBands</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_26">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_28">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getprojection">getProjection</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_27">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_29">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getpropertyinfos">getPropertyInfos</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_28">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_30">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getpropertynames">getPropertyNames</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_29">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_31">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getrasterinfo">getRasterInfo</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_30">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_32">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getversion">getVersion</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_33">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#isvalidwfsurl">isValidWfsUrl</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_31">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_34">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#openproject">openProject</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_32">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_35">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#polygonize">polygonize</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_33">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_36">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#random">random</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_37">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#removelayer">removeLayer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_34">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_38">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#savedataas">saveDataAs</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_35">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_39">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#savedataset">saveDataSet</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_36">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_40">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#saverasterfromtable">saveRasterFromTable</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_37">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_41">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setprogressvisible">setProgressVisible</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_38">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_42">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Packages</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">TerraLib</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="terralib">TerraLib</h1>
+<p>Type to access TerraLib. It contains very basic and low level functions that are used by the other types of the package. If needed, these functions should be used with care. Such functions mught stop with very strange errors because they do not check any errors in their arguments. All functions must be called by '.'.  </p>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>TerraLib().getVersion()</code></pre>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#addGdalLayer">addGdalLayer</a></td>
+<td>Add a new GDAL layer to a given project.</td>
+</tr>
+<tr>
+<td><a href="#addGeoJSONCellSpaceLayer">addGeoJSONCellSpaceLayer</a></td>
+<td>Create a new cellular layer into a shapefile.</td>
+</tr>
+<tr>
+<td><a href="#addGeoJSONLayer">addGeoJSONLayer</a></td>
+<td>Add a GeoJSON layer to a given project.</td>
+</tr>
+<tr>
+<td><a href="#addPgCellSpaceLayer">addPgCellSpaceLayer</a></td>
+<td>Add a new cellular layer to a PostgreSQL connection.</td>
+</tr>
+<tr>
+<td><a href="#addPgLayer">addPgLayer</a></td>
+<td>Add a new PostgreSQL layer to a given project.</td>
+</tr>
+<tr>
+<td><a href="#addShpCellSpaceLayer">addShpCellSpaceLayer</a></td>
+<td>Create a new cellular layer into a shapefile.</td>
+</tr>
+<tr>
+<td><a href="#addShpLayer">addShpLayer</a></td>
+<td>Add a shapefile layer to a given project.</td>
+</tr>
+<tr>
+<td><a href="#addWfsLayer">addWfsLayer</a></td>
+<td>Add a WFS layer to a given project.</td>
+</tr>
+<tr>
+<td><a href="#addWmsLayer">addWmsLayer</a></td>
+<td>Add a WMS layer to a given project.</td>
+</tr>
+<tr>
+<td><a href="#attributeFill">attributeFill</a></td>
+<td>Fill a given attribute in a layer.</td>
+</tr>
+<tr>
+<td><a href="#castGeomToSubtype">castGeomToSubtype</a></td>
+<td>Returns a subtype of Geometry object.</td>
+</tr>
+<tr>
+<td><a href="#checkLayerGeometries">checkLayerGeometries</a></td>
+<td>Checks if data layer geometries are valid.</td>
+</tr>
+<tr>
+<td><a href="#checkName">checkName</a></td>
+<td>Check if a name is valid.</td>
+</tr>
+<tr>
+<td><a href="#createProject">createProject</a></td>
+<td>Create a new <a href="../project/">Project</a>.</td>
+</tr>
+<tr>
+<td><a href="#douglasPeucker">douglasPeucker</a></td>
+<td>Create a new dataset applying Douglas Peucker algorithm.</td>
+</tr>
+<tr>
+<td><a href="#dropPgDatabase">dropPgDatabase</a></td>
+<td>Remove a PostreSQL database.</td>
+</tr>
+<tr>
+<td><a href="#dropPgTable">dropPgTable</a></td>
+<td>Remove a PostreSQL table.</td>
+</tr>
+<tr>
+<td><a href="#geometry">geometry</a></td>
+<td>Return a handle to TerraLib Geometry Objects.</td>
+</tr>
+<tr>
+<td><a href="#getArea">getArea</a></td>
+<td>Returns the area of this envelope as measured in the spatial reference system of it.</td>
+</tr>
+<tr>
+<td><a href="#getBoundingBox">getBoundingBox</a></td>
+<td>Return the bounding box of a <a href="../layer/">Layer</a>.</td>
+</tr>
+<tr>
+<td><a href="#getDataSet">getDataSet</a></td>
+<td>Returns a given dataset from a layer.</td>
+</tr>
+<tr>
+<td><a href="#getDataSetSize">getDataSetSize</a></td>
+<td>Return the size of a dataset.</td>
+</tr>
+<tr>
+<td><a href="#getDistance">getDistance</a></td>
+<td>Returns the shortest distance between any two points in the two geometries.</td>
+</tr>
+<tr>
+<td><a href="#getDummyValue">getDummyValue</a></td>
+<td>Returns the dummy value of a raster data.</td>
+</tr>
+<tr>
+<td><a href="#getGeometryInfo">getGeometryInfo</a></td>
+<td>Get information about the geometry attribute.</td>
+</tr>
+<tr>
+<td><a href="#getLayerInfo">getLayerInfo</a></td>
+<td>Return the information of a given layer.</td>
+</tr>
+<tr>
+<td><a href="#getLayerSize">getLayerSize</a></td>
+<td>Returns the size of a layer.</td>
+</tr>
+<tr>
+<td><a href="#getNumOfBands">getNumOfBands</a></td>
+<td>Returns the number of bands of some Raster.</td>
+</tr>
+<tr>
+<td><a href="#getProjection">getProjection</a></td>
+<td>Returns a coordinate system name given an identification.</td>
+</tr>
+<tr>
+<td><a href="#getPropertyInfos">getPropertyInfos</a></td>
+<td>Returns the property informations of a layer.</td>
+</tr>
+<tr>
+<td><a href="#getPropertyNames">getPropertyNames</a></td>
+<td>Returns the property names of the dataset.</td>
+</tr>
+<tr>
+<td><a href="#getRasterInfo">getRasterInfo</a></td>
+<td>Return the information of a raster.</td>
+</tr>
+<tr>
+<td><a href="#getVersion">getVersion</a></td>
+<td>Return the current TerraLib version.</td>
+</tr>
+<tr>
+<td><a href="#isValidWfsUrl">isValidWfsUrl</a></td>
+<td>Validates if the URL is a valid WFS server.</td>
+</tr>
+<tr>
+<td><a href="#openProject">openProject</a></td>
+<td>Open a new project.</td>
+</tr>
+<tr>
+<td><a href="#polygonize">polygonize</a></td>
+<td>Creates a polygonized data using GDALPolygonize().</td>
+</tr>
+<tr>
+<td><a href="#random">random</a></td>
+<td>Return pseudo-random number generations exported from Boost.</td>
+</tr>
+<tr>
+<td><a href="#removeLayer">removeLayer</a></td>
+<td>Remove a given layer from a given project.</td>
+</tr>
+<tr>
+<td><a href="#saveDataAs">saveDataAs</a></td>
+<td>Save some data of a layer to another data type.</td>
+</tr>
+<tr>
+<td><a href="#saveDataSet">saveDataSet</a></td>
+<td>Save a given dataset.</td>
+</tr>
+<tr>
+<td><a href="#saveRasterFromTable">saveRasterFromTable</a></td>
+<td>Save a raster on file.</td>
+</tr>
+<tr>
+<td><a href="#setProgressVisible">setProgressVisible</a></td>
+<td>Set progress viewer.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="addgdallayer"><strong>addGdalLayer</strong></h2>
+<p>Add a new GDAL layer to a given project.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A table that represents a project.</li>
+<li><strong>#2</strong>: The name of the layer.</li>
+<li><strong>#3</strong>: The file to the layer.</li>
+<li><strong>#4</strong>: A number value that represents the Spatial Reference System Identifier.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>proj = {
+    file = "myproject.tview",
+    title = "TerraLib Tests",
+    author = "Avancini Rodrigo"
+}
+
+TerraLib().createProject(proj, {})
+
+layerName = "TifLayer"
+layerFile = filePath("cbers_rgb342_crop1.tif", "gis")
+TerraLib().addGdalLayer(proj, layerName, layerFile)</code></pre>
+<h2 id="addgeojsoncellspacelayer"><strong>addGeoJSONCellSpaceLayer</strong></h2>
+<p>Create a new cellular layer into a shapefile.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A table that represents a project.</li>
+<li><strong>#2</strong>: The name of the layer.</li>
+<li><strong>#3</strong>: The name of the layer.</li>
+<li><strong>#4</strong>: The size of a cell.</li>
+<li><strong>#5</strong>: The file to the cellular layer.</li>
+<li><strong>#6</strong>: A boolean value indicating whether the cells should cover only the input data (true) or its bounding box (false).</li>
+</ul>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>proj = {
+    file = "mygeojsonproject.tview",
+    title = "TerraLib Tests",
+    author = "Carneiro Heitor"
+}
+
+TerraLib().createProject(proj, {})
+
+layerName1 = "Setores_Layer"
+layerFile1 = filePath("Setores_Censitarios_2000_pol.geojson", "gis")
+TerraLib().addGeoJSONLayer(proj, layerName1, layerFile1)
+
+TerraLib().addGeoJSONCellSpaceLayer(proj, layerName1, "Setores_Cells", 10000, currentDir())</code></pre>
+<h2 id="addgeojsonlayer"><strong>addGeoJSONLayer</strong></h2>
+<p>Add a GeoJSON layer to a given project.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A table that represents a project.</li>
+<li><strong>#2</strong>: The name of the layer.</li>
+<li><strong>#3</strong>: The file to the layer.</li>
+<li><strong>#4</strong>: A number value that represents the Spatial Reference System Identifier.</li>
+<li><strong>#5</strong>: A string value used to set the character encoding.</li>
+</ul>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>tl = TerraLib()
+TerraLib().createProject("project.tview", {})
+TerraLib().addGeoJSONLayer(proj, "GeoJSONLayer", filePath("Setores_Censitarios_2000_pol.geojson", "gis"))</code></pre>
+<h2 id="addpgcellspacelayer"><strong>addPgCellSpaceLayer</strong></h2>
+<p>Add a new cellular layer to a PostgreSQL connection.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The name of the project.</li>
+<li><strong>#2</strong>: Name of the input layer.</li>
+<li><strong>#3</strong>: The name of the layer.</li>
+<li><strong>#4</strong>: The size of a cell.</li>
+<li><strong>#5</strong>: The connection data, such as host, port, and user.</li>
+<li><strong>#6</strong>: A boolean value indicating whether the cells should cover only the input data (true) or its bounding box (false).</li>
+</ul>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>local proj = {
+    file = "myproject.tview",
+    title = "TerraLib Tests",
+    author = "Avancini Rodrigo"
+}
+
+TerraLib().createProject(proj, {})
+
+local layerName1 = "SampaShp"
+local layerFile1 = filePath("sampa.shp", "gis")
+TerraLib().addShpLayer(proj, layerName1, layerFile1)
+
+local pgData = {
+    type = "POSTGIS",
+    host = "localhost",
+    port = "5432",
+    user = "postgres",
+    password = "postgres",
+    database = "terralib_save_test",
+    table = "sampa_cells"
+}
+
+local clName1 = "SampaPgCells"
+local resolution = 0.7
+TerraLib().addPgCellSpaceLayer(proj, layerName1, clName1, resolution, pgData)</code></pre>
+<h2 id="addpglayer"><strong>addPgLayer</strong></h2>
+<p>Add a new PostgreSQL layer to a given project.  </p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><strong>database</strong>: The database name.</li>
+<li><strong>encoding</strong>: A string value used to set the character encoding.</li>
+<li><strong>host</strong>: Name of the host.</li>
+<li><strong>name</strong>: The name of the layer.</li>
+<li><strong>password</strong>: The password.</li>
+<li><strong>port</strong>: Port number.</li>
+<li><strong>project</strong>: A table that represents a project.</li>
+<li><strong>srid</strong>: A number value that represents the Spatial Reference System Identifier.</li>
+<li><strong>user</strong>: The user name.</li>
+</ul>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>
+proj = {
+    file = "myproject.tview",
+    title = "TerraLib Tests",
+    author = "Avancini Rodrigo"
+}
+
+TerraLib().createProject(proj, {})
+
+local layerName1 = "SampaShp"
+local layerFile1 = filePath("sampa.shp", "gis")
+TerraLib().addShpLayer(proj, layerName1, layerFile1)
+
+pgData = {
+    type = "POSTGIS",
+    host = "localhost",
+    port = "5432",
+    user = "postgres",
+    password = "postgres",
+    database = "terralib_save_test",
+    table = "sampa_cells",
+}
+
+TerraLib().addPgLayer(proj, "SampaPg", pgData)</code></pre>
+<h2 id="addshpcellspacelayer"><strong>addShpCellSpaceLayer</strong></h2>
+<p>Create a new cellular layer into a shapefile.  </p>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A table that represents a project.</li>
+<li><strong>#2</strong>: The name of the layer.</li>
+<li><strong>#3</strong>: The name of the layer.</li>
+<li><strong>#4</strong>: The size of a cell.</li>
+<li><strong>#5</strong>: The file to the layer.</li>
+<li><strong>#6</strong>: A boolean value indicating whether the cells should cover only the input data (true) or its bounding box (false).</li>
+<li><strong>#7</strong>: A boolean value indicating whether a spatial index file should be created.</li>
+</ul>
+<h3 id="usage_6">Usage</h3>
+<pre class="highlight"><code>proj = {
+    file = "myproject.tview",
+    title = "TerraLib Tests",
+    author = "Avancini Rodrigo"
+}
+
+TerraLib().createProject(proj, {})
+
+layerName1 = "SampaShp"
+layerFile1 = filePath("sampa.shp", "gis")
+TerraLib().addShpLayer(proj, layerName1, layerFile1)
+
+TerraLib().addShpCellSpaceLayer(proj, layerName1, "Sampa_Cells", 0.7, currentDir())</code></pre>
+<h2 id="addshplayer"><strong>addShpLayer</strong></h2>
+<p>Add a shapefile layer to a given project.  </p>
+<h3 id="arguments_6">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A table that represents a project.</li>
+<li><strong>#2</strong>: The name of the layer.</li>
+<li><strong>#3</strong>: The file to the layer.</li>
+<li><strong>#4</strong>: A boolean value indicating whether a spatial index file should be created.</li>
+<li><strong>#5</strong>: A number value that represents the Spatial Reference System Identifier.</li>
+<li><strong>#6</strong>: A string value used to set the character encoding.</li>
+</ul>
+<h3 id="usage_7">Usage</h3>
+<pre class="highlight"><code>tl = TerraLib()
+proj = TerraLib().createProject("project.tview", {})
+TerraLib().addShpLayer(proj, "ShapeLayer", filePath("sampa.shp", "gis"))</code></pre>
+<h2 id="addwfslayer"><strong>addWfsLayer</strong></h2>
+<p>Add a WFS layer to a given project.  </p>
+<h3 id="arguments_7">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A table that represents a project.</li>
+<li><strong>#2</strong>: The name of the layer.</li>
+<li><strong>#3</strong>: The URL of the WFS server.</li>
+<li><strong>#4</strong>: The data set in WFS server.</li>
+<li><strong>#5</strong>: A number value that represents the Spatial Reference System Identifier.</li>
+<li><strong>#6</strong>: A string value used to set the character encoding.</li>
+</ul>
+<h3 id="usage_8">Usage</h3>
+<pre class="highlight"><code>local layerName = "WFS-Layer"
+local url = "http://terrabrasilis.info/redd-pac/wfs/wfs_biomes"
+local dataset = "reddpac:BAU"
+TerraLib().addWfsLayer(project, name, url, dataset)</code></pre>
+<h2 id="addwmslayer"><strong>addWmsLayer</strong></h2>
+<p>Add a WMS layer to a given project.  </p>
+<h3 id="arguments_8">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A table that represents a project.</li>
+<li><strong>#2</strong>: The name of the layer.</li>
+<li><strong>#3</strong>: A table with the WMS connection parameters.</li>
+<li><strong>#4</strong>: The data set in WMS server.</li>
+<li><strong>#5</strong>: A number value that represents the Spatial Reference System Identifier.</li>
+</ul>
+<h3 id="usage_9">Usage</h3>
+<pre class="highlight"><code>local layerName = "WMS-Layer"
+local url = "http://terrabrasilis.info/terraamazon/ows"
+local dataset = "IMG_02082016_321077D"
+local directory = currentDir()
+local conn = {
+url = url,
+directory = directory,
+format = "jpeg"
+}
+TerraLib().addWmsLayer(project, layerName, conn, dataset)</code></pre>
+<h2 id="attributefill"><strong>attributeFill</strong></h2>
+<p>Fill a given attribute in a layer.  </p>
+<h3 id="arguments_9">Arguments</h3>
+<ul>
+<li><strong>area</strong>: A boolean value indicating whether the area should be considered.</li>
+<li><strong>attribute</strong>: Name of the attribute to be created.</li>
+<li><strong>default</strong>: The default value.</li>
+<li><strong>from</strong>: Name of the input layer with the data where the operations will take place.</li>
+<li><strong>nodata</strong>: A number used in raster data that represents no information in a pixel value.</li>
+<li><strong>operation</strong>: Name of the operation.</li>
+<li><strong>out</strong>: Name of the layer to be created with the output.</li>
+<li><strong>pixel</strong>: A boolean value. If true, a pixel is considered within a polygon if they have some overlap. If false, a pixel is within a polygon if its centroid is within the polygon.</li>
+<li><strong>project</strong>: The name of the project.</li>
+<li><strong>repr</strong>: A string with the spatial representation of data ("raster", "polygon", "point", or "line").</li>
+<li><strong>select</strong>: The attribute to be used in the operation.</li>
+<li><strong>to</strong>: Name of the reference layer with the elements to be copied to the output.</li>
+</ul>
+<h3 id="usage_10">Usage</h3>
+<pre class="highlight"><code>proj = {
+    file = "myproject.tview",
+    title = "TerraLib Tests",
+    author = "Avancini Rodrigo"
+}
+
+TerraLib().createProject(proj, {})
+
+layerName1 = "Para"
+layerFile1 = filePath("limitePA_polyc_pol.shp", "gis")
+TerraLib().addShpLayer(proj, layerName1, layerFile1)
+
+resolution = 60e3
+TerraLib().addShpCellSpaceLayer(proj, layerName1, clName, resolution, filePath1)
+
+clSet = TerraLib().getDataSet{project = proj, layer = clName}
+
+layerName2 = "Protection_Unit"
+layerFile2 = filePath("BCIM_Unidade_Protecao_IntegralPolygon_PA_polyc_pol.shp", "gis")
+TerraLib().addShpLayer(proj, layerName2, layerFile2)
+
+TerraLib().attributeFill{
+    project = proj,
+    from = layerName2,
+   to = clName,
+   out = presLayerName,
+   attribute = "presence",
+   operation = "presence",
+   select = "FID"
+}</code></pre>
+<h2 id="castgeomtosubtype"><strong>castGeomToSubtype</strong></h2>
+<p>Returns a subtype of Geometry object.  </p>
+<h3 id="arguments_10">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A Geometry object.</li>
+</ul>
+<h3 id="usage_11">Usage</h3>
+<pre class="highlight"><code>shpPath = filePath("RODOVIAS_AMZ_lin.shp", "gis")
+dSet = TerraLib().getDataSet{file = shpPath}
+geom = dSet[1].OGR_GEOMETRY
+geom = TerraLib().castGeomToSubtype(geom)</code></pre>
+<h2 id="checklayergeometries"><strong>checkLayerGeometries</strong></h2>
+<p>Checks if data layer geometries are valid. If invalid geometries are found, it returns a list of the problems.  </p>
+<h3 id="arguments_11">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A project.</li>
+<li><strong>#2</strong>: The name of the layer.</li>
+<li><strong>#3</strong>: A boolean value which if true tries to fix the geometry problems founded.</li>
+</ul>
+<h3 id="usage_12">Usage</h3>
+<pre class="highlight"><code>local problems = TerraLib().checkLayerGeometries(self.project, self.name)
+print(problems[1].error, problems[1].coord.x, problems[1].coord.y)</code></pre>
+<h2 id="checkname"><strong>checkName</strong></h2>
+<p>Check if a name is valid. Return an error message if the name is invalid, otherwise it returns a empty string.  </p>
+<h3 id="arguments_12">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string name.</li>
+</ul>
+<h3 id="usage_13">Usage</h3>
+<pre class="highlight"><code>TerraLib().checkName("aname")</code></pre>
+<h2 id="createproject"><strong>createProject</strong></h2>
+<p>Create a new <a href="../project/">Project</a>.  </p>
+<h3 id="arguments_13">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The name of the project.</li>
+<li><strong>#2</strong>: A table where the layers will be stored.</li>
+</ul>
+<h3 id="usage_14">Usage</h3>
+<pre class="highlight"><code>import("gis")
+
+proj = {
+    file = "myproject.tview",
+    title = "TerraLib Tests",
+    author = "Avancini Rodrigo"
+}
+
+TerraLib().createProject(proj, {})</code></pre>
+<h2 id="douglaspeucker"><strong>douglasPeucker</strong></h2>
+<p>Create a new dataset applying Douglas Peucker algorithm.  </p>
+<h3 id="arguments_14">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The project.</li>
+<li><strong>#2</strong>: The layer name used as reference to create a new dataset.</li>
+<li><strong>#3</strong>: The new dataset name.</li>
+<li><strong>#4</strong>: The tolerance is a distance that defines the threshold for vertices to be considered "insignificant" for the general structure of the geometry. The tolerance must be expressed in the same units as the projection of the input geometry.</li>
+</ul>
+<h3 id="usage_15">Usage</h3>
+<pre class="highlight"><code>lnName = "ES_Rails"
+lnFile = filePath("test/rails.shp", "gis")
+TerraLib().addShpLayer(proj, lnName, lnFile)
+TerraLib().douglasPeucker(proj, lnName, "spl"..lnName, 500)</code></pre>
+<h2 id="droppgdatabase"><strong>dropPgDatabase</strong></h2>
+<p>Remove a PostreSQL database.  </p>
+<h3 id="arguments_15">Arguments</h3>
+<ul>
+<li><strong>database</strong>: The database name.</li>
+<li><strong>host</strong>: Name of the host.</li>
+<li><strong>password</strong>: The password.</li>
+<li><strong>port</strong>: Port number.</li>
+<li><strong>user</strong>: The user name.</li>
+</ul>
+<h3 id="usage_16">Usage</h3>
+<pre class="highlight"><code>
+proj = {
+    file = "myproject.tview",
+    title = "TerraLib Tests",
+    author = "Avancini Rodrigo"
+}
+
+TerraLib().createProject(proj, {})
+
+local layerName1 = "SampaShp"
+local layerFile1 = filePath("sampa.shp", "gis")
+TerraLib().addShpLayer(proj, layerName1, layerFile1)
+
+pgData = {
+    type = "POSTGIS",
+    host = "localhost",
+    port = "5432",
+    user = "postgres",
+    password = "postgres",
+    database = "terralib_save_test",
+    table = "sampa_cells",
+    encoding = "CP1252"
+}
+
+TerraLib().addPgLayer(proj, "SampaPg", pgData)
+
+TerraLib().dropPgDatabase(pgData)</code></pre>
+<h2 id="droppgtable"><strong>dropPgTable</strong></h2>
+<p>Remove a PostreSQL table.  </p>
+<h3 id="arguments_16">Arguments</h3>
+<ul>
+<li><strong>database</strong>: The database name.</li>
+<li><strong>encoding</strong>: The encoding of the table.</li>
+<li><strong>host</strong>: Name of the host.</li>
+<li><strong>password</strong>: The password.</li>
+<li><strong>port</strong>: Port number.</li>
+<li><strong>user</strong>: The user name.</li>
+</ul>
+<h3 id="usage_17">Usage</h3>
+<pre class="highlight"><code>
+proj = {
+    file = "myproject.tview",
+    title = "TerraLib Tests",
+    author = "Avancini Rodrigo"
+}
+
+TerraLib().createProject(proj, {})
+
+local layerName1 = "SampaShp"
+local layerFile1 = filePath("sampa.shp", "gis")
+TerraLib().addShpLayer(proj, layerName1, layerFile1)
+
+pgData = {
+    type = "POSTGIS",
+    host = "localhost",
+    port = "5432",
+    user = "postgres",
+    password = "postgres",
+    database = "terralib_save_test",
+    table = "sampa_cells",
+    encoding = "CP1252"
+}
+
+TerraLib().addPgLayer(proj, "SampaPg", pgData)
+
+TerraLib().dropPgTable(pgData)</code></pre>
+<h2 id="geometry"><strong>geometry</strong></h2>
+<p>Return a handle to TerraLib Geometry Objects.  </p>
+<h3 id="usage_18">Usage</h3>
+<pre class="highlight"><code>TerraLib().geometry().Point(0, 0)</code></pre>
+<h2 id="getarea"><strong>getArea</strong></h2>
+<p>Returns the area of this envelope as measured in the spatial reference system of it.  </p>
+<h3 id="arguments_17">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The geometry of the project.</li>
+</ul>
+<h3 id="usage_19">Usage</h3>
+<pre class="highlight"><code>local dSet = TerraLib().getDataSet{project = proj, layer = clName1}
+local area = TerraLib().getArea(dSet[0].OGR_GEOMETRY)</code></pre>
+<h2 id="getboundingbox"><strong>getBoundingBox</strong></h2>
+<p>Return the bounding box of a <a href="../layer/">Layer</a>.  </p>
+<h3 id="arguments_18">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A Layer.</li>
+</ul>
+<h3 id="usage_20">Usage</h3>
+<pre class="highlight"><code>TerraLib().getBoundingBox(proj.layers["layerName"])</code></pre>
+<h2 id="getdataset"><strong>getDataSet</strong></h2>
+<p>Returns a given dataset from a layer.  </p>
+<h3 id="arguments_19">Arguments</h3>
+<ul>
+<li><strong>file</strong>: A file path.</li>
+<li><strong>layer</strong>: A layer name.</li>
+<li><strong>missing</strong>: A value to replace null values.</li>
+<li><strong>project</strong>: A project.</li>
+</ul>
+<h3 id="usage_21">Usage</h3>
+<pre class="highlight"><code>dset = TerraLib().getDataSet{project = "myproject.tview", layer = "mylayer"}</code></pre>
+<h2 id="getdatasetsize"><strong>getDataSetSize</strong></h2>
+<p>Return the size of a dataset.  </p>
+<h3 id="arguments_20">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A file.</li>
+</ul>
+<h3 id="usage_22">Usage</h3>
+<pre class="highlight"><code>tifFile = filePath("prodes_polyc_10k.tif", "gis")
+tifSize = TerraLib().getDataSetSize(tifFile)</code></pre>
+<h2 id="getdistance"><strong>getDistance</strong></h2>
+<p>Returns the shortest distance between any two points in the two geometries.  </p>
+<h3 id="arguments_21">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The geometry.</li>
+<li><strong>#2</strong>: The other geometry.</li>
+</ul>
+<h3 id="usage_23">Usage</h3>
+<pre class="highlight"><code>local dSet = TerraLib().getDataSet{project = proj, layer = clName1}
+local dist = TerraLib().getDistance(dSet[0].OGR_GEOMETRY, dSet[getn(dSet) - 1].OGR_GEOMETRY)</code></pre>
+<h2 id="getdummyvalue"><strong>getDummyValue</strong></h2>
+<p>Returns the dummy value of a raster data.  </p>
+<h3 id="arguments_22">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The project.</li>
+<li><strong>#2</strong>: The layer name which is in the project.</li>
+<li><strong>#3</strong>: The band number.</li>
+</ul>
+<h3 id="usage_24">Usage</h3>
+<pre class="highlight"><code>local layerName = "TifLayer"
+local layerFile = filePath("cbers_rgb342_crop1.tif", "gis")
+TerraLib().addGdalLayer(proj, layerName, layerFile)
+local dummy = TerraLib().getDummyValue(proj, layerName, 0)</code></pre>
+<h2 id="getgeometryinfo"><strong>getGeometryInfo</strong></h2>
+<p>Get information about the geometry attribute.  </p>
+<h3 id="arguments_23">Arguments</h3>
+<ul>
+<li><strong>file</strong>: A file. If a project is set, file is ignored.</li>
+<li><strong>layer</strong>: Name of a layer.</li>
+<li><strong>project</strong>: A project.</li>
+</ul>
+<h3 id="usage_25">Usage</h3>
+<pre class="highlight"><code>
+local shpFile = filePath("amazonia-roads.shp", "gis")
+local geomInfo = TerraLib().getGeometryInfo{file = shpFile}
+print(geomInfo.fid, geomInfo.name, geomInfo.geometry)</code></pre>
+<h2 id="getlayerinfo"><strong>getLayerInfo</strong></h2>
+<p>Return the information of a given layer.  </p>
+<h3 id="arguments_24">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The name of the project.</li>
+<li><strong>#2</strong>: The name of a layer.</li>
+</ul>
+<h3 id="usage_26">Usage</h3>
+<pre class="highlight"><code>proj = {
+    file = "myproject.tview",
+    title = "TerraLib Tests",
+    author = "Avancini Rodrigo"
+}
+
+TerraLib().createProject(proj, {})
+
+local layerName1 = "SampaShp"
+local layerFile1 = filePath("sampa.shp", "gis")
+TerraLib().addShpLayer(proj, layerName1, layerFile1)
+
+pgData = {
+    type = "POSTGIS",
+    host = "localhost",
+    port = "5432",
+    user = "postgres",
+    password = "postgres",
+    database = "terralib_save_test",
+    table = "sampa_cells"
+}
+
+TerraLib().addPgLayer(proj, "SampaPg", pgData)
+
+layerInfo = TerraLib().getLayerInfo(proj, "SampaPg")</code></pre>
+<h2 id="getlayersize"><strong>getLayerSize</strong></h2>
+<p>Returns the size of a layer. When it stores vector data, it returns the number of elements. If it stores raster data, return the number of pixels.  </p>
+<h3 id="arguments_25">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The project.</li>
+<li><strong>#2</strong>: The layer name which is in the project.</li>
+</ul>
+<h3 id="usage_27">Usage</h3>
+<pre class="highlight"><code>local layerName = "SampaShp"
+local layerFile = filePath("sampa.shp", "gis")
+TerraLib().addShpLayer(proj, layerName, layerFile)
+local size = TerraLib().getLayerSize(proj, layerName)</code></pre>
+<h2 id="getnumofbands"><strong>getNumOfBands</strong></h2>
+<p>Returns the number of bands of some Raster.  </p>
+<h3 id="arguments_26">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The project.</li>
+<li><strong>#2</strong>: The input layer name.</li>
+</ul>
+<h3 id="usage_28">Usage</h3>
+<pre class="highlight"><code>TerraLib().addGdalLayer(proj, layerName, layerFile)
+local numBands = TerraLib().getNumOfBands(proj, layerName)</code></pre>
+<h2 id="getprojection"><strong>getProjection</strong></h2>
+<p>Returns a coordinate system name given an identification.  </p>
+<h3 id="arguments_27">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A layer.</li>
+</ul>
+<h3 id="usage_29">Usage</h3>
+<pre class="highlight"><code>local prj = TerraLib().getProjection(proj.layers[layerName])
+print(prj.NAME..". SRID: "..prj.SRID..". PROJ4: "..prj.PROJ4)</code></pre>
+<h2 id="getpropertyinfos"><strong>getPropertyInfos</strong></h2>
+<p>Returns the property informations of a layer.  </p>
+<h3 id="arguments_28">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A <a href="../project/">Project</a>.</li>
+<li><strong>#2</strong>: A <a href="../layer/">Layer</a> name.</li>
+</ul>
+<h3 id="usage_30">Usage</h3>
+<pre class="highlight"><code>local propInfos = TerraLib().getPropertyInfos(proj, "layerName")
+unitTest:assertEquals(propInfos[1].name, "ID")
+unitTest:assertEquals(propInfos[1].type, "integer 64")
+unitTest:assertEquals(propInfos[2].name, "NM_MICRO")
+unitTest:assertEquals(propInfos[2].type, "string")</code></pre>
+<h2 id="getpropertynames"><strong>getPropertyNames</strong></h2>
+<p>Returns the property names of the dataset.  </p>
+<h3 id="arguments_29">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A <a href="../project/">Project</a>.</li>
+<li><strong>#2</strong>: A <a href="../layer/">Layer</a> name.</li>
+</ul>
+<h3 id="usage_31">Usage</h3>
+<pre class="highlight"><code>local propNames = TerraLib().getPropertyNames(proj, proj.layers[layerName])
+for i = 0, #propNames do
+    unitTest:assert((propNames[i] == "FID") or (propNames[i] == "ID") or
+                    (propNames[i] == "NM_MICRO") or (propNames[i] == "CD_GEOCODU"))
+end</code></pre>
+<h2 id="getrasterinfo"><strong>getRasterInfo</strong></h2>
+<p>Return the information of a raster.  </p>
+<h3 id="arguments_30">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A raster file.</li>
+</ul>
+<h3 id="usage_32">Usage</h3>
+<pre class="highlight"><code>tifFile = filePath("prodes_polyc_10k.tif", "gis")
+tifInfo = info = gis.TerraLib().getRasterInfo(file)</code></pre>
+<h2 id="getversion"><strong>getVersion</strong></h2>
+<p>Return the current TerraLib version.  </p>
+<h3 id="usage_33">Usage</h3>
+<pre class="highlight"><code>import("gis")
+print(TerraLib().getVersion())</code></pre>
+<h2 id="isvalidwfsurl"><strong>isValidWfsUrl</strong></h2>
+<p>Validates if the URL is a valid WFS server.  </p>
+<h3 id="arguments_31">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The URL of the WFS server.</li>
+</ul>
+<h3 id="usage_34">Usage</h3>
+<pre class="highlight"><code>local layerName = "WFS-Layer"
+local url = "http://terrabrasilis.info/redd-pac/wfs/wfs_biomes"
+local dataset = "reddpac:BAU"
+TerraLib().isValidWfsUrl(url)</code></pre>
+<h2 id="openproject"><strong>openProject</strong></h2>
+<p>Open a new project.  </p>
+<h3 id="arguments_32">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The name of the project.</li>
+<li><strong>#2</strong>: The path for the project.</li>
+</ul>
+<h3 id="usage_35">Usage</h3>
+<pre class="highlight"><code>import("gis")
+proj = {}
+TerraLib().openProject(proj2, "myproject.tview")</code></pre>
+<h2 id="polygonize"><strong>polygonize</strong></h2>
+<p>Creates a polygonized data using GDALPolygonize().  </p>
+<h3 id="arguments_33">Arguments</h3>
+<ul>
+<li><strong>band</strong>: The band which will be created the values.</li>
+<li><strong>layer</strong>: The layer name.</li>
+<li><strong>outInfo</strong>: A table with output information according to data source with the same arguments when creates a layer from a file or database.</li>
+<li><strong>project</strong>: The project which contains the layer.</li>
+</ul>
+<h3 id="usage_36">Usage</h3>
+<pre class="highlight"><code>local rasterInfo = {
+    project = aProject,
+    layer = aLayerName,
+    band = 0,
+}
+
+local outInfo = {
+    source = "postgis",
+    host = "localhost",
+    port = "5432",
+    user = "postgres",
+    password = "postgres",
+    database = "postgis_22_sample",
+    table = "aTableName",
+    encoding = "LATIN1"
+}
+
+TerraLib().polygonize(rasterInfo, outInfo)</code></pre>
+<h2 id="random"><strong>random</strong></h2>
+<p>Return pseudo-random number generations exported from Boost.  </p>
+<h3 id="usage_37">Usage</h3>
+<pre class="highlight"><code>mt = TerraLib().random().MersenneTwister(1)
+nd = TerraLib().random().NormalDistribution(mt, 1, 6)
+print(nd())</code></pre>
+<h2 id="removelayer"><strong>removeLayer</strong></h2>
+<p>Remove a given layer from a given project.  </p>
+<h3 id="arguments_34">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The name of the project.</li>
+<li><strong>#2</strong>: The name of the layer to be removed.</li>
+</ul>
+<h3 id="usage_38">Usage</h3>
+<pre class="highlight"><code>removeLayer(project, layerName)</code></pre>
+<h2 id="savedataas"><strong>saveDataAs</strong></h2>
+<p>Save some data of a layer to another data type.  </p>
+<h3 id="arguments_35">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The reference information data.</li>
+<li><strong>#2</strong>: The data that will be saved.</li>
+<li><strong>#3</strong>: Indicates if the saved data will be overwritten.</li>
+<li><strong>#4</strong>: The attribute(s) that will be saved.</li>
+<li><strong>#5</strong>: A table with a data's subset of the <a href="../layer/">Layer</a>. If this parameter is set with a subset of from data, the saved data will have only its values. And, if values is set and attrs is nil, all attributes will be saved.</li>
+</ul>
+<h3 id="usage_39">Usage</h3>
+<pre class="highlight"><code>local fromData = {
+    project = aProject,
+    layer = "aLayerName"
+}
+local toData = {
+    file = "shp2geojson.geojson",
+    type = "geojson",
+    srid = 4326
+}
+TerraLib().saveDataAs(fromData, toData, true, {"population", "ages"})</code></pre>
+<h2 id="savedataset"><strong>saveDataSet</strong></h2>
+<p>Save a given dataset.  </p>
+<h3 id="arguments_36">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The name of the project.</li>
+<li><strong>#2</strong>: The input layer name.</li>
+<li><strong>#3</strong>: A table mapping the names of the attributes from the input to the output.</li>
+<li><strong>#4</strong>: The output layer name.</li>
+<li><strong>#5</strong>: A table with the attributes to be saved.</li>
+<li><strong>#6</strong>: The name of the output data set.</li>
+</ul>
+<h3 id="usage_40">Usage</h3>
+<pre class="highlight"><code>saveDataSet(project, fromLayerName, toSet, toName, attrs)</code></pre>
+<h2 id="saverasterfromtable"><strong>saveRasterFromTable</strong></h2>
+<p>Save a raster on file.  </p>
+<h3 id="arguments_37">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A table built from raster dataset.</li>
+<li><strong>#2</strong>: The raster file that was used for build the raster table.</li>
+<li><strong>#3</strong>: A file to save the raster.</li>
+<li><strong>#4</strong>: A attribute from the table that its values will be saved on raster band 0.</li>
+</ul>
+<h3 id="usage_41">Usage</h3>
+<pre class="highlight"><code>tifFile = filePath("prodes_polyc_10k.tif", "gis")
+local outFile = File("newraster.tif"):deleteIfExists()
+TerraLib().saveRasterFromTable(cs.cells, tifFile, outFile, "b0")</code></pre>
+<h2 id="setprogressvisible"><strong>setProgressVisible</strong></h2>
+<p>Set progress viewer.  </p>
+<h3 id="arguments_38">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A boolean that if true show the percetage progress of some functions.</li>
+</ul>
+<h3 id="usage_42">Usage</h3>
+<pre class="highlight"><code>TerraLib().setProgressVisible(true)
+TerraLib().attributeFill(...)</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../project/" class="btn btn-neutral float-left" title="Project"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../functions/utils/" class="btn btn-neutral float-right" title="Utils">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../project/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../functions/utils/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>Layer - TerraME</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Layer";
+        var mkdocs_page_input_path = "package/gis/types/layer.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../..">
+          <img src="../../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">TerraME</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Packages</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">gis</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Layer</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attributes">Attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attributes_1">attributes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bands">bands</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#box">box</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#check">check</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#delete">delete</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#drop">drop</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_6">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dummy">dummy</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_7">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#export">export</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_8">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fill">fill</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_4">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_9">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#merge">merge</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_10">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#polygonize">polygonize</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_5">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_11">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#projection">projection</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_12">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#representation">representation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_13">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#simplify">simplify</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_6">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_14">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#split">split</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_15">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_1">#</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_16">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../project/">Project</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../terralib/">TerraLib</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Packages</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">Layer</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="layer">Layer</h1>
+<p>A Layer representing a geospatial dataset stored in a given data source. Each Layer belongs to a <a href="../project/">Project</a>. It is possible to use data stored in different data sources to create a Layer, or to create a cellular Layer from scratch. Cellular Layers homogenize the spatial representation of a given model, making the model simpler and requiring less computational resources. Layer gets different arguments, depending on the task one needs to execute. See the table below.  </p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Mandatory Arguments</th>
+<th>Optional arguments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open a Layer that already belongs to a <a href="../project/">Project</a>.</td>
+<td>name, project</td>
+<td></td>
+</tr>
+<tr>
+<td>Create a Layer using an existent file, database, or service.</td>
+<td>name, project, [arguments related to the source]</td>
+<td>[arguments related to the source]</td>
+</tr>
+<tr>
+<td>Create a cellular Layer from scratch. It has a set of squared polygons that cover its input. It can be stored in "postgis" or "shp" sources.</td>
+<td>input, name, project, resolution, [arguments related to the source]</td>
+<td>box, clean, [arguments related to the source]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>box</strong>: A boolean value indicating whether the cellular Layer will fill the box from the input layer (true) or only the minimal set of cells that cover all the input data (false, default).</li>
+<li><strong>clean</strong>: A boolean value indicating whether the argument file should be cleaned if it needs to create the file. The default value is false.</li>
+<li><strong>encoding</strong>: A string value to set the character encoding. Supported encodings are "utf8", "cp1250", "cp1251", "cp1252", "cp1253", "cp1254", "cp1257", and "latin1". The default value is "latin1".</li>
+<li><strong>epsg</strong>: A number from the EPSG Geodetic Parameter Dataset describing a projection. It is a unique value used to unambiguously identify projected, unprojected, and local spatial coordinate system definitions. When the projection of the data does not have this information, it is necessary to set it manually to allow combining the Layer with other Layer to execute any algorithm. If the prj file of a given data exists but there is no EPSG number, please visit <a href="http://www.prj2epsg.org">http://www.prj2epsg.org</a> to search for it. A list with the supported epsg numbers is available at <a href="http://www.terrame.org/projections.html">http://www.terrame.org/projections.html</a> .</li>
+<li><strong>feature</strong>: A string with the name of the feature to be read from a WFS.</li>
+<li><strong>file</strong>: A string with the location of the file to be loaded or created, or a <a href="../../../../base/types/file/">File (base package)</a>.</li>
+<li><strong>format</strong>: A string with the image format available in a WMS ("png", default). You can use another format if available in the WMS ("jpeg", "tiff", "geotiff", etc).</li>
+<li><strong>host</strong>: String with the host where the database is stored. The default value is "localhost".</li>
+<li><strong>index</strong>: A boolean value indicating whether a spatial index file must be created for a shapefile. The default value is true.</li>
+<li><strong>input</strong>: Name of the input layer whose coverage area will be used to create a cellular layer.</li>
+<li><strong>map</strong>: A string with the name of the map to be read from a WMS. The map will be saved in the current directory within wms subdirectory automatically created.</li>
+<li><strong>name</strong>: A string with the layer name to be used. If the layer already exists and no additional argument is used besides project, then it opens such layer.</li>
+<li><strong>password</strong>: A string with the password.</li>
+<li><strong>port</strong>: Number with the port of the connection. The default value is the standard port of the DBMS. For example, MySQL uses 3306 as standard port.</li>
+<li><strong>progress</strong>: A boolean value indicating whether progress will be shown while creating the cellular space. The default value is true.</li>
+<li><strong>project</strong>: A file name with the TerraView project to be used, or a <a href="../project/">Project</a>.</li>
+<li><strong>resolution</strong>: A number with the x and y resolution. It will need to be measured in the same projection of the input layer.</li>
+<li><strong>service</strong>: A string with the description of a WFS or WMS location. When the string contains wms or wfs in its content, the argument source can be avoided.</li>
+<li><strong>source</strong>: A string with the data source. See table below with the supported data sources:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Description</th>
+<th>Mandatory</th>
+<th>Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"postgis"</td>
+<td>PostGIS database.</td>
+<td>password</td>
+<td>host, port, epsg, user</td>
+</tr>
+<tr>
+<td>"shp"</td>
+<td>ESRI shapefile.</td>
+<td>file</td>
+<td>index, epsg</td>
+</tr>
+<tr>
+<td>"wfs"</td>
+<td>Web Feature Service (WFS).</td>
+<td>feature, service</td>
+<td></td>
+</tr>
+<tr>
+<td>"wms"</td>
+<td>Web Map Service (WMS).</td>
+<td>map, service</td>
+<td>format, user, password, port</td>
+</tr>
+<tr>
+<td>"tif"</td>
+<td>Geotiff file.</td>
+<td>file</td>
+<td>epsg</td>
+</tr>
+<tr>
+<td>"asc"</td>
+<td>ASC format.</td>
+<td>file</td>
+<td>epsg</td>
+</tr>
+<tr>
+<td>"nc"</td>
+<td>NetCDF file.</td>
+<td>file</td>
+<td>epsg</td>
+</tr>
+<tr>
+<td>"geojson"</td>
+<td>GeoJSON file.</td>
+<td>file</td>
+<td>epsg</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>user</strong>: String with the username. The default value is "".</li>
+</ul>
+<h3 id="attributes">Attributes</h3>
+<p>Some attributes of Layer have internal semantics. They can be used as <strong>read-only</strong> by the modeler.</p>
+<ul>
+<li><strong>epsg</strong>: A number with its projection identifier.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>import("gis")
+
+proj = Project{
+    file = "myproject.tview"
+}
+
+-- Creating a layer from a shapefile.
+Layer{
+    project = proj,
+    file = filePath("TI_AMZ.shp", "gis"),
+    name = "ti"
+}
+
+-- Creating a layer from a PostGIS database.
+Layer{
+    project = proj,
+    name = "roads",
+    user = "root",
+    password = "abc123",
+    table = "roads"
+}
+
+-- Opening a layer called "cells".
+cl = Layer{
+    project = filePath("rondonia.tview", "gis"),
+    name = "cells"
+}
+
+-- Creating a cellular layer.
+cl2 = Layer{
+    project = proj,
+    input = "amazonia-states",
+    name = "cells",
+    file = "cells.shp",
+    resolution = 5e4 -- 50x50km
+}
+
+-- Opening a WFS.
+Layer{
+    project = proj,
+    name = "protected",
+    service = "http://terrabrasilis.info/redd-pac/wfs/wfs_biomes",
+    feature = "ProtectedAreas2000",
+}</code></pre>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#attributes">attributes</a></td>
+<td>The attribute names of the Layer.</td>
+</tr>
+<tr>
+<td><a href="#bands">bands</a></td>
+<td>Return the number of bands of a raster layer.</td>
+</tr>
+<tr>
+<td><a href="#box">box</a></td>
+<td>Returns the bounding box as a table with the keys xMin, yMin, xMax and yMax.</td>
+</tr>
+<tr>
+<td><a href="#check">check</a></td>
+<td>Checks if data layer geometries are valid.</td>
+</tr>
+<tr>
+<td><a href="#delete">delete</a></td>
+<td>Delete the data source of the Layer.</td>
+</tr>
+<tr>
+<td><a href="#drop">drop</a></td>
+<td>Drop the database of the Layer.</td>
+</tr>
+<tr>
+<td><a href="#dummy">dummy</a></td>
+<td>Returns the dummy value of a raster layer.</td>
+</tr>
+<tr>
+<td><a href="#export">export</a></td>
+<td>Exports the data of a Layer to another data source.</td>
+</tr>
+<tr>
+<td><a href="#fill">fill</a></td>
+<td>Create a new attribute for each object of a Layer.</td>
+</tr>
+<tr>
+<td><a href="#merge">merge</a></td>
+<td>Merges every temporal layer from the layer's project into a single layer with all temporal attribute.</td>
+</tr>
+<tr>
+<td><a href="#polygonize">polygonize</a></td>
+<td>Creates a vector data from a raster layer using polygons covering contiguous pixels that share the same value.</td>
+</tr>
+<tr>
+<td><a href="#projection">projection</a></td>
+<td>Return the Layer's projection.</td>
+</tr>
+<tr>
+<td><a href="#representation">representation</a></td>
+<td>Return a string with the representation of the layer.</td>
+</tr>
+<tr>
+<td><a href="#simplify">simplify</a></td>
+<td>Create a new data simplifying its geometry.</td>
+</tr>
+<tr>
+<td><a href="#split">split</a></td>
+<td>Splits a temporal layer into multiple layers.</td>
+</tr>
+<tr>
+<td><a href="##">#</a></td>
+<td>Return the number of objects (points, polygons, lines, or pixels) within the Layer.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attributes_1"><strong>attributes</strong></h2>
+<p>The attribute names of the Layer. It returns a vector of strings, whose size is the number of attributes.  </p>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>import("gis")
+
+print(vardump(layer:attributes()))</code></pre>
+<h2 id="bands"><strong>bands</strong></h2>
+<p>Return the number of bands of a raster layer. If the layer does not have a raster representation then it will stop with an error. The bands of the raster layer are named from zero to the number of bands minus one.  </p>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>print(layer:bands())</code></pre>
+<h2 id="box"><strong>box</strong></h2>
+<p>Returns the bounding box as a table with the keys xMin, yMin, xMax and yMax.  </p>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>bbox = alayer:box()
+print(bbox.xMin, bbox.yMin, bbox.xMax, bbox.yMax)</code></pre>
+<h2 id="check"><strong>check</strong></h2>
+<p>Checks if data layer geometries are valid. If some invalid geometry are found, a warning is show about the problem. Return true if no problem is found.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A boolean value which if true tries to fix the geometry problems found. If not set, its value will be false. If it is not possible fix the geometries an error will be shown.</li>
+<li><strong>#2</strong>: A boolean value indicating whether progress will be shown while fixing the geometries.</li>
+</ul>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>local layer = Layer{
+    project = proj,
+    name = "DefectBio",
+    file = "biomassa.shp"
+}
+
+if not layer:check() then
+    layer:check(true)
+end</code></pre>
+<h2 id="delete"><strong>delete</strong></h2>
+<p>Delete the data source of the Layer. If it is a file or a set of files, remove them. If it is a database table, remove it.  </p>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>layer:delete()</code></pre>
+<h2 id="drop"><strong>drop</strong></h2>
+<p>Drop the database of the Layer. This function only works when the layer is stored in a PostGIS table. Note that it removes all tables within the database.  </p>
+<h3 id="usage_6">Usage</h3>
+<pre class="highlight"><code>layer:drop()</code></pre>
+<h2 id="dummy"><strong>dummy</strong></h2>
+<p>Returns the dummy value of a raster layer. If the layer does not have a raster representation then it returns nil . The bands of the raster layer are named from zero to the number of bands minus one. If the band is greater than that, it returns an error.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The band number. The default value is zero.</li>
+</ul>
+<h3 id="usage_7">Usage</h3>
+<pre class="highlight"><code>print(layer:dummy())</code></pre>
+<h2 id="export"><strong>export</strong></h2>
+<p>Exports the data of a Layer to another data source. The data can be either a file data or postgis. The SRID and overwrite are common arguments.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>epsg</strong>: A number from the EPSG Geodetic Parameter Dataset describing a projection. It can be used to reproject the data. A list with the supported epsg numbers is available at <a href="http://www.terrame.org/projections.html">http://www.terrame.org/projections.html</a> .</li>
+<li><strong>overwrite</strong>: Indicates if the exported data will be overwritten, the default is false.</li>
+<li><strong>progress</strong>: A boolean value indicating whether progress will be shown while exporting the layer. The default value is true.</li>
+<li><strong>select</strong>: A vector with the names of the attributes to be saved. When saving a single attribute, you can use a string "attribute" instead of a table {"attribute"}.</li>
+<li><strong>...</strong>: Additional arguments related to where the output will be saved. These arguments are the same for describing the data source when one creates a layer from a file or database.</li>
+</ul>
+<h3 id="usage_8">Usage</h3>
+<pre class="highlight"><code>layer:export{file = "myfile.shp"}
+layer:export{file = "myfile.geojson"}
+layer:export{file = "myfile.geojson", epsg = 4326}
+layer:export{file = "myfile.geojson", epsg = 4326, select = {"uf", "population"}}</code></pre>
+<h2 id="fill"><strong>fill</strong></h2>
+<p>Create a new attribute for each object of a Layer. This attribute can be stored as a new column of a table or a new file, according to where the Layer is stored. There are several strategies for filling cells according to the geometry of the input layer.  </p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><strong>area</strong>: Whether the calculation will be based on the intersection area (true), or the weights are equal for each object with some overlap (false, missing value).</li>
+<li><strong>attribute</strong>: The name of the new attribute to be created.</li>
+<li><strong>band</strong>: An integer value representing the band of the raster to be used. The default value is one.</li>
+<li><strong>dummy</strong>: A number related to the input raster data that represents no information in a pixel value. This value will be ignored by all operations as if it did not exist. For example, in averages, dummy values will not be used in the sum nor to count the number of pixels. Its default value is the result of <a href="../files/Layer.html#dummy">Layer:dummy()</a>.</li>
+<li><strong>layer</strong>: An input Layer belonging to the same <a href="../files/Project.html">Project</a>. It can also be a string with the Layer's name. There are several strategies available, depending on the geometry of the Layer. See below:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Geometry</th>
+<th>Using only geometry</th>
+<th>Using attribute of objects with some overlap</th>
+<th>Using geometry and attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Points</td>
+<td>"count", "distance", "presence"</td>
+<td>"average", "mode", "maximum", "minimum", "stdev", "sum", "median"</td>
+<td>(none)</td>
+</tr>
+<tr>
+<td>Lines</td>
+<td>"count", "distance", "presence"</td>
+<td>"average", "mode", "maximum", "minimum", "stdev", "sum", "median"</td>
+<td>(none)</td>
+</tr>
+<tr>
+<td>Polygons</td>
+<td>"area", "count", "distance", "presence"</td>
+<td>"average", "mode", "maximum", "minimum", "stdev", "sum", "median"</td>
+<td>"average", "mode", "coverage", "sum"</td>
+</tr>
+<tr>
+<td>Raster</td>
+<td>(none)</td>
+<td>"average", "mode", "maximum", "minimum", "coverage", "stdev", "sum", "count", "median"</td>
+<td>(none)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>missing</strong>: A value that will be used to fill a cell whose attribute cannot be computed (for example, when there is no intersection area). Note that this argument is related to the output. Its default value is zero.</li>
+<li><strong>operation</strong>: The way to compute the attribute of each cell. When using raster data, a pixel is considered within a given geometry if there is some intersection between the pixel and the geometry. This means that the same pixel might belong to two or more geometries of the layer. See the table below with the available operations:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+<th>Mandatory arguments</th>
+<th>Optional arguments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"area"</td>
+<td>Percentage of area with some overlay with a layer of polygons. The created values will range from zero (no intersection) to one (area fully covered by polygons). This algorithm supposes that there is no intersection area between each pair of polygons from the reference layer. It sums the intersection areas of the object with all the polygons of the reference layer. Because of that, if there is some overlay between the polygons of the reference layer, it might create attribute values greater than one.</td>
+<td>attribute, layer</td>
+<td>progress, split</td>
+</tr>
+<tr>
+<td>"average"</td>
+<td>Average of quantitative values from the objects that have some intersection with the cell, without taking into account their geometric properties. When using argument area, it computes the average weighted by the proportions of the respective intersection areas. Useful to distribute atributes that represent averages, such as per capita income.</td>
+<td>attribute, layer, select</td>
+<td>area, band, dummy, missing, pixel, progress, split</td>
+</tr>
+<tr>
+<td>"count"</td>
+<td>Number of objects that have some overlay with the cell.</td>
+<td>attribute, layer</td>
+<td>dummy, pixel, progress, split</td>
+</tr>
+<tr>
+<td>"coverage"</td>
+<td>Percentage or total area of each qualitative value covering the cell, using polygons or raster data. It creates one new attribute for each available value, in the form attribute.."_"..value, where attribute is the value passed as argument to fill and value represent the different values in the input data. The sum of the created attribute values for a given cell will range from zero to one indicating the percentage of the cell covered by pixels of each class (default), or the total area covered by each class, according to the area of a pixel in the raster data (when using area = true). Note that this operation does not use dummy value, therefore one attribute will also be created for the dummy values. When using shapefiles, keep in mind the total limit of ten characters, as it removes the characters after the tenth in the name. This function will stop with an error if two attribute names in the output are the same.</td>
+<td>attribute, layer, select</td>
+<td>area, band, missing, pixel, progress, split</td>
+</tr>
+<tr>
+<td>"distance"</td>
+<td>Distance to the nearest object. The distance is computed from the centroid of the cell to the closest point, line, or border of a polygon.</td>
+<td>attribute, layer</td>
+<td>progress, split</td>
+</tr>
+<tr>
+<td>"maximum"</td>
+<td>Maximum quantitative value among the objects that have some intersection with the cell, without taking into account their geometric properties.</td>
+<td>attribute, layer, select</td>
+<td>band, dummy, missing, pixel, progress, split</td>
+</tr>
+<tr>
+<td>"minimum"</td>
+<td>Minimum quantitative value among the objects that have some intersection with the cell, without taking into account their geometric properties.</td>
+<td>attribute, layer, select</td>
+<td>band, dummy, missing, pixel, progress, split</td>
+</tr>
+<tr>
+<td>"mode"</td>
+<td>More common qualitative value from the objects that have some intersection with the cell, without taking into account their geometric properties. This operation creates an attribute with string values. Whenever there are two or more values with the same count, the resulting value will contain all them separated by comma. When using argument area, it uses the value of the object that has larger coverage.</td>
+<td>attribute, layer, select</td>
+<td>band, dummy, missing, pixel, progress, split</td>
+</tr>
+<tr>
+<td>"presence"</td>
+<td>Boolean value pointing out whether some object has an overlay with the cell.</td>
+<td>attribute, layer</td>
+<td>progress, split</td>
+</tr>
+<tr>
+<td>"stdev"</td>
+<td>Standard deviation of quantitative values from objects that have some intersection with the cell, without taking into account their geometric properties.</td>
+<td>attribute, layer, select</td>
+<td>band, dummy, missing, pixel, progress, split</td>
+</tr>
+<tr>
+<td>"sum"</td>
+<td>Sum of quantitative values from objects that have some intersection with the cell, without taking into account their geometric properties. When using argument area, it computes the sum based on the proportions of intersection area. Useful to preserve the total sum in both layers, such as population size.</td>
+<td>attribute, layer, select</td>
+<td>area, band, dummy, missing, pixel, progress, split</td>
+</tr>
+<tr>
+<td>"median"</td>
+<td>Median is the midpoint of a frequency distribution of observed values.</td>
+<td>attribute, layer, select</td>
+<td>band, dummy, missing, pixel, progress, split</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>pixel</strong>: A string value indicating when a pixel is within a polygon. See the table below.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pixel</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"centroid" (default)</td>
+<td>A pixel is within a polygon if its centroid is within the polygon. It is recommended to use this strategy when one wants to keep the sum of the amount of pixels in the created output, and when the resolution of the polygons is greater than the resolution of the pixels. If the resolution of polygons is smaller than the resolution of pixels, there might exist polygons that do not contain any pixel. For cellular representations, when the cells were created using the raster and the resolution of polygons is considerably smaller than the resolution of pixels, a pixel might belong to two polygons as its centroid might be located in the limit of both polygons.</td>
+</tr>
+<tr>
+<td>"overlap"</td>
+<td>A pixel is considered within a polygon if they have some overlap. This way, a pixel might belong to two or more polygons at the same time. This strategy is usually recommended when the resolution of the polygons is smaller than the resolution of the pixels. This strategy takes more time to run.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>progress</strong>: A boolean value indicating whether progress will be shown while computing the operation. The default value is true.</li>
+<li><strong>select</strong>: Name of an attribute from the input data. It is only required when the selected operation needs a value associated to the geometry (average, sum, mode). When using a raster data as input, use argument band instead.</li>
+<li><strong>split</strong>: A boolean to determine if the fill will split the temporal data into different layers with each new layer's name formed by the own Layer's name and the respective times as sufix. The default value is false and, in this case, the temporal data will be filled in the own Layer into different attributes though.</li>
+</ul>
+<h3 id="usage_9">Usage</h3>
+<pre class="highlight"><code>import("gis")
+
+cl = Layer{
+    project = file("rondonia.tview"),
+    layer = "cells"
+}
+
+cl:fill{
+    attribute = "distRoads",
+    operation = "distance",
+    layer = "roads"
+}
+
+cl:fill{
+    attribute = "population",
+    layer = "population",
+    operation = "sum",
+    area = true
+}
+
+cl:fill{
+    attribute = "area2010_",
+    operation = "coverage",
+    layer = "cover",
+    select = "cover2010"
+}
+
+cl:fill{
+    attribute = "area",
+    operation = "coverage",
+    layer = "cover*", -- temporal representation
+}</code></pre>
+<h2 id="merge"><strong>merge</strong></h2>
+<p>Merges every temporal layer from the layer's project into a single layer with all temporal attribute. Atributes from temporal layers are created with the attribute name followed by the time from its layer. Every temporal layer must have the same geometry.  </p>
+<h3 id="usage_10">Usage</h3>
+<pre class="highlight"><code>layer:merge()</code></pre>
+<h2 id="polygonize"><strong>polygonize</strong></h2>
+<p>Creates a vector data from a raster layer using polygons covering contiguous pixels that share the same value. The output data can be either a file data or postgis.  </p>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><strong>band</strong>: The band number (0, default). The output data created will have an attribute named 'value' with the value of the pixel according to the band selected.</li>
+<li><strong>overwrite</strong>: Optional argument that indicates if the output data will be overwritten, the default is false.</li>
+<li><strong>...</strong>: Additional arguments related to where the output will be saved. These arguments are the same for describing the data source when one creates a layer from a file or database.</li>
+</ul>
+<h3 id="usage_11">Usage</h3>
+<pre class="highlight"><code>layer:polygonize{file = "polygonized.shp", overwrite = true}
+layer:polygonize{
+    source = "postgis",
+    password = "postgres",
+    database = "postgis_22_sample",
+    table = "polygonized",
+    overwrite = true
+}</code></pre>
+<h2 id="projection"><strong>projection</strong></h2>
+<p>Return the Layer's projection. It contains the name of the projection, its Geodetic Identifier (EPSG), and its Proj4 description (<a href="www.proj4.org/parameters.html">www.proj4.org/parameters.html</a>).  </p>
+<h3 id="usage_12">Usage</h3>
+<pre class="highlight"><code>print(layer:projection())</code></pre>
+<h2 id="representation"><strong>representation</strong></h2>
+<p>Return a string with the representation of the layer. It can be "point", "polygon", "line", or "raster".  </p>
+<h3 id="usage_13">Usage</h3>
+<pre class="highlight"><code>print(layer:representation())</code></pre>
+<h2 id="simplify"><strong>simplify</strong></h2>
+<p>Create a new data simplifying its geometry. The data will be created using the same data source layer. This function uses Douclas-Peucker algorithm and currently works only for line data.  </p>
+<h3 id="arguments_6">Arguments</h3>
+<ul>
+<li><strong>output</strong>: The data name that will be created.</li>
+<li><strong>tolerance</strong>: The maximum distance between the original curve and the simplified curve. A given point is removed when the distances in a curve without it is less than the maximum distance. The tolerance uses the same unit of the input geometry's projection.</li>
+</ul>
+<h3 id="usage_14">Usage</h3>
+<pre class="highlight"><code>layer:simplify{output = "layer_simplified", tolerance = 500}</code></pre>
+<h2 id="split"><strong>split</strong></h2>
+<p>Splits a temporal layer into multiple layers. It creates a 'layer_time' for each time available as attribute values 'attribute_time'.  </p>
+<h3 id="usage_15">Usage</h3>
+<pre class="highlight"><code>layer:split()</code></pre>
+<h2 id="_1"><strong>#</strong></h2>
+<p>Return the number of objects (points, polygons, lines, or pixels) within the Layer.  </p>
+<h3 id="usage_16">Usage</h3>
+<pre class="highlight"><code>print(#layer)</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../" class="btn btn-neutral float-left" title="gis"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../project/" class="btn btn-neutral float-right" title="Project">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../project/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
