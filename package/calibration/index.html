@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>calibration - TerraME</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "calibration";
+        var mkdocs_page_input_path = "package/calibration/index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+<style>
+  img.center {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">TerraME</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../base/">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../base/functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../base/examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../base/data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../base/font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gis/">gis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../gis/types/layer/">Layer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../gis/types/project/">Project</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../gis/types/terralib/">TerraLib</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../gis/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../gis/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../gis/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ca</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ca/">ca</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ca/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../ca/functions/lifePatterns/">LifePatterns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ca/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ca/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ca/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">logo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../logo/">logo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../logo/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../logo/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../logo/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../logo/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sci</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../sci/">sci</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sci/types/spline/">Spline</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sci/functions/feedback/">Feedback</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../sci/functions/examples/">Examples</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sysdyn</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../sysdyn/">sysdyn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sysdyn/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sysdyn/examples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">calibration</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">calibration</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#types">Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data">Data</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="types/multipleRuins/">MultipleRuins</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="types/samde/">SAMDE</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="functions/goodnessOfFit/">GoodnessOfFit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gpm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gpm/">gpm</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../gpm/types/gpm/">GPM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../gpm/types/network/">Network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../gpm/types/examples/">Example</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../gpm/types/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">calibration</li>
+      <li class="breadcrumb-item active">calibration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="calibration-metrics-and-algorithms">Calibration metrics and algorithms</h1>
+<p><strong>Version:</strong> 0.5.5<br />
+<strong>License:</strong> LGPL-3<br />
+<strong>Release:</strong> 02/08/2018<br />
+<strong>Authors:</strong> Antonio Oliveira Jr, Pedro R. Andrade, Claus Aranha<br />
+<strong>URL:</strong> <a href="https://github.com/pedro-andrade-inpe/calibration">https://github.com/pedro-andrade-inpe/calibration</a><br />
+<strong>Contact:</strong> <a href="mailto:junior092006@hotmail.com">junior092006@hotmail.com</a>, <a href="mailto:pedro.andrade@inpe.br">pedro.andrade@inpe.br</a>, <a href="mailto:caranha@cs.tsukuba.jp">caranha@cs.tsukuba.jp</a>  </p>
+<p>A package with functions for calibrating spatial models. It contains goodness-of-fit metrics as well as an automatic calibration feature using a genetic algorithm called SaMDE (Self-Adaptive Mutation in the Differential Evolution).  </p>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="types/multipleRuins/">MultipleRuns</a></td>
+<td>The Multiple Runs type has various model execution strategies, that can be used by the modeler to compare the results of a model and analyze it's behavior in different scenarios.</td>
+</tr>
+<tr>
+<td><a href="types/samde/">SAMDE</a></td>
+<td>Type to calibrate a model using genetic algorithm.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="functions/goodnessOfFit/">GoodnessOfFit</a></td>
+<td>Goodness-of-fit metrics.</td>
+</tr>
+<tr>
+<td><a href="functions/utils/">Utils</a></td>
+<td>Useful functions that are used by <a href="types/multipleRuins/">MultipleRuns</a> and <a href="types/samde/">SAMDE</a>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples"><a href="functions/examples/">Examples</a></h2>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="functions/examples/#broeke"><strong>broeke</strong></a></td>
+<td>An implementation of the model described in ten Broeke, Guus, George van Voorn, and Arend Ligtenberg.</td>
+</tr>
+<tr>
+<td><a href="functions/examples/#costanza"><strong>costanza</strong></a></td>
+<td>Basic example for testing goodness-of-fit.</td>
+</tr>
+<tr>
+<td><a href="functions/examples/#daisy"><strong>daisy</strong></a></td>
+<td>Daisyworld example using multiple Runs factorial strategy.</td>
+</tr>
+<tr>
+<td><a href="functions/examples/#fire-average"><strong>fire-average</strong></a></td>
+<td>Fire in the forest example using multiple runs repeateated strategy.</td>
+</tr>
+<tr>
+<td><a href="functions/examples/#moving-agents"><strong>moving-agents</strong></a></td>
+<td>Example that uses <a href="types/multipleRuins/">MultipleRuns</a> to compute wow many cells agents moving randomly can reach.</td>
+</tr>
+<tr>
+<td><a href="functions/examples/#sir-mr-campaign"><strong>sir-mr-campaign</strong></a></td>
+<td>Multiple simulations of a Susceptible-Infected-Recovered (SIR) model with a public campaign.</td>
+</tr>
+<tr>
+<td><a href="functions/examples/#sir-mr-probability"><strong>sir-mr-probability</strong></a></td>
+<td>Investigating the probability of infection in a Susceptible-Infected-Recovered (SIR) model.</td>
+</tr>
+<tr>
+<td><a href="functions/examples/#sir-samde-fit"><strong>sir-samde-fit</strong></a></td>
+<td>Infection example using SaMDE, simulates an infection spreading inside a school.</td>
+</tr>
+<tr>
+<td><a href="functions/examples/#sir-samde-max-infected"><strong>sir-samde-max-infected</strong></a></td>
+<td>An example of a bad calibration.</td>
+</tr>
+<tr>
+<td><a href="functions/examples/#sir-samde-point"><strong>sir-samde-point</strong></a></td>
+<td>Calibration of a SIR model using a single point.</td>
+</tr>
+<tr>
+<td><a href="functions/examples/#yeast-mr"><strong>yeast-mr</strong></a></td>
+<td>Basic example for testing <a href="types/multipleRuins/">MultipleRuns</a> using Yeast model.</td>
+</tr>
+<tr>
+<td><a href="functions/examples/#yeast-samde"><strong>yeast-samde</strong></a></td>
+<td>Basic example for <a href="types/samde/">SAMDE</a> using Yeast model.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data"><a href="functions/data/">Data</a></h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="functions/data/#costanza.pgm"><strong>costanza.pgm</strong></a></td>
+<td>Example of a CellularSpaces for multi resolution goodness-of-fit metric.</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../sysdyn/examples/" class="btn btn-neutral float-left" title="Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="types/multipleRuins/" class="btn btn-neutral float-right" title="MultipleRuins">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../sysdyn/examples/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="types/multipleRuins/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

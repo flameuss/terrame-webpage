@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Models - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Models";
+        var mkdocs_page_input_path = "package/sysdyn/models.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+<style>
+  img.center {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">TerraME</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gis/">gis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/types/layer/">Layer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/types/project/">Project</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/types/terralib/">TerraLib</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ca</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ca/">ca</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ca/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ca/functions/lifePatterns/">LifePatterns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ca/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ca/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ca/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">logo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logo/">logo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logo/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../logo/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../logo/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../logo/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sci</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sci/">sci</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../sci/types/spline/">Spline</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../sci/functions/feedback/">Feedback</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../sci/functions/examples/">Examples</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sysdyn</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">sysdyn</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Models</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#chaoticgrowth">ChaoticGrowth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#coffee">Coffee</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_1">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#daisyworld">Daisyworld</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_2">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dam">Dam</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_3">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homeostasis">Homeostasis</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_4">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#limitedgrowth">LimitedGrowth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_5">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lorenz">Lorenz</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_6">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#monolake">MonoLake</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_7">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#populationgrowth">PopulationGrowth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_8">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#predatorprey">PredatorPrey</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_9">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#randomwalk">RandomWalk</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_10">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#roomtemperature">RoomTemperature</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_11">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sir">SIR</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_12">Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#output">Output</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tub">Tub</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_13">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#yeast">Yeast</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_14">Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#output_1">Output</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">calibration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../calibration/">calibration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/types/multipleRuins/">MultipleRuins</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/types/samde/">SAMDE</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/goodnessOfFit/">GoodnessOfFit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gpm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gpm/">gpm</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/gpm/">GPM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/network/">Network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/examples/">Example</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">sysdyn</li>
+      <li class="breadcrumb-item active">Models</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="models">Models</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#ChaoticGrowth">ChaoticGrowth</a></td>
+<td>A Model that describes a chaotic population growth.</td>
+</tr>
+<tr>
+<td><a href="#Coffee">Coffee</a></td>
+<td>Simple model that simulates the temperature of a cup of coffee.</td>
+</tr>
+<tr>
+<td><a href="#Daisyworld">Daisyworld</a></td>
+<td>An implementation of the daisy world model.</td>
+</tr>
+<tr>
+<td><a href="#Dam">Dam</a></td>
+<td>A water in the dam model.</td>
+</tr>
+<tr>
+<td><a href="#Homeostasis">Homeostasis</a></td>
+<td>A model to show homeostasis taking place.</td>
+</tr>
+<tr>
+<td><a href="#LimitedGrowth">LimitedGrowth</a></td>
+<td>A model that simulates limited growth.</td>
+</tr>
+<tr>
+<td><a href="#Lorenz">Lorenz</a></td>
+<td>Classic Lorenz Model to study chaos.</td>
+</tr>
+<tr>
+<td><a href="#MonoLake">MonoLake</a></td>
+<td>A model for the Mono Lake problem.</td>
+</tr>
+<tr>
+<td><a href="#PopulationGrowth">PopulationGrowth</a></td>
+<td>Simple model that simulates the growth of two populations.</td>
+</tr>
+<tr>
+<td><a href="#PredatorPrey">PredatorPrey</a></td>
+<td>Model that implements predatory-prey dynamics.</td>
+</tr>
+<tr>
+<td><a href="#RandomWalk">RandomWalk</a></td>
+<td>Simple random walk model, where a given value can be added by one or subtracted by one randomly.</td>
+</tr>
+<tr>
+<td><a href="#RoomTemperature">RoomTemperature</a></td>
+<td>Simple model that simulates the temperature of three rooms.</td>
+</tr>
+<tr>
+<td><a href="#SIR">SIR</a></td>
+<td>A Susceptible-Infectious-Recovered (SIR) Model to study epidemics.</td>
+</tr>
+<tr>
+<td><a href="#Tub">Tub</a></td>
+<td>A simple water in the tub model.</td>
+</tr>
+<tr>
+<td><a href="#Yeast">Yeast</a></td>
+<td>A yeast growth model.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="chaoticgrowth"><a href="../lua/ChaoticGrowth.lua">ChaoticGrowth</a></h2>
+<p><img alt="" class="center" src="../images/chaotic-growth.bmp" /></p>
+<p>A Model that describes a chaotic population growth.</p>
+<h3 id="parameters">Parameters</h3>
+<ul>
+<li><strong>finalTime</strong>: The final time of the simulation. The default value is 300.</li>
+<li><strong>pop</strong>: The initial population. The default value is 0.1.</li>
+<li><strong>rate</strong>: The rate that multiplies the population size in each time step. The degault value is 4.</li>
+</ul>
+<h2 id="coffee"><a href="../lua/Coffee.lua">Coffee</a></h2>
+<p><img alt="" class="center" src="../images/coffee.bmp" /></p>
+<p>Simple model that simulates the temperature of a cup of coffee.</p>
+<h3 id="parameters_1">Parameters</h3>
+<ul>
+<li><strong>finalTime</strong>: The final time of the simulation in minutes. The default value is 20.</li>
+<li><strong>roomTemperature</strong>: The temperature of the room. The default value is 20.</li>
+<li><strong>temperature</strong>: The initial temperature of the cup of coffee. The default value is 80.</li>
+</ul>
+<h2 id="daisyworld"><a href="../lua/Daisyworld.lua">Daisyworld</a></h2>
+<p><img alt="" class="center" src="../images/daisyworld.bmp" /></p>
+<p>An implementation of the daisy world model. Wood, A. J., G. J. Ackland, J. G. Dyke, H. T. P. Williams, and T. M. Lenton (2008), Daisyworld: A review, Rev. Geophys., 46. Daisyworld consists of two different types of daisy, which may be considered distinct species (because there is no possibility of mixed replication of the types) or, alternatively, as distinct phenotypes of the same species. The two types are identified as either black or white according to their reflectivity or albedo.</p>
+<h3 id="parameters_2">Parameters</h3>
+<ul>
+<li><strong>blackAlbedo</strong>: The albedo of black area. The default value is 0.25.</li>
+<li><strong>blackArea</strong>: The initial area of black daisies. The default value is 0.273.</li>
+<li><strong>decayRate</strong>: The death rate for all daisies.</li>
+<li><strong>emptyArea</strong>: The initial empty area. The default value is 0.327.</li>
+<li><strong>finalTime</strong>: The final time of the simulation. The default value is 100.</li>
+<li><strong>planetArea</strong>: The total area of the planet. The sum of the arguments whiteArea, blackArea, and emptyArea should be equals to this value. The default value is 1.</li>
+<li><strong>soilAlbedo</strong>: The albedo of empty area. The default value is 0.5.</li>
+<li><strong>sunLuminosity</strong>: Sun luminosity (this is the main variable of the model). Values beteween 0.70 and 1.6 support life in Daisyworld.</li>
+<li><strong>whiteAlbedo</strong>: The albedo of white area. The default value is 0.75.</li>
+<li><strong>whiteArea</strong>: The initial area of white daisies. The default value is 0.4.</li>
+</ul>
+<h2 id="dam"><a href="../lua/Dam.lua">Dam</a></h2>
+<p>A water in the dam model.</p>
+<h3 id="parameters_3">Parameters</h3>
+<ul>
+<li><strong>changedYear</strong>: The year in which water values change. The default value is 1970.</li>
+<li><strong>consumePerPerson</strong>: The total amount of water per inhabitant. The default value is 10.</li>
+<li><strong>countYear</strong>: The flag in which defines whether count or not the years . The default value is false.</li>
+<li><strong>currentYear</strong>: The starting year. The default value is 1950.</li>
+<li><strong>finalTime</strong>: The final time of the simulation in months. The default value is 1000.</li>
+<li><strong>growth</strong>: The comsumption amount of kWh produced by cubic meters. The default value is 100.</li>
+<li><strong>inFlow1</strong>: The flow of water into the dam each first season. The default is 2e9.</li>
+<li><strong>inFlow2</strong>: The flow of water into the dam each second season. The default value is 1.5e9.</li>
+<li><strong>kWh2cubicMeters</strong>: The total amount of kWh produced by cubic meters. The default value is 100.</li>
+<li><strong>population</strong>: The total amount of inhabitants. The default value is 1e5.</li>
+<li><strong>water</strong>: The initial stock of water measured in m³. The initial value is 5,000,000,000.</li>
+</ul>
+<h2 id="homeostasis"><a href="../lua/Homeostasis.lua">Homeostasis</a></h2>
+<p><img alt="" class="center" src="../images/homeostasis.bmp" /></p>
+<p>A model to show homeostasis taking place.</p>
+<h3 id="parameters_4">Parameters</h3>
+<ul>
+<li><strong>finalTime</strong>: The final time of the simulation. The default value is 30.</li>
+<li><strong>gain</strong>: The fixed increment in the stock in each time step. The default value is 2.0.</li>
+<li><strong>rate</strong>: The rate that multiplies the stock in each time step. The default value is -0.4.</li>
+<li><strong>stock</strong>: The initial stock. The default value is 0.</li>
+</ul>
+<h2 id="limitedgrowth"><a href="../lua/LimitedGrowth.lua">LimitedGrowth</a></h2>
+<p><img alt="" class="center" src="../images/limited-growth.bmp" /></p>
+<p>A model that simulates limited growth.</p>
+<h3 id="parameters_5">Parameters</h3>
+<ul>
+<li><strong>capacity</strong>: The maximum amount of individuals.</li>
+<li><strong>finalTime</strong>: The number of simulation steps.</li>
+<li><strong>pop</strong>: The initial population.</li>
+<li><strong>rate</strong>: The growth rate of the population.</li>
+</ul>
+<h2 id="lorenz"><a href="../lua/Lorenz.lua">Lorenz</a></h2>
+<p><img alt="" class="center" src="../images/lorenz.bmp" /></p>
+<p>Classic Lorenz Model to study chaos. Lorenz, Edward Norton (1963). "Deterministic nonperiodic flow". Journal of the Atmospheric Sciences 20 (2): 130-141. The Lorenz system is a system of ordinary differential equations first studied by Edward Lorenz. It is notable for having chaotic solutions for certain parameter values and initial conditions. In particular, the Lorenz attractor is a set of chaotic solutions of the Lorenz system which, when plotted, resemble a butterfly or figure eight (from <a href="https://en.wikipedia.org/wiki/Lorenz_system">https://en.wikipedia.org/wiki/Lorenz_system</a>).</p>
+<h3 id="parameters_6">Parameters</h3>
+<ul>
+<li><strong>beta</strong>: The value of beta from the differential equations. The default value is 8/3.</li>
+<li><strong>delta</strong>: The integration step (the model is non-linear). The default value is 0.01.</li>
+<li><strong>finalTime</strong>: The final simulation time. The default value is 10,000.</li>
+<li><strong>rho</strong>: The value of ro from the differential equations. The default value is 28.</li>
+<li><strong>sigma</strong>: The value of sigma from the differential equations. The default value is 10.</li>
+<li><strong>x</strong>: The initial x value. Default is one.</li>
+<li><strong>y</strong>: The initial x value. Default is one.</li>
+<li><strong>z</strong>: The initial x value. Default is one.</li>
+</ul>
+<h2 id="monolake"><a href="../lua/MonoLake.lua">MonoLake</a></h2>
+<p><img alt="" class="center" src="../images/monolake.bmp" /></p>
+<p>A model for the Mono Lake problem. See the chapter in the "Modelling the Environment" book, by Andrew Ford. This is the implementation of Mono Lake's first model.</p>
+<h3 id="parameters_7">Parameters</h3>
+<ul>
+<li><strong>evapRate</strong>: The evaporation rate in feet/year.</li>
+<li><strong>export</strong>: The amount of water taken out from the lake in KAF/year. 1 KAF = 1,233,481.85 m3.</li>
+<li><strong>finalTime</strong>: The final time of the simulation. The default value is 50.</li>
+<li><strong>level</strong>: The initial level of the lake. It is updated every time step according to the amount of water in the lake.</li>
+<li><strong>otherIn</strong>: Other inputs of water to the lake in KAF/year.</li>
+<li><strong>otherOut</strong>: Other output of water from the lake in KAF/year.</li>
+<li><strong>precRate</strong>: The precipitation rate in feet/year.</li>
+<li><strong>runoff</strong>: The amount of water that gets in the lake by runoff in KAF/year.</li>
+<li><strong>waterInLake</strong>: The amount of water in the lake in the beginning of the simulation.</li>
+</ul>
+<h2 id="populationgrowth"><a href="../lua/PopulationGrowth.lua">PopulationGrowth</a></h2>
+<p><img alt="" class="center" src="../images/population-growth.bmp" /></p>
+<p>Simple model that simulates the growth of two populations.</p>
+<h3 id="parameters_8">Parameters</h3>
+<ul>
+<li><strong>finalTime</strong>: The final time of the simulation. The default value is 100.</li>
+<li><strong>growth</strong>: The growth rate of the first population. The default value is 0.5, growing fifty percent in each time step.</li>
+<li><strong>growthChange</strong>: The change of the growth rate. The growth rate is multiplied by this value in each time step. The default value is 1, meaning that growth rate does not change.</li>
+<li><strong>population</strong>: The initial size of the first population. The default value is 60.</li>
+</ul>
+<h2 id="predatorprey"><a href="../lua/PredatorPrey.lua">PredatorPrey</a></h2>
+<p><img alt="" class="center" src="../images/predator-prey.bmp" /></p>
+<p>Model that implements predatory-prey dynamics.</p>
+<h3 id="parameters_9">Parameters</h3>
+<ul>
+<li><strong>finalTime</strong>: The final time of the simulation. The minimum value is 50 and the default value is 500.</li>
+<li><strong>period</strong>: The time interval where the number of predators and preys are updated. The observation of the model occurs at one time step, therefore if this value is 0.1 then it will update the populations ten times for each update in the charts.</li>
+<li><strong>predator</strong>: A number between 10 and 40 with the initial number of predators.</li>
+<li><strong>predDeath</strong>: A number between 0.001 and 0.5 with the probability of a predator to die. The default value is 0.02.</li>
+<li><strong>predGrowthKills</strong>: A number between 0 and 0.01 with the increase in the size of the predator population per eack prey killed. The default value is 0.00002.</li>
+<li><strong>prey</strong>: A number between 100 and 1000 with the initial number of preys.</li>
+<li><strong>preyDeathPred</strong>: A number between 0.0001 and 0.01 with the probability of a prey to be killed by a predator. The default value is 0.001.</li>
+<li><strong>preyGrowth</strong>: A number between 0.01 and 1 with the probability of a prey to reproduce. The default value is 0.08.</li>
+</ul>
+<h2 id="randomwalk"><a href="../lua/RandomWalk.lua">RandomWalk</a></h2>
+<p><img alt="" class="center" src="../images/random-walk.bmp" /></p>
+<p>Simple random walk model, where a given value can be added by one or subtracted by one randomly.</p>
+<h3 id="parameters_10">Parameters</h3>
+<ul>
+<li><strong>finalTime</strong>: The final time of the simulation. It should be at least 10. The default value is 100.</li>
+<li><strong>prob</strong>: The probability of adding one to the value in each time step. The available values are 0, 0.3, 0.5 (default), 0.7, 0.95, and 1.</li>
+<li><strong>value</strong>: The initial value. The default value is zero.</li>
+</ul>
+<h2 id="roomtemperature"><a href="../lua/RoomTemperature.lua">RoomTemperature</a></h2>
+<p><img alt="" class="center" src="../images/room-temperature.bmp" /></p>
+<p>Simple model that simulates the temperature of three rooms.</p>
+<h3 id="parameters_11">Parameters</h3>
+<ul>
+<li><strong>finalTime</strong>: The final time of the simulation. The default value is 100.</li>
+<li><strong>inside</strong>: The temperature inside the room. The default initial value is 15.</li>
+<li><strong>lossToOutside</strong>: The percentage of heat loss every time step according to the difference between the temperature inside and outside the room. The default value is 0.3.</li>
+<li><strong>outside</strong>: The temperature outside the room. The default value is 1.</li>
+<li><strong>tempSet</strong>: The selected temperature in the thermostat. The default value is 20.</li>
+<li><strong>thermalInertia</strong>: The percentage of input heat every time step according to the difference between the temperature inside the room and the one selected in the thermostat. The default value is 0.3.</li>
+</ul>
+<h2 id="sir"><a href="../lua/SIR.lua">SIR</a></h2>
+<p><img alt="" class="center" src="../images/sir.bmp" /></p>
+<p>A Susceptible-Infectious-Recovered (SIR) Model to study epidemics.</p>
+<h3 id="parameters_12">Parameters</h3>
+<ul>
+<li><strong>contacts</strong>: The number of contacts each infected has each time step. The default value is 6.</li>
+<li><strong>duration</strong>: The duration of the disease in days. The default value is 2.</li>
+<li><strong>finalTime</strong>: The final simulation time, in days. The default value is 30.</li>
+<li><strong>infected</strong>: The initial indected population. The default value is 2.</li>
+<li><strong>maximum</strong>: A threshold of infected people that activates a public policy. The policy asks people to start leaving their houses, which cuts the contacts between people by half.</li>
+<li><strong>probability</strong>: The probability of a susceptible person getting infected after a contact with an infected one. The default value is 0.25.</li>
+<li><strong>recovered</strong>: The initial recovered population. The default value is 0.</li>
+<li><strong>susceptible</strong>: The initial susceptible population. The default value is 9998.</li>
+</ul>
+<h3 id="output">Output</h3>
+<ul>
+<li><strong>finalInfected</strong>: A table with number of infected individuals in each simulation step.</li>
+<li><strong>maxInfected</strong>: The maximum number of infected individuals along the simulation.</li>
+</ul>
+<h2 id="tub"><a href="../lua/Tub.lua">Tub</a></h2>
+<p><img alt="" class="center" src="../images/tub.bmp" /></p>
+<p>A simple water in the tub model.</p>
+<h3 id="parameters_13">Parameters</h3>
+<ul>
+<li><strong>finalTime</strong>: The final time of the simulation in minutes. The default value is 8.</li>
+<li><strong>inFlow</strong>: The flow of water into the tub each ten minutes. The default is zero.</li>
+<li><strong>outFlow</strong>: The flow of water outside the tub each minute. The default is 5.</li>
+<li><strong>water</strong>: The initial stock of water measured in gallons. The default value is 40.</li>
+</ul>
+<h2 id="yeast"><a href="../lua/Yeast.lua">Yeast</a></h2>
+<p><img alt="" class="center" src="../images/yeast.bmp" /></p>
+<p>A yeast growth model.</p>
+<h3 id="parameters_14">Parameters</h3>
+<ul>
+<li><strong>capacity</strong>: The total capacity of the environment. The default value is 665.</li>
+<li><strong>cells</strong>: The initial number of cells. The default value is 9.6.</li>
+<li><strong>finalTime</strong>: The final simulation time. The default value is 9.</li>
+<li><strong>rate</strong>: The growth rate of the cells. The default value is 1.1.</li>
+</ul>
+<h3 id="output_1">Output</h3>
+<ul>
+<li><strong>finalCells</strong>: A vector with the quantity of cells in each time step.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="sysdyn"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../examples/" class="btn btn-neutral float-right" title="Examples">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../examples/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

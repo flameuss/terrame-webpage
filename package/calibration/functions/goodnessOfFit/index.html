@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>GoodnessOfFit - TerraME</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "GoodnessOfFit";
+        var mkdocs_page_input_path = "package/calibration/functions/goodnessOfFit.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+<style>
+  img.center {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../..">
+          <img src="../../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">TerraME</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../gis/">gis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/layer/">Layer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/project/">Project</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/terralib/">TerraLib</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ca</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ca/">ca</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ca/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/lifePatterns/">LifePatterns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">logo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logo/">logo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logo/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sci</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sci/">sci</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/types/spline/">Spline</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/functions/feedback/">Feedback</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/functions/examples/">Examples</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sysdyn</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/">sysdyn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/examples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">calibration</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">calibration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/multipleRuins/">MultipleRuins</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/samde/">SAMDE</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Functions</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">GoodnessOfFit</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#multilevel">multiLevel</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pixelbypixel">pixelByPixel</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sumofsquares">sumOfSquares</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gpm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../gpm/">gpm</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/gpm/">GPM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/network/">Network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/examples/">Example</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">calibration</li>
+          <li class="breadcrumb-item">Functions</li>
+      <li class="breadcrumb-item active">GoodnessOfFit</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="goodnessoffit">GoodnessOfFit</h1>
+<p>Goodness-of-fit metrics.</p>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#multiLevel">multiLevel</a></td>
+<td>Compares two CelluarSpace according to the calibration method described in Costanza's paper.</td>
+</tr>
+<tr>
+<td><a href="#pixelByPixel">pixelByPixel</a></td>
+<td>Compares two CelluarSpaces using a pixel by pixel strategy.</td>
+</tr>
+<tr>
+<td><a href="#sumOfSquares">sumOfSquares</a></td>
+<td>Calculates the sum of the difference of squares between two tables of a table.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="multilevel"><strong>multiLevel</strong></h2>
+<p>Compares two CelluarSpace according to the calibration method described in Costanza's paper. It returns a number with the average precision between the values of both CelluarSpaces. Source: Costanza R. Model goodness of fit: a multiple resolution procedure. Ecological modelling. 1989 Sep 15;47(3-4):199-215.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>discrete</strong>: A boolean value indicating whether the values are discrete. The default value is false, meaning that the atributes are continuous.</li>
+<li><strong>k</strong>: Value that determines the weigth for each square calibration. The default value is 0.1.</li>
+<li><strong>log</strong>: Value indicating whether the levels should be computed using log scale: 1, 2, 4, ... until the maximum length in both directions. The default value (fales) means that all levels will be computed: 1, 2, 3, ... until the maximum length in both directions.</li>
+<li><strong>select</strong>: A vector of strings with the names of the attributes to be compared. They must follow the same order of data.target: the first attribute is related to the first CellularSpace and so for the second one. When the target is a single CellularSpace, the two attributes must belong to it. It can also be a single string, when comparing the same attribute name in both CellularSpaces.</li>
+<li><strong>target</strong>: A <a href="../../../../base/types/cellularSpace/">CellularSpace (base package)</a> or a table with two CellularSpaces.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>import("calibration")
+
+cs1 = CellularSpace{
+    file = filePath("costanza.pgm", "calibration"),
+    attrname = "costanza"
+}
+
+cs2 = CellularSpace{
+    file = filePath("costanza2.pgm", "calibration"),
+    attrname = "costanza"
+}
+
+multiLevel{
+    target = {cs1, cs2},
+    select = "costanza",
+    discrete = true
+}</code></pre>
+<h2 id="pixelbypixel"><strong>pixelByPixel</strong></h2>
+<p>Compares two CelluarSpaces using a pixel by pixel strategy. It returns a number with the average difference of the values in each cell of both CelluarSpaces. When the attributes are discrete, the difference between two cells will be zero when they have the same value or one if not. If all the values are equal, the output will be one. If they are completely different, it will be zero. When the attributes are continuous, the difference between the two values will be used. In this case, the returned value is the average of all differences.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>discrete</strong>: A boolean value indicating whether the values are discrete. The default value is false, meaning that the atributes are continuous.</li>
+<li><strong>select</strong>: A vector of strings with the names of the attributes to be compared. They must follow the same order of data.target: the first attribute is related to the first CellularSpace and so for the second one. When the target is a single CellularSpace, the two attributes must belong to it. It can also be a single string, when comparing the same attribute name in both CellularSpaces.</li>
+<li><strong>target</strong>: A <a href="../../../../base/types/cellularSpace/">CellularSpace (base package)</a> or a table with two CellularSpaces.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>import("calibration")
+
+cell = Cell{a = 0.8, b = 0.7}
+cs = CellularSpace{xdim = 10, instance = cell}
+
+result = pixelByPixel{
+    target = cs,
+    select = {"a", "b"}
+}
+
+print(result)</code></pre>
+<h2 id="sumofsquares"><strong>sumOfSquares</strong></h2>
+<p>Calculates the sum of the difference of squares between two tables of a table.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A named table formed by other tables.</li>
+<li><strong>#2</strong>: The attribute corresponding to the first table in table data.</li>
+<li><strong>#3</strong>: The attribute corresponding to the second table in table data.</li>
+</ul>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>import("calibration")
+data = {a = {1, 2, 3, 4, 5}, b = {5, 4, 3, 2, 1}}
+sumOfSquares(data, "a", "b")</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../types/samde/" class="btn btn-neutral float-left" title="SAMDE"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../utils/" class="btn btn-neutral float-right" title="Utils">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../types/samde/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../utils/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

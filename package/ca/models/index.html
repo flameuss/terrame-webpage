@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Models - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Models";
+        var mkdocs_page_input_path = "package/ca/models.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+<style>
+  img.center {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">TerraME</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gis/">gis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/types/layer/">Layer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/types/project/">Project</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/types/terralib/">TerraLib</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ca</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">ca</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Models</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#anneal">Anneal</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bandedvegetation">BandedVegetation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_1">Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#output">Output</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#daisyworld">DaisyWorld</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_2">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#excitable">Excitable</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_3">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fire">Fire</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_4">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#growth">Growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_5">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#interspecificcompetition">InterspecificCompetition</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_6">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#life">Life</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_7">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#oscillator">Oscillator</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_8">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parasit">Parasit</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_9">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parity">Parity</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_10">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#snow">Snow</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_11">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#soliddiffusion">SolidDiffusion</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_12">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#wolfram">Wolfram</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_13">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/lifePatterns/">LifePatterns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">logo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logo/">logo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logo/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../logo/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../logo/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../logo/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sci</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sci/">sci</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../sci/types/spline/">Spline</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../sci/functions/feedback/">Feedback</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../sci/functions/examples/">Examples</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sysdyn</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sysdyn/">sysdyn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sysdyn/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sysdyn/examples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">calibration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../calibration/">calibration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/types/multipleRuins/">MultipleRuins</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/types/samde/">SAMDE</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/goodnessOfFit/">GoodnessOfFit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gpm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gpm/">gpm</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/gpm/">GPM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/network/">Network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/examples/">Example</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">ca</li>
+      <li class="breadcrumb-item active">Models</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="models">Models</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#Anneal">Anneal</a></td>
+<td>Anneal model from Toffoli &amp; Margolis (1988).</td>
+</tr>
+<tr>
+<td><a href="#BandedVegetation">BandedVegetation</a></td>
+<td>Banded vegetation model based on Dunkerley (1997) Banded vegetation: development under uniform rainfall from a simple cellular automaton model.</td>
+</tr>
+<tr>
+<td><a href="#DaisyWorld">DaisyWorld</a></td>
+<td>Implementation of a 2D Daisy World model.</td>
+</tr>
+<tr>
+<td><a href="#Excitable">Excitable</a></td>
+<td>Excitable model from Wiener &amp; Rosenbleuth (1946).</td>
+</tr>
+<tr>
+<td><a href="#Fire">Fire</a></td>
+<td>A Model to simulate fire in the forest.</td>
+</tr>
+<tr>
+<td><a href="#Growth">Growth</a></td>
+<td>Simple growth model.</td>
+</tr>
+<tr>
+<td><a href="#InterspecificCompetition">InterspecificCompetition</a></td>
+<td>Spatial Interspecific Competition using CA.</td>
+</tr>
+<tr>
+<td><a href="#Life">Life</a></td>
+<td>A Model to simulate Game of Life.</td>
+</tr>
+<tr>
+<td><a href="#Oscillator">Oscillator</a></td>
+<td>Oscillator model from Ermentrout &amp; Edelstein-Keshet (1993).</td>
+</tr>
+<tr>
+<td><a href="#Parasit">Parasit</a></td>
+<td>Parasit model from Hassell et al.</td>
+</tr>
+<tr>
+<td><a href="#Parity">Parity</a></td>
+<td>Parity model, by Nigel Gilbert.</td>
+</tr>
+<tr>
+<td><a href="#Snow">Snow</a></td>
+<td>Snow falling from the sky.</td>
+</tr>
+<tr>
+<td><a href="#SolidDiffusion">SolidDiffusion</a></td>
+<td>This model describes how diffusion occurs between two adjacent solids.</td>
+</tr>
+<tr>
+<td><a href="#Wolfram">Wolfram</a></td>
+<td>Implements Wolfram's one-dimensional Cellular Automata.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="anneal"><a href="../lua/Anneal.lua">Anneal</a></h2>
+<p><img alt="" class="center" src="../images/anneal.bmp" /></p>
+<p>Anneal model from Toffoli &amp; Margolis (1988). Cellular Automata Machines: A New Environment for Modeling. Cambridge, MA. MIT Press.</p>
+<h3 id="parameters">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: A number with the final time of the simulation.</li>
+</ul>
+<h2 id="bandedvegetation"><a href="../lua/BandedVegetation.lua">BandedVegetation</a></h2>
+<p><img alt="" class="center" src="../images/banded-vegetation.bmp" /></p>
+<p>Banded vegetation model based on Dunkerley (1997) Banded vegetation: development under uniform rainfall from a simple cellular automaton model. Plant Ecology 129(2):103-111. This model was implemented by Ana Claudia Rorato, Karina Tosto and Ricardo Dal'Agnol da Silva.</p>
+<h3 id="parameters_1">Parameters</h3>
+<ul>
+<li><strong>distributeLaterally</strong>: Distribute water to lateral neighbors? The default value is true.</li>
+<li><strong>distributeToSecondNeighbors</strong>: Distribute water to the neighbors of lateral neighbors? The default value is true. It only works if distributeLaterally is activated.</li>
+<li><strong>dryCoeff</strong>: A coefficient beteeen 1.2 and 3.5 to change the state of a cell to dry .</li>
+<li><strong>finalTime</strong>: Final simulation tome. The default value is 20.</li>
+<li><strong>plantCover</strong>: Initial percentage of plant cover. A number from 0.01 to 1.</li>
+<li><strong>rainDecrease</strong>: A boolean value indicating whether the rain decreases after time 10. The default value is true.</li>
+<li><strong>rainfall</strong>: Amount of rain in each time step. The default value is 100.</li>
+<li><strong>rainfallPlantSurvival</strong>: A value that multiplies dry and wet coefficients. The default value is 100.</li>
+<li><strong>wetCoeff</strong>: A coefficient beteeen 0.6 and 1.2 to change the state of a cell to wet.</li>
+</ul>
+<h3 id="output">Output</h3>
+<ul>
+<li><strong>plantCoverFinal</strong>: The percentage of plant cover in the end of the simulation.</li>
+</ul>
+<h2 id="daisyworld"><a href="../lua/DaisyWorld.lua">DaisyWorld</a></h2>
+<p><img alt="" class="center" src="../images/daisy.bmp" /></p>
+<p>Implementation of a 2D Daisy World model. We have three type of cells: White daisies, Black daisies and soil, with a given albedo for each of them. The cells are placed randomly in the cellular space depending on the given percentage of soil and white daisies, in the remaining there are placed black daisies. Each of them is given with a random initial age, to control the population of daisies, because when they are old (given age) they die. Each cell is also given a random initial value for soil heat between the range of possible values of temperature. Each time step for CA, the temperature will be calculated as follows: Each cell temperature will be calculated according to the daisy albedo and the previous temperature, also the mean neighbours temperature is calculated and this value is used to calculate the mean between the temperature from the cell itself and the mean of the neighbours. If there is an empty cell with a daisy as neighbour, and the conditions for reproduction are fulfilled, a new daisy will be born in the empty cell. The conditions for reproduction are that the daisy's ground has to be inside the range of temperatures, and if it is in the given perfect temperature to reproduce it will have 100 % of chances to reproduce, and less chances the further it is from the perfect temperature. The new born daisy will be the same type as the maximum neighbourhood type (black or white). The daisies will die on a certain (given) age. The first version of this implementation was developed by Nourhan, Shahin and Aida, as final work for Environmental Modeling course in Erasmus Mundus program, Munster University, 2014. It still needs further development.</p>
+<h3 id="parameters_2">Parameters</h3>
+<ul>
+<li><strong>albedo</strong>: A table with white and black albedos.</li>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: The final simulation time.</li>
+<li><strong>lifeSpan</strong>: How long does a daisy live?</li>
+<li><strong>proportion</strong>: A table with two indexes, empty and white, describing the initial proportions of empty and white cells.</li>
+<li><strong>reproduceTemperature</strong>: A table with temperatures related to reproduction.</li>
+<li><strong>temperature</strong>: A table with the temperatures: max for maximum temperature, min for minimum temperature, reproduceMin for the minimum temperature that makes the daisies reproductible, reproducePerfect for the temperature daisies will reproduce with a probability of 100%, and reproduceMax for the maximum temperature where daisies can reproduce.</li>
+</ul>
+<h2 id="excitable"><a href="../lua/Excitable.lua">Excitable</a></h2>
+<p><img alt="" class="center" src="../images/excitable.bmp" /></p>
+<p>Excitable model from Wiener &amp; Rosenbleuth (1946). Arch. Inst. Cardiol. Mexico 16, 202-265. Reffered in Ermentrout &amp; Edelstein-Keshet (1993). Cellular Automata Approaches to Biological Modeling. Jornal of Theoretical Biology, 160, 97-133.</p>
+<h3 id="parameters_3">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: A number with the final time of the simulation.</li>
+</ul>
+<h2 id="fire"><a href="../lua/Fire.lua">Fire</a></h2>
+<p><img alt="" class="center" src="../images/fire.bmp" /></p>
+<p>A Model to simulate fire in the forest.</p>
+<h3 id="parameters_4">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: A number with the x and y size of space.</li>
+<li><strong>empty</strong>: The percentage of empty cells in the beginning of the simulation. It must be a value between 0 and 1, with default 0.1.</li>
+<li><strong>finalTime</strong>: A number with the final simulation time.</li>
+</ul>
+<h2 id="growth"><a href="../lua/Growth.lua">Growth</a></h2>
+<p><img alt="" class="center" src="../images/growth.bmp" /></p>
+<p>Simple growth model. A given population starts from the center of space and grows randomly.</p>
+<h3 id="parameters_5">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: A number with the final time of the simulation.</li>
+<li><strong>probability</strong>: The probability of a cell to become alive once it has an alive neighbor.</li>
+</ul>
+<h2 id="interspecificcompetition"><a href="../lua/InterspecificCompetition.lua">InterspecificCompetition</a></h2>
+<p><img alt="" class="center" src="../images/interspecific-competition.bmp" /></p>
+<p>Spatial Interspecific Competition using CA. This model illustrates how species juxtaposition in space can lead to different population dynamics among competitors species. Three Cellular automaton models were constructed to simulate the competitive interaction of five grass species, Agrostis stolonifera, Holcus lanatus, Cynosurus cristatus, Poa trivialis and Lolium perenne, based on experimentally determined rates of invasion. For more information see Cellular Automaton Models of Interspecific Competition for Space The Effect of Pattern on Process. Author(s): Jonathan Silvertown, Senino Holtier, Jeff Johnson and Pam Dale Source: Journal of Ecology, Vol. 80, No. 3 (Sep., 1992), pp. 527-533. This model was implemented by Rolf Simoes, Diogo Amore, and Joao Arthur Pavanelli.</p>
+<h3 id="parameters_6">Parameters</h3>
+<ul>
+<li><strong>displacements</strong>: The displacement of the specied in grid (the paper's models).</li>
+<li><strong>finalTime</strong>: The number of simulation steps. The default value is 500.</li>
+</ul>
+<h2 id="life"><a href="../lua/Life.lua">Life</a></h2>
+<p><img alt="" class="center" src="../images/life.bmp" /></p>
+<p>A Model to simulate Game of Life. Look at the "oscillators" and the "spaceships" in <a href="http://www.conwaylife.com/wiki/Main_Page">http://www.conwaylife.com/wiki/Main_Page</a> for the description some patterns.</p>
+<h3 id="parameters_7">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: A number with the x and y size of space.</li>
+<li><strong>finalTime</strong>: A number with the final time of the simulation.</li>
+<li><strong>pattern</strong>: A set of available patterns to be used as initial state for the cellular automata. The available patterns are described in the data available in the package. They should be used without ".life" extension. The default pattern is "random", with half alive cells randomly distributed in space.</li>
+</ul>
+<h2 id="oscillator"><a href="../lua/Oscillator.lua">Oscillator</a></h2>
+<p><img alt="" class="center" src="../images/oscillator.bmp" /></p>
+<p>Oscillator model from Ermentrout &amp; Edelstein-Keshet (1993). Cellular Automata Approaches to Biological Modeling. Jornal of Theoretical Biology, 160, 97-133.</p>
+<h3 id="parameters_8">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: A number with the final time of the simulation.</li>
+</ul>
+<h2 id="parasit"><a href="../lua/Parasit.lua">Parasit</a></h2>
+<p><img alt="" class="center" src="../images/parasit.bmp" /></p>
+<p>Parasit model from Hassell et al. (1991). Spatial structure and chaos in insect population dynamics. Nature, Lond. 353, 255-258.</p>
+<h3 id="parameters_9">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: A number with the final time of the simulation.</li>
+</ul>
+<h2 id="parity"><a href="../lua/Parity.lua">Parity</a></h2>
+<p><img alt="" class="center" src="../images/parity.bmp" /></p>
+<p>Parity model, by Nigel Gilbert. See modelingcommons.org/browse/one_model/3381.</p>
+<h3 id="parameters_10">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: A number with the final time of the simulation.</li>
+</ul>
+<h2 id="snow"><a href="../lua/Snow.lua">Snow</a></h2>
+<p><img alt="" class="center" src="../images/snow.bmp" /></p>
+<p>Snow falling from the sky.</p>
+<h3 id="parameters_11">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: A number with the final time of the simulation.</li>
+<li><strong>probability</strong>: The probability of a cell on the top of space to change its state to snow.</li>
+</ul>
+<h2 id="soliddiffusion"><a href="../lua/SolidDiffusion.lua">SolidDiffusion</a></h2>
+<p><img alt="" class="center" src="../images/solid.bmp" /></p>
+<p>This model describes how diffusion occurs between two adjacent solids. It is based on NetLogo Solid Diffusion model <a href="http://ccl.northwestern.edu/netlogo/models/SolidDiffusion.">http://ccl.northwestern.edu/netlogo/models/SolidDiffusion.</a> Solid diffusion is material transport by atomic motion, this phenomena is exhaustively studied in fields as materials science, physics, biology, geology, engineering and chemistry. In this model we demonstrate that the Vacancy Diffusion Mechanism is caused by missing atoms in the metal crystal (Vacancies). These vacancies are occupied by atoms that move from areas of high concentration of Atom of type B to areas with low concentration, until the concentration is equal throughtout the sample. The first version of this implementation was developed by Yasmine and John, as final work for Environmental Modeling course in Erasmus Mundus program, Munster University, 2014. It still needs further development.</p>
+<h3 id="parameters_12">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: The final simulation time.</li>
+</ul>
+<h2 id="wolfram"><a href="../lua/Wolfram.lua">Wolfram</a></h2>
+<p><img alt="" class="center" src="../images/wolfram.bmp" /></p>
+<p>Implements Wolfram's one-dimensional Cellular Automata. For more information, see <a href="http://mathworld.wolfram.com/ElementaryCellularAutomaton.html.">http://mathworld.wolfram.com/ElementaryCellularAutomaton.html.</a></p>
+<h3 id="parameters_13">Parameters</h3>
+<ul>
+<li><strong>finalTime</strong>: A number with the final time of the simulation. It also indicates the size of space needed to show all the simulation steps.</li>
+<li><strong>rule</strong>: A number between 0 and 255 with the rule to be used by the automaton.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="ca"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../functions/lifePatterns/" class="btn btn-neutral float-right" title="LifePatterns">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../functions/lifePatterns/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

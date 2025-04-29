@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>Utils - TerraME</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Utils";
+        var mkdocs_page_input_path = "package/calibration/functions/utils.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+<style>
+  img.center {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../..">
+          <img src="../../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">TerraME</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../gis/">gis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/layer/">Layer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/project/">Project</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/terralib/">TerraLib</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ca</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ca/">ca</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ca/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/lifePatterns/">LifePatterns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">logo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logo/">logo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logo/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sci</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sci/">sci</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/types/spline/">Spline</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/functions/feedback/">Feedback</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/functions/examples/">Examples</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sysdyn</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/">sysdyn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/examples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">calibration</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">calibration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/multipleRuins/">MultipleRuins</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/samde/">SAMDE</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Functions</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../goodnessOfFit/">GoodnessOfFit</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Utils</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checkparametersingle">checkParameterSingle</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checkparametersrange">checkParametersRange</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checkparametersset">checkParametersSet</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clonevalues">cloneValues</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#randommodel">randomModel</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_4">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#timetostring">timeToString</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_5">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gpm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../gpm/">gpm</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/gpm/">GPM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/network/">Network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/examples/">Example</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">calibration</li>
+          <li class="breadcrumb-item">Functions</li>
+      <li class="breadcrumb-item active">Utils</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="utils">Utils</h1>
+<p>Useful functions that are used by <a href="../../types/multipleRuins/">MultipleRuns</a> and <a href="../../types/samde/">SAMDE</a>. It contains basic functions to work with Models, such as checking parameters and creating random instances of a given Model.</p>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#checkParameterSingle">checkParameterSingle</a></td>
+<td>Verify if a given parameter for a Model value is a valid subset for a given Model parameter.</td>
+</tr>
+<tr>
+<td><a href="#checkParametersRange">checkParametersRange</a></td>
+<td>Verify if a given parameter for a Model using min and max (and possibly range) values is a valid subset for a given Model parameter.</td>
+</tr>
+<tr>
+<td><a href="#checkParametersSet">checkParametersSet</a></td>
+<td>Verify if a given parameter for a Model using a table of values is a valid subset for a given Model parameter.</td>
+</tr>
+<tr>
+<td><a href="#cloneValues">cloneValues</a></td>
+<td>Function to create a copy of a given parameter, returns the copy.</td>
+</tr>
+<tr>
+<td><a href="#randomModel">randomModel</a></td>
+<td>Function that returns a random model instance from a set of parameters.</td>
+</tr>
+<tr>
+<td><a href="#timeToString">timeToString</a></td>
+<td>Function that returns the time in a higher-level representation.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="checkparametersingle"><strong>checkParameterSingle</strong></h2>
+<p>Verify if a given parameter for a Model value is a valid subset for a given Model parameter.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A model to be instantiated.</li>
+<li><strong>#2</strong>: The name of the parameter to be checked in the parameters table.</li>
+<li><strong>#3</strong>: The numerical index, of the parameter value to be checked, in the choosen parameter Choice table.</li>
+<li><strong>#4</strong>: The value to be checked.</li>
+<li><strong>#5</strong>: Optional parameter to be used if the paramater 'idx' is inside another table, it's the parameter's table name.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>import("calibration")
+
+myModel = Model{
+    x = Choice{-100, -1, 0, 1, 2, 100},
+    finalTime = 1,
+    init = function(self)
+        self.timer = Timer{
+            -- ...
+        }
+    end
+}
+
+local parameters = {x = Choice{-100, 5, 2}}
+ok, err =  pcall(function()
+    checkParameterSingle(myModel, "x", 2, 5)
+end)
+
+print(err) -- Error: Parameter 5 in #2 is out of the model x range.</code></pre>
+<h2 id="checkparametersrange"><strong>checkParametersRange</strong></h2>
+<p>Verify if a given parameter for a Model using min and max (and possibly range) values is a valid subset for a given Model parameter.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A Model to be instantiated.</li>
+<li><strong>#2</strong>: The name of the parameter to be verified in the Model.</li>
+<li><strong>#3</strong>: A table with the values to be verified.</li>
+<li><strong>#4</strong>: Optional parameter to be used if the paramater 'idx' is inside another table, it's the parameter's table name.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>import("calibration")
+
+myModel = Model{
+    y = Choice{min = 1, max = 100, step = 1},
+    finalTime = 1,
+    init = function(self)
+        self.timer = Timer{
+            -- ...
+        }
+    end
+}
+
+local parameters = {y = Choice{min = 20, max = 40}}
+ok, err =  pcall(function()
+    checkParametersRange(myModel, "y", parameters.y)
+end)
+
+print(err) -- Error: Argument 'y.step' is mandatory.</code></pre>
+<h2 id="checkparametersset"><strong>checkParametersSet</strong></h2>
+<p>Verify if a given parameter for a Model using a table of values is a valid subset for a given Model parameter.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A model to be instantiated.</li>
+<li><strong>#2</strong>: The index of the parameter to be checked in the parameters table.</li>
+<li><strong>#3</strong>: A table with the group of parameter values to be checked.</li>
+<li><strong>#4</strong>: Optional parameter to be used if the paramater 'idx' is inside another table, it's the parameter's table name.</li>
+</ul>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>
+import("calibration")
+
+myModel = Model{
+    x = Choice{-100, -1, 0, 1, 2, 100},
+    finalTime = 1,
+    init = function(self)
+        self.timer = Timer{
+            -- ...
+        }
+    end
+}
+
+local parameters = {x = Choice{-100, 1, 3}}
+ok, err =  pcall(function()
+   checkParametersSet(myModel, "x", parameters.x)
+end)
+
+print(err) -- Error: Parameter 3 in #3 is out of the model x range.</code></pre>
+<h2 id="clonevalues"><strong>cloneValues</strong></h2>
+<p>Function to create a copy of a given parameter, returns the copy.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The parameter to be copied.</li>
+</ul>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>
+import("calibration")
+local original = {param = 42}
+local copy = cloneValues(original)</code></pre>
+<h2 id="randommodel"><strong>randomModel</strong></h2>
+<p>Function that returns a random model instance from a set of parameters. Each Choice argument will be instantiated with a random value from the available choices. The other arguments will be instantiated with their exact values. This function can be used by SaMDE as well as by <a href="../../types/multipleRuins/">MultipleRuns</a>.  </p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The Model to be instantiated.</li>
+<li><strong>#2</strong>: A table of possible parameters for the model. Multiple Runs or Calibration instance.</li>
+</ul>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>
+import("calibration")
+local myModel = Model{
+  x = Choice{-100, -1, 0, 1, 2, 100},
+  y = Choice{min = 1, max = 10, step = 1},
+  finalTime = 1,
+  init = function(self)
+    self.timer = Timer{
+      Event{action = function()
+        self.value = 2 * self.x ^2 - 3 * self.x + 4 + self.y
+      end}
+  }
+  end
+}
+local parameters = {x = Choice{-100,- 1, 0, 1, 2, 100}, y = Choice{min = 1, max = 8, step = 1}}
+randomModel(myModel, parameters)</code></pre>
+<h2 id="timetostring"><strong>timeToString</strong></h2>
+<p>Function that returns the time in a higher-level representation.  </p>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The time in seconds.</li>
+</ul>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>
+import("calibration")
+local t = 3670
+print(timeToString(t)) -- 1 hour and 1 minute</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../goodnessOfFit/" class="btn btn-neutral float-left" title="GoodnessOfFit"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../examples/" class="btn btn-neutral float-right" title="Examples">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../goodnessOfFit/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../examples/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

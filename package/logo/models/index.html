@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Models - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Models";
+        var mkdocs_page_input_path = "package/logo/models.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+<style>
+  img.center {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">TerraME</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../base/functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../base/font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gis/">gis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/types/layer/">Layer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/types/project/">Project</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/types/terralib/">TerraLib</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gis/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ca</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ca/">ca</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ca/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ca/functions/lifePatterns/">LifePatterns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ca/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ca/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ca/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">logo</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">logo</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Models</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ants">Ants</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#disease">Disease</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_1">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#growingsociety">GrowingSociety</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_2">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#heatbugs">Heatbugs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_3">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#labyrinth">Labyrinth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_4">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lifecycle">LifeCycle</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_5">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#overpopulation">Overpopulation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_6">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#predatorprey">PredatorPrey</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_7">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#schelling">Schelling</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_8">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#singleagent">SingleAgent</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_9">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sugarscape">Sugarscape</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_10">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sci</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sci/">sci</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../sci/types/spline/">Spline</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../sci/functions/feedback/">Feedback</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../sci/functions/examples/">Examples</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sysdyn</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sysdyn/">sysdyn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sysdyn/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sysdyn/examples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">calibration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../calibration/">calibration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/types/multipleRuins/">MultipleRuins</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/types/samde/">SAMDE</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/goodnessOfFit/">GoodnessOfFit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../calibration/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gpm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gpm/">gpm</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/gpm/">GPM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/network/">Network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/examples/">Example</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../gpm/types/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">logo</li>
+      <li class="breadcrumb-item active">Models</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="models">Models</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#ants">Ants</a></td>
+<td>A colony of ants bringing food to their nest.</td>
+</tr>
+<tr>
+<td><a href="#disease">Disease</a></td>
+<td>A SIR model implemented with agents.</td>
+</tr>
+<tr>
+<td><a href="#growingsociety">GrowingSociety</a></td>
+<td>Model where a given Society grows, filling the whole space.</td>
+</tr>
+<tr>
+<td><a href="#heatbugs">Heatbugs</a></td>
+<td>Heatbugs is an agent-based model inspired by the behavior of biological agents that seek to regulate the temperature of their surrounding environment around an optimum level.</td>
+</tr>
+<tr>
+<td><a href="#labyrinth">Labyrinth</a></td>
+<td>A labyrynth, where agents move randomly from a given entrance until an exit point.</td>
+</tr>
+<tr>
+<td><a href="#lifecycle">LifeCycle</a></td>
+<td>A model where agents reproduce and die by age.</td>
+</tr>
+<tr>
+<td><a href="#overpopulation">Overpopulation</a></td>
+<td>Model where Agents die by overpopulation.</td>
+</tr>
+<tr>
+<td><a href="#predatorprey">PredatorPrey</a></td>
+<td>Predator-prey dynamics.</td>
+</tr>
+<tr>
+<td><a href="#schelling">Schelling</a></td>
+<td>Schelling's segregation model.</td>
+</tr>
+<tr>
+<td><a href="#singleagent">SingleAgent</a></td>
+<td>A single agent moving around randomly.</td>
+</tr>
+<tr>
+<td><a href="#sugarscape">Sugarscape</a></td>
+<td>Sex, Culture, and Conflict: The Emergence of History.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ants"><a href="../lua/Ants.lua">Ants</a></h2>
+<p><img alt="" class="center" src="../images/ants.bmp" /></p>
+<p>A colony of ants bringing food to their nest. Ant colonies are very interesting entities because of their capacities to collectively achieve complex decisions based on simple behavioural rules and the use of local information and indirect communication. This behaviour is useful to researches from different fields, especially in Swarm Robotics and computational intelligence. Implemented by Bernardo Dornellas de Mendonca Martins dos Reis (more information available at <a href="http://www.terralab.ufop.br/dokuwiki/doku.php?id=terralab:curso:envsoft:finalproject:ant1">http://www.terralab.ufop.br/dokuwiki/doku.php?id=terralab:curso:envsoft:finalproject:ant1</a>). Original authors: Fesseha Belay &amp; Javier Morata.</p>
+<h3 id="parameters">Parameters</h3>
+<ul>
+<li><strong>dimension</strong>: Space dimensions. A number with 50 as default value.</li>
+<li><strong>finalTime</strong>: Final simulation time. A number with 450 as default value.</li>
+<li><strong>initialFood</strong>: A number with 100 as default value.</li>
+<li><strong>rateDiffusion</strong>: A value in the set {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} with 1 as default value.</li>
+<li><strong>rateEvaporation</strong>: A number of at least 1e-06 and at most 0.999999 with 0.2 as default value.</li>
+<li><strong>societySize</strong>: A number of at least 10 and at most 500 with 10 as default value.</li>
+</ul>
+<h2 id="disease"><a href="../lua/Disease.lua">Disease</a></h2>
+<p>A SIR model implemented with agents. It exemplifies the number of additional decisions a modeller must take to switch from system dynamics to agent-based modeling.</p>
+<h3 id="parameters_1">Parameters</h3>
+<ul>
+<li><strong>contacts</strong>: Number of contacts. The default value is 6.</li>
+<li><strong>duration</strong>: Disease duration. A number with 2 as default value.</li>
+<li><strong>finalTime</strong>: Final simulation time. A number with 30 as default value.</li>
+<li><strong>probability</strong>: Probability to infect a contact. A number with 0.25 as default value.</li>
+<li><strong>quantity</strong>: Number of agents. The default value is 1000.</li>
+</ul>
+<h2 id="growingsociety"><a href="../lua/GrowingSociety.lua">GrowingSociety</a></h2>
+<p><img alt="" class="center" src="../images/growing-society.bmp" /></p>
+<p>Model where a given Society grows, filling the whole space. Agents reproduce with 20% of probability if there is an empty neighbor.</p>
+<h3 id="parameters_2">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: The final simulation time.</li>
+<li><strong>quantity</strong>: The initial number of Agents in the model.</li>
+</ul>
+<h2 id="heatbugs"><a href="../lua/Heatbugs.lua">Heatbugs</a></h2>
+<p><img alt="" class="center" src="../images/Heatbugs-map-1-end.bmp" /></p>
+<p>Heatbugs is an agent-based model inspired by the behavior of biological agents that seek to regulate the temperature of their surrounding environment around an optimum level. This model demonstrates how agents can organize themselves within a population. The agents can detect and alter the environmental conditions in their neighborhood, though they can only interact with other agents indirectly. Although this model does not match the behavior of any specific organism, it can be used to show how emergent behavior can arise as a result of different rules that govern the behavior of agents. The bugs (agents) exist in an environment composed of a grid of square patches. Each bug can move to another, more suitable patch, as long as it is not occupied by another bug. Each bug has an ideal temperature, though it is not the same for every bug. The bugs emit a certain amount of heat into the environment at each time step. This heat slowly disperses throughout the environment, though some is lost to cooling. The larger the discrepancy between the bug's patch temperature and its ideal temperature, the more unhappy it is. If the bug is not happy in its patch, it will move to an adjacent empty patch that most closely resembles its ideal temperature. A patch that is too warm will cause the bug to move to the coolest adjacent empty patch. In the same way, a patch that is too cold will cause the bug to move to the warmest adjacent empty patch. However, as the bugs only search their immediate neighborhood, it cannot be guaranteed that the bugs will always move to the most suitable patch available. The first version of this implementation was developed by Ondrej and Linda, as final work for Environmental Modeling course in Erasmus Mundus program, Munster University, 2014. It still needs further development.</p>
+<h3 id="parameters_3">Parameters</h3>
+<ul>
+<li><strong>diffusionRate</strong>: The rate of amount emitted by agent in each iteration. Default value is 0.9.</li>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>evaporationRate</strong>: The speed of heat loss of each cell. This occurs in every iteration, for every cell. Default is 0.04.</li>
+<li><strong>finalTime</strong>: The final simulation time.</li>
+<li><strong>idealTemperature</strong>: Upper and lower edges of ideal temperature. Default ranges from 45 to 60.</li>
+<li><strong>initialCellTemperature</strong>: Initial temperature of each cell. Default is 10.</li>
+<li><strong>outputHeat</strong>: Upper and lower edges of amount of heat emitted by agent in each iteration to its neighbors. Default ranges from 10 to 20.</li>
+<li><strong>quantity</strong>: The initial number of Agents in the model.</li>
+<li><strong>randomMoveChance</strong>: Probability to move randomly, instead of choosing coolest/hottest neighbor. Default is 0.5. with the number of Agents along the simulation should be drawn.</li>
+<li><strong>temperature</strong>: Sets minimum and maximum extend of legend. Default ranges from 0 to 150.</li>
+</ul>
+<h2 id="labyrinth"><a href="../lua/Labyrinth.lua">Labyrinth</a></h2>
+<p><img alt="" class="center" src="../images/labyrinth.bmp" /></p>
+<p>A labyrynth, where agents move randomly from a given entrance until an exit point. There are some available labyrynths available. See the documentation of data.</p>
+<h3 id="parameters_4">Parameters</h3>
+<ul>
+<li><strong>finalTime</strong>: The final simulation time.</li>
+<li><strong>labyrinth</strong>: The spatial representation of the model. The available labyrinths are described in the data available in the package. They should be used without ".labyrinth" extension. The default pattern is "room".</li>
+<li><strong>quantity</strong>: The initial number of Agents in the model.</li>
+</ul>
+<h2 id="lifecycle"><a href="../lua/LifeCycle.lua">LifeCycle</a></h2>
+<p><img alt="" class="center" src="../images/life-cycle.bmp" /></p>
+<p>A model where agents reproduce and die by age. Each Agent starts with age zero. From age 15 until 30 they have 30% of chance of reproducing if there is an empty neighbor cell. Agents have 5% of probability of dying each time step after age 20.</p>
+<h3 id="parameters_5">Parameters</h3>
+<ul>
+<li><strong>chart</strong>: A boolean value indicating whether a Chart with the number of Agents along the simulation should be drawn.</li>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: The final simulation time.</li>
+<li><strong>quantity</strong>: The initial number of Agents in the model.</li>
+</ul>
+<h2 id="overpopulation"><a href="../lua/Overpopulation.lua">Overpopulation</a></h2>
+<p><img alt="" class="center" src="../images/overpopulation.bmp" /></p>
+<p>Model where Agents die by overpopulation. Each Agent breeds with a probability of 30% and die if there are more than three Agents in the neighborhood.</p>
+<h3 id="parameters_6">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: The final simulation time.</li>
+<li><strong>quantity</strong>: The initial number of Agents in the model.</li>
+</ul>
+<h2 id="predatorprey"><a href="../lua/PredatorPrey.lua">PredatorPrey</a></h2>
+<p><img alt="" class="center" src="../images/predatorprey.bmp" /></p>
+<p>Predator-prey dynamics.</p>
+<h3 id="parameters_7">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: The final simulation time.</li>
+</ul>
+<h2 id="schelling"><a href="../lua/Schelling.lua">Schelling</a></h2>
+<p><img alt="" class="center" src="../images/schelling.bmp" /></p>
+<p>Schelling's segregation model. In 1971, the American economist Thomas Schelling created an agent-based model that might help explain why segregation is so difficult to combat. His model of segregation showed that even when individuals (or "agents") didn't mind being surrounded or living by agents of a different race, they would still choose to segregate themselves from other agents over time! Although the model is quite simple, it gives a fascinating look at how individuals might self-segregate, even when they have no explicit desire to do so. A small preference for one's neighbors to be of the same color could lead to total segregation. In Schellinga model, initially black and white families are randomly distributed. At each step in the modeling process the families examine their immediate neighborhood and either stay put or move elsewhere depending on whether the local racial composition suits their preferences. The procedure is repeated until everyone finds a satisfactory home (or until the simulator’s patience is exhausted).</p>
+<h3 id="parameters_8">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space. The default value is 25.</li>
+<li><strong>finalTime</strong>: The final simulation time. The default value is 500.</li>
+<li><strong>freeSpace</strong>: The percentage of space that is not filled with any agent along the simulation. The default value is 25.</li>
+<li><strong>preference</strong>: What is the minimum number of neighbor agents be like me that makes me satisfied with my current cell? The default value is 3.</li>
+</ul>
+<h2 id="singleagent"><a href="../lua/SingleAgent.lua">SingleAgent</a></h2>
+<p><img alt="" class="center" src="../images/single-agent.bmp" /></p>
+<p>A single agent moving around randomly.</p>
+<h3 id="parameters_9">Parameters</h3>
+<ul>
+<li><strong>dim</strong>: The x and y dimensions of space.</li>
+<li><strong>finalTime</strong>: The final simulation time.</li>
+<li><strong>quantity</strong>: The initial number of Agents in the model.</li>
+</ul>
+<h2 id="sugarscape"><a href="../lua/Sugarscape.lua">Sugarscape</a></h2>
+<p><img alt="" class="center" src="../images/sugarscape.bmp" /></p>
+<p>Sex, Culture, and Conflict: The Emergence of History. Chapter 3 of Joshua M. Epstein &amp; Robert Axtell, Growing Artificial Societies: Social Science from the Bottom Up. This model was implemented by Andre R. Goncalves and Frederico F. Avila.</p>
+<h3 id="parameters_10">Parameters</h3>
+<ul>
+<li><strong>finalTime</strong>: The final simulation time.</li>
+<li><strong>initPop</strong>: The initial number of Agents in the model.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="logo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../functions/utils/" class="btn btn-neutral float-right" title="Utils">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../functions/utils/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

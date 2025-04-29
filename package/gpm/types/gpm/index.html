@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>GPM - TerraME</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "GPM";
+        var mkdocs_page_input_path = "package/gpm/types/gpm.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+<style>
+  img.center {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../..">
+          <img src="../../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">TerraME</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../gis/">gis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/layer/">Layer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/project/">Project</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/terralib/">TerraLib</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ca</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ca/">ca</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ca/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/lifePatterns/">LifePatterns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">logo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logo/">logo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logo/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sci</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sci/">sci</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/types/spline/">Spline</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/functions/feedback/">Feedback</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/functions/examples/">Examples</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sysdyn</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/">sysdyn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/examples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">calibration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../calibration/">calibration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../calibration/types/multipleRuins/">MultipleRuins</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../calibration/types/samde/">SAMDE</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../calibration/functions/goodnessOfFit/">GoodnessOfFit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../calibration/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../calibration/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../calibration/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gpm</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">gpm</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">GPM</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fill">fill</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#save">save</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../network/">Network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../examples/">Example</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">gpm</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">GPM</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="gpm">GPM</h1>
+<p>Type to create a Generalized Proximity Matrix (GPM). GPM is a concept used to establish relations between origins and destinations, represented as geographical objects. It has several strategies to define how two objects are connected, from basic geographical relations such as intersection area and border to connectivity networks. The relations created by GPM are not stored in external sources nor in attributes of the CellularSpaces it connects. It is necessary to use some functions of this type in order to create attributes or neighborhoods and to save the output.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>destination</strong>: A <a href="../../../../base/types/cellularSpace/">CellularSpace (base package)</a> or a <a href="../network/">Network</a>, containing the destination points. When the destination is a Network, the real destinations are the targets of the network. It is possible to use the origin as destination as well.</li>
+<li><strong>distance</strong>: Maximum distance allowed to connect an origin to a destination.</li>
+<li><strong>entrance</strong>: Optional string that can used when the destination is a Network. Its values can be "points" or "lines" which indicates how the distances will be calculated. The default is "points". See the table below.</li>
+<li><strong>origin</strong>: A <a href="../../../../base/types/cellularSpace/">CellularSpace (base package)</a> representing the objects to be connected.</li>
+<li><strong>progress</strong>: Optional boolean value indicating whether GPM will print messages while processing values. The default value is true.</li>
+<li><strong>strategy</strong>: An optional string with the strategy to create a GPM.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Description</th>
+<th>Compulsory Arguments</th>
+<th>Optional Arguments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"area"</td>
+<td>Create relations between objects that have intersection areas. This strategy can only be used with objects represented as polygons. The weight of each relation is the intersection area.</td>
+<td>destination, origin</td>
+<td>progress</td>
+</tr>
+<tr>
+<td>"border"</td>
+<td>Create relations between polygons that share borders. The weight of each relation is the length of the intersection border divided by the perimeter of the origin, which is a value between zero and one.</td>
+<td>origin, strategy</td>
+<td>progress</td>
+</tr>
+<tr>
+<td>"contains"</td>
+<td>Connect a destination to an origin that contains it. It requires that both origin and destination are represented as polygons. The weight of each relation will be one.</td>
+<td>destination, origin, strategy</td>
+<td>progress</td>
+</tr>
+<tr>
+<td>"distance"</td>
+<td>Connects all objects from the origin to the destination according to their distances. If the argument distance is used, then only the objects that have distance less than this value are connected. The weight of the relation will be the distance between the two objects.</td>
+<td>destination, origin</td>
+<td>distance, entrance, progress</td>
+</tr>
+<tr>
+<td>"length"</td>
+<td>Create relations between polygons that share borders. The weight of each relation is the length of the intersection border.</td>
+<td>destination, origin, strategy</td>
+<td>progress</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>import("gpm")
+
+roads = CellularSpace{file = filePath("roads.shp", "gpm")}
+communities = CellularSpace{file = filePath("communities.shp", "gpm")}
+cells = CellularSpace{file = filePath("cells.shp", "gpm")}
+
+network = Network{
+    lines = roads,
+    target = communities,
+    progress = false,
+    inside = function(distance, cell)
+        if cell.STATUS == "paved" then
+            return distance / 5
+        else
+            return distance / 2
+        end
+    end,
+    outside = function(distance)
+        return distance * 2
+    end
+}
+
+gpm = GPM{
+    destination = network,
+    origin = cells,
+    progress = false,
+    output = {
+        id = "id1",
+        distance = "distance"
+    }
+}</code></pre>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#fill">fill</a></td>
+<td>Create attributes in the origin according to the relations established by GPM.</td>
+</tr>
+<tr>
+<td><a href="#save">save</a></td>
+<td>Save the GPM into a neighborhood file.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fill"><strong>fill</strong></h2>
+<p>Create attributes in the origin according to the relations established by GPM. The values of each created attribute is always related to the weights of the connections in the GPM. These attributes are created in memory, and must be saved manually afterwards if needed.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>attribute</strong>: Name of the attribute to be created.</li>
+<li><strong>copy</strong>: An attribute (or a set of attributes) to be copied from the destination to the origin, given the selected neighbor. It can be a string, a vector of strings with the attribute names, or a named table, where the values represent the attribute names from the destination and the indexes are the attribute names to be created in the origin.</li>
+<li><strong>max</strong>: An optional number with the maximum output value. If it is greater than max, then it will be max. The default is math.huge, meaning that there is no limitation on the maximum value.</li>
+<li><strong>missing</strong>: Value of the output used when there is no input value available. The default value is math.huge for strategy "minimum" and -math.huge for strategy "maximum".</li>
+<li><strong>strategy</strong>: The strategy used to create attributes. See the table below.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Description</th>
+<th>Mandatory Arguments</th>
+<th>Optional Arguments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"all"</td>
+<td>Create one attribute for each available destination. The selected attribute name to be created will be the prefix for the attributes to be created. For each connection with unique identifier x, one attribute with the selected attribute name followed by _x will be created. If an origin is not connected to a given destination, the output for the attribute for the origin will be the value of missing.</td>
+<td>attribute</td>
+<td>missing</td>
+</tr>
+<tr>
+<td>"average"</td>
+<td>Average of all connection weights into one single attribute. Missing values are set to zero.</td>
+<td>attribute</td>
+<td></td>
+</tr>
+<tr>
+<td>"count"</td>
+<td>Count the number of neighbors.</td>
+<td>attribute</td>
+<td>max</td>
+</tr>
+<tr>
+<td>"maximum"</td>
+<td>Create an attribute using the maximum value among the weights of the connections.</td>
+<td>attribute</td>
+<td>copy, missing</td>
+</tr>
+<tr>
+<td>"minimum"</td>
+<td>Create an attribute using the minimum value among the weights of the connections.</td>
+<td>attribute</td>
+<td>copy, missing</td>
+</tr>
+<tr>
+<td>"sum"</td>
+<td>Sum all the weights into one single attribute. Missing values are set to zero.</td>
+<td>attribute</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>
+import("gpm")
+
+cells = CellularSpace{file = filePath("cells.shp", "gpm")}
+farms = CellularSpace{file = filePath("farms.shp", "gpm")}
+
+gpm = GPM{
+    origin = cells,
+    strategy = "area",
+    destination = farms,
+    progress = false
+}
+
+gpm:fill{
+    strategy = "count",
+    attribute = "quantity",
+    max = 5
+}
+
+map = Map{
+    target = gpm.origin,
+    select = "quantity",
+    min = 0,
+    max = 5,
+    slices = 6,
+    color = "Reds"
+}</code></pre>
+<h2 id="save"><strong>save</strong></h2>
+<p>Save the GPM into a neighborhood file.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string or a <a href="../../../../base/types/file/">File (base package)</a> with the name of the file to be saved. Three extensions are allowed: '.gal', '.gwt', or '.gpm'.</li>
+</ul>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>import("gpm")
+
+roads = CellularSpace{file = filePath("roads.shp", "gpm")}
+communities = CellularSpace{file = filePath("communities.shp", "gpm")}
+cells = CellularSpace{file = filePath("cells.shp", "gpm")}
+
+network = Network{
+    lines = roads,
+    target = communities,
+    progress = false,
+    inside = function(distance, cell)
+        if cell.STATUS == "paved" then
+            return distance / 5
+        else
+            return distance / 2
+        end
+    end,
+    outside = function(distance)
+        return distance * 2
+    end
+}
+
+gpm = GPM{
+    destination = network,
+    origin = cells,
+    progress = false,
+}
+
+gpm:save("cells.gpm")</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../" class="btn btn-neutral float-left" title="gpm"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../network/" class="btn btn-neutral float-right" title="Network">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../network/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

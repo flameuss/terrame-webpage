@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>MultipleRuins - TerraME</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "MultipleRuins";
+        var mkdocs_page_input_path = "package/calibration/types/multipleRuins.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+<style>
+  img.center {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../..">
+          <img src="../../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">TerraME</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../base/functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../base/font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../gis/">gis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/layer/">Layer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/project/">Project</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/types/terralib/">TerraLib</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gis/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ca</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ca/">ca</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ca/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/lifePatterns/">LifePatterns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../ca/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">logo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logo/">logo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logo/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logo/functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sci</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sci/">sci</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/types/spline/">Spline</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/functions/feedback/">Feedback</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../sci/functions/examples/">Examples</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">sysdyn</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/">sysdyn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sysdyn/examples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">calibration</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">calibration</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">MultipleRuins</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attributes">Attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../samde/">SAMDE</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/goodnessOfFit/">GoodnessOfFit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/examples/">Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">gpm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../gpm/">gpm</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/gpm/">GPM</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/network/">Network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/examples/">Example</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../gpm/types/data/">Data</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">calibration</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">MultipleRuins</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="multipleruns">MultipleRuns</h1>
+<p>The Multiple Runs type has various model execution strategies, that can be used by the modeler to compare the results of a model and analyze it's behavior in different scenarios. It returns a <a href="./">MultipleRuns</a> table with the results.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>folderName</strong>: Name or file path of the folder where the simulations output will be saved. Whenever the Model saves one or more files along its simulation, it is necessary to use this argument to guarantee that the files of each simulation will be saved in a different directory.</li>
+<li><strong>free</strong>: If true, then the memory used by Model instances will be removed after each simulation. Only the observed properties of the model will be stored within MultipleRuns. Default is false.</li>
+<li><strong>hideGraphics</strong>: If true (default), then sessionInfo().graphics will disable all charts and observers during models execution.</li>
+<li><strong>init</strong>: An optional user-defined function that gets a model instance and executes before running the model.</li>
+<li><strong>model</strong>: The Model to be instantiated and executed several times.</li>
+<li><strong>parameters</strong>: A table with the parameters to be tested. These parameters must be a subset of the parameters of the Model with a subset of the available values. They may have any name the modeler chooses.</li>
+<li><strong>quantity</strong>: number of samples to be created in sample strategy execution.</li>
+<li><strong>repetition</strong>: repetition of runs that must be executed with the same parameters. The default value is 1.</li>
+<li><strong>showProgress</strong>: If true, a message is printed on screen to show the models executions progress on repeated strategy, (Default is false).</li>
+<li><strong>strategy</strong>: Strategy to be used when testing the model. See the table below:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Description</th>
+<th>Mandatory arguments</th>
+<th>Optional arguments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"factorial"</td>
+<td>Simulate the Model with all combinations of the argument parameters.</td>
+<td>model, parameters</td>
+<td>folderName, free, hideGraphics, init, quantity, repetition, showProgress, summary, ...</td>
+</tr>
+<tr>
+<td>"sample"</td>
+<td>Run the model with a random combination of the possible parameters</td>
+<td>model, parameters, repetition</td>
+<td>folderName, free, hideGraphics, init, quantity, showProgress, summary, ...</td>
+</tr>
+<tr>
+<td>"selected"</td>
+<td>This should test the Model with a given set of parameters values. In this case, the argument parameters must be a named table, where each position is another table describing the parameters to be used in such simulation.</td>
+<td>model, parameters</td>
+<td>folderName, free, hideGraphics, init, quantity, repetition, showProgress, summary, ...</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>summary</strong>: A function can be defined by the user to summarize results after executing all repetitions of a set of parameters. This function gets as a parameter a table containing the values of each variable, the results of each simulation and results of each user-defined functions.</li>
+<li><strong>...</strong>: Additional functions can be defined by the user. Such functions are executed each time a simulation of a Model ends and get as parameter the model instance itself. MultipleRuns will get the returning value of these function calls and put it into a vector of results available in the returning value of MultpleRuns.</li>
+</ul>
+<h3 id="attributes">Attributes</h3>
+<p>Some attributes of MultipleRuns have internal semantics. They can be used as <strong>read-only</strong> by the modeler.</p>
+<ul>
+<li><strong>output</strong>: A DataFrame with the final values in each model execution. The additional functions used as arguments for MultipleRuns will also generate attributes whose name will be the function's name, and whose values will be the returning value of such function given the final state of the model as argument.</li>
+<li><strong>parameters</strong>: A table with parameters used to instantiate the model in this simulation. Also indexed by execution order.</li>
+<li><strong>simulations</strong>: A table with directory names. A directory is created for each model instance to save the output functions result. It is indexed by execution order.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>
+-- Complete Example:
+import("calibration")
+local MyModel = Model{
+    x = Choice{-100, -1, 0, 1, 2, 100},
+    y = Choice{min = 1, max = 10, step = 1},
+    finalTime = 1,
+    init = function(self)
+        self.timer = Timer{
+            Event{action = function()
+                self.value = 2 * self.x ^2 - 3 * self.x + 4 + self.y
+            end}
+        }
+    end
+}
+
+local RainModel = Model{
+    water = Choice{min = 0, max = 100},
+    rain = Choice{min = 0, max = 20},
+    finalTime = 2,
+    init = function(self)
+        self.timer = Timer{
+            Event{action = function()
+                self.water = self.water + (self.rain - 150)
+            end}
+        }
+    end
+}
+
+c = MultipleRuns{
+    model = MyModel,
+    strategy = "sample",
+    showProgress = false,
+    quantity = 5,
+    parameters = {
+        x = Choice{-100, -1, 0, 1, 2, 100},
+        y = Choice{min = 1, max = 10, step = 1},
+        finalTime = 1
+    },
+    additionalOutputfunction = function(model)
+        return model.value
+    end,
+    additionalFunction = function(model)
+        return model.value/2
+    end
+}
+
+-- Selected Example:
+m = MultipleRuns{
+    model = MyModel,
+ showProgress = false,
+    parameters = {
+        scenario1 = {x = 2, y = 5},
+        scenario2 = {x = 1, y = 3}
+     },
+    additionalF = function(model)
+        return "test"
+    end
+}
+
+-- This should run the model 10 times with the same parameters:
+r = MultipleRuns{
+    model = RainModel,
+    showProgress = false,
+    parameters = {repeatScenario = {water = 10, rain = 20, finalTime = 1}},
+    repetition = 10
+}
+
+-- Factorial Example. It will run the model 2*66 times to test all the possibilities
+-- for the parameters repetition times.
+MultipleRuns{
+    model = RainModel,
+    showProgress = false,
+    strategy = "factorial",
+    parameters = {
+        water = Choice{min = 10, max = 20, step = 1},
+        rain = Choice{min = 10, max = 20, step = 2},
+        finalTime = 1
+    },
+    repetition = 2
+}
+
+-- Sample Example:
+MultipleRuns{
+    model = RainModel,
+    strategy = "sample",
+    showProgress = false,
+    parameters = {
+        water = Choice{min = 10, max = 20, step = 1},
+        rain = Choice{min = 10, max = 20, step = 2},
+        finalTime = 10,
+    },
+    quantity = 5
+}
+
+-- This should run the model 5 times selecting random values from the defined parameters
+-- (if they are choice, otherwise use the only available value).
+-- This should run the model two times with the same parameters defined in the vector of parameters.</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../" class="btn btn-neutral float-left" title="calibration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../samde/" class="btn btn-neutral float-right" title="SAMDE">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../samde/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
